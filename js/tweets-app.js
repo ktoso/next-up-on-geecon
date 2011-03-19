@@ -11,7 +11,8 @@ $(function() {
         defaults: {
             from_user_id_str:  "",
             profile_image_url: "",
-            created_at:        new Date(),
+            created_at:        null,
+            relative_time:     "A few seconds ago",
             id_str:            "",
             metadata:          "",
             to_user_id:        "",
@@ -26,10 +27,6 @@ $(function() {
 
         // Ensure that each tweet created has `content`.
         initialize: function() {
-//            if (!this.get("content")) {
-//                this.set({"content": this.defaults.content});
-//            }
-            this.set({"relative_time": relativeTime(this.get('created_at'))})
         },
 
         // Remove this tweet from *localStorage* and delete its view.
@@ -62,7 +59,7 @@ $(function() {
 
         // Tweets are sorted by their creation date
         comparator: function(tweet) {
-            return tweet.get('created_at');
+            return tweet.get('id_str');
         }
 
     });
@@ -159,13 +156,13 @@ $(function() {
             Tweets.bind('refresh', this.addAll);
             Tweets.bind('all', this.render);
 
-            setInterval(this.reFetch, 35 /*s*/ * 1000);
-            this.reFetch();
-            Tweets.fetch();
-        },
+            $.each(Tweets, function(it) {
+                it.clear();
+            });
 
-        filterer:  function(status) {
-            return status.text.match(/geecon/)
+            setInterval(this.fetchTweets, 35 /*s*/ * 1000);
+            this.fetchTweets();
+            Tweets.fetch();
         },
 
         // Re-rendering the App just means refreshing the statistics -- the rest
@@ -178,8 +175,8 @@ $(function() {
         // appending its element to the `<ul>`.
         addOne: function(tweet) {
             var view = new TweetView({model: tweet});
-            this.$("#tweet-list").append(view.render().el);
-            twttr.anywhere(function (T){
+            this.$("#tweet-list").append(view.render().el).hide().slideDown('slow');
+            twttr.anywhere(function (T) {
                 T.linkifyUsers();
             });
         },
@@ -189,23 +186,32 @@ $(function() {
             Tweets.each(this.addOne);
         },
 
-        reFetch: function() {
+        fetchTweets: function() {
             var geecon = 'geecon';
 
-            $.getJSON('http://search.twitter.com/search.json?q=' + geecon + '&callback=?',
+            var callUrl = 'http://search.twitter.com/search.json'
+            var callback = '&callback=?';
+            if (this.refresh_url != null) {
+                callUrl += this.refresh_url + callback;
+            } else {
+                callUrl += "?q=" + geecon;
+            }
+
+            console.log('Calling: ' + callUrl);
+
+            $.getJSON(callUrl,
                     function(data) {
+
+                        console.log(data);
+
                         $.each(data.results, function(index, tweet) {
+                            tweet.relative_time = relativeTime(tweet.created_at);
                             Tweets.create(tweet);
                         });
-                    });
-        },
 
-        // Generate the attributes for a new Tweet item.
-        newAttributes: function() {
-            return {
-                content: this.input.val(),
-                order:   Tweets.nextOrder()
-            };
+                        this.refresh_url = data.refresh_url;
+                        console.log("Saved refresh_url as: " + this.refresh_url);
+                    });
         }
     });
 
