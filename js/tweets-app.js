@@ -19,7 +19,7 @@ $(function() {
             favorited:           false,
             inReplyToScreenName: "",
             geo:                 "",
-            user:                "null"
+            user:                null
         },
 
         // Ensure that each tweet created has `content`.
