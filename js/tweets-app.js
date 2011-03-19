@@ -136,8 +136,12 @@ $(function() {
         // the App already present in the HTML.
         el: $("#tweetsapp"),
 
+
+        // refresh tweets interfal (in ms)
+        INTERVAL: 35 * 1000,
+
         // used to get "only new" tweets, will be set during reFetch
-        refresh_url: '',
+        refresh_url: null,
 
         // Delegated events for creating new items, and clearing completed ones.
         events: {
@@ -160,9 +164,11 @@ $(function() {
                 it.clear();
             });
 
-            setInterval(this.fetchTweets, 35 /*s*/ * 1000);
             this.fetchTweets();
-            Tweets.fetch();
+
+            this.intervalID = setInterval((function(self) {
+                return function(){ self.fetchTweets(); }
+            })(this), this.INTERVAL);
         },
 
         // Re-rendering the App just means refreshing the statistics -- the rest
@@ -187,18 +193,22 @@ $(function() {
         },
 
         fetchTweets: function() {
-            var geecon = 'geecon';
+            var geeconQuery = 'q=geecon';
 
-            var callUrl = 'http://search.twitter.com/search.json'
+            var callUrl = 'http://search.twitter.com/search.json';
             var callback = '&callback=?';
-            if (this.refresh_url != null) {
+
+            if (this.refresh_url) {
+                console.log('refresh call...');
                 callUrl += this.refresh_url + callback;
             } else {
-                callUrl += "?q=" + geecon;
+                console.log('initial call...');
+                callUrl += "?" + geeconQuery + callback;
             }
 
             console.log('Calling: ' + callUrl);
 
+            var super = this;
             $.getJSON(callUrl,
                     function(data) {
 
@@ -209,8 +219,8 @@ $(function() {
                             Tweets.create(tweet);
                         });
 
-                        this.refresh_url = data.refresh_url;
-                        console.log("Saved refresh_url as: " + this.refresh_url);
+                        super.refresh_url = data.refresh_url;
+                        console.log("Saved refresh_url as: " + super.refresh_url);
                     });
         }
     });
