@@ -1,0 +1,6 @@
+[submodule "js/backbone-clone"]
+	path = js/backbone
+	url = git://github.com/documentcloud/backbone.git
+[submodule "js/backbone"]
+	path = js/backbone
+	url = git://github.com/documentcloud/backbone.git
