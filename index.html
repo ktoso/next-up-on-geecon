@@ -7,74 +7,82 @@
     <script src="js/backbone/test/vendor/json2.js"></script>
     <script src="js/backbone/test/vendor/jquery-1.5.js"></script>
     <script src="js/backbone/test/vendor/underscore-1.1.4.js"></script>
+
     <script src="js/backbone/backbone.js"></script>
     <script src="js/backbone/examples/backbone-localstorage.js"></script>
-    <script src="js/application.js"></script>
+
+    <script src="http://platform.twitter.com/anywhere.js?id=uBGv4o7I1o3O7XkMZONaNw&v=1" type="text/javascript"></script>
+    <script src="js/tweets-app.js"></script>
+
+    <script src="js/countdowns-app.js"></script>
 </head>
 
 <body>
 
-<!-- tweet App Interface -->
+<section>
 
-<div id="tweetsapp">
+    <div id="tweetsapp">
 
-    <div class="title">
-        <h2>Tweets</h2>
+        <div class="title">
+            <h2>Tweets</h2>
+        </div>
+
+        <div class="content">
+
+            <!--<div id="create-tweet">-->
+            <!--<input id="new-tweet" placeholder="What needs to be done?" type="text"/>-->
+            <!--<span class="ui-tooltip-top" style="display:none;">Press Enter to save this task</span>-->
+            <!--</div>-->
+
+            <div id="tweets">
+                <ul id="tweet-list">
+                    <!-- will contain tweets -->
+                </ul>
+            </div>
+
+            <div id="tweet-stats"></div>
+
+        </div>
+
     </div>
 
-    <div class="content">
-
-        <div id="create-tweet">
-            <input id="new-tweet" placeholder="What needs to be done?" type="text"/>
-            <span class="ui-tooltip-top" style="display:none;">Press Enter to save this task</span>
-        </div>
-
-        <div id="tweets">
-            <ul id="tweet-list"></ul>
-        </div>
-
-        <div id="tweet-stats"></div>
-
+    <div id="credits">
+        GeeCON 2011 - <a href="https://github.com/ktoso/next-up-on-geecon">fork us on GitHub</a>!
     </div>
 
-</div>
+    <!-- ************************************* Templates ************************************* -->
 
-<div id="credits">
-    GeeCON 2011 - <a href="https://github.com/ktoso/next-up-on-geecon">fork us on GitHub</a>!
-</div>
-
-<!-- ************************************* Templates ************************************* -->
-
-<script type="text/template" id="item-template">
-    <div class="tweet <%= done ? 'done' : '' %>">
-        <div class="display">
-            <input class="check" type="checkbox" <%= done ? 'checked="checked"' : '' %> />
-            <div class="tweet-content"></div>
-            <span class="tweet-destroy"></span>
+    <script type="text/template" id="item-template">
+        <div class="tweet <%= done ? 'done' : '' %>">
+            <div class="display">
+                <input class="check" type="checkbox" <%= done ? 'checked="checked"' : '' %> />
+                <div class="tweet-content"></div>
+                <span class="tweet-destroy"></span>
+            </div>
+            <div class="edit">
+                <input class="tweet-input" type="text" value=""/>
+            </div>
         </div>
-        <div class="edit">
-            <input class="tweet-input" type="text" value=""/>
-        </div>
-    </div>
-</script>
+    </script>
 
-<script type="text/template" id="stats-template">
-    <% if (total) { %>
+    <script type="text/template" id="stats-template">
+        <% if (total) { %>
         <span class="tweet-count">
           <span class="number"><%= remaining %></span>
           <span class="word"><%= remaining == 1 ? 'item' : 'items' %></span> left.
         </span>
-    <% } %>
-    <% if (done) { %>
+        <% } %>
+        <% if (done) { %>
         <span class="tweet-clear">
           <a href="#">
               Clear <span class="number-done"><%= done %></span>
               completed <span class="word-done"><%= done == 1 ? 'item' : 'items' %></span>
           </a>
         </span>
-    <% } %>
-</script>
+        <% } %>
+    </script>
 
+</section>
 </body>
 
 </html>

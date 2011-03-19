@@ -31,16 +31,13 @@ a img {
     border: none;
 }
 
-html {
-    background: #eeeeee;
-}
-
-body {
+body, html {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 14px;
     line-height: 1.4em;
     background: #eeeeee;
     color: #333333;
+    height: 95%;
 }
 
 #tweetsapp {
@@ -48,6 +45,8 @@ body {
     clear: none;
     width: 480px;
     margin: 40px;
+    height: 98%;
+    overflow: hidden;
     background: white;
     padding: 20px;
     -moz-box-shadow: rgba(0, 0, 0, 0.2) 0 5px 6px 0;

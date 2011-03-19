@@ -5,7 +5,7 @@ $(function(){
   // -------------------------------------------------------------------------------------------------------------------
 
   // Our basic **tweet** model has `content`, `order`, and `done` attributes.
-  window.Tweet = Backbone.Model.extend({
+  window.Countdown = Backbone.Model.extend({
 
     // Default attributes for the tweet.
     defaults: {
@@ -34,15 +34,15 @@ $(function(){
 
   });
 
-  // Tweet Collection
+  // Countdown Collection
   // -------------------------------------------------------------------------------------------------------------------
 
   // The collection of tweets is backed by *localStorage* instead of a remote
   // server.
-  window.TweetList = Backbone.Collection.extend({
+  window.CountdownList = Backbone.Collection.extend({
 
     // Reference to this collection's model.
-    model: Tweet,
+    model: Countdown,
 
     // Save all of the tweet items under the `"tweets"` namespace.
     localStorage: new Store("tweets"),
@@ -57,28 +57,28 @@ $(function(){
       return this.without.apply(this, this.done());
     },
 
-    // We keep the Tweets in sequential order, despite being saved by unordered
+    // We keep the Countdowns in sequential order, despite being saved by unordered
     // GUID in the database. This generates the next order number for new items.
     nextOrder: function() {
       if (!this.length) return 1;
       return this.last().get('order') + 1;
     },
 
-    // Tweets are sorted by their original insertion order.
+    // Countdowns are sorted by their original insertion order.
     comparator: function(tweet) {
       return tweet.get('order');
     }
 
   });
 
-  // Create our global collection of **Tweets**.
-  window.Tweets = new TweetList;
+  // Create our global collection of **Countdowns**.
+  window.Countdowns = new CountdownList;
 
-  // Tweet Item View
+  // Countdown Item View
   // -------------------------------------------------------------------------------------------------------------------
 
   // The DOM element for a tweet item...
-  window.TweetView = Backbone.View.extend({
+  window.CountdownView = Backbone.View.extend({
 
     //... is a list tag.
     tagName:  "li",
@@ -94,8 +94,8 @@ $(function(){
       "keypress .tweet-input"      : "updateOnEnter"
     },
 
-    // The TweetView listens for changes to its model, re-rendering. Since there's
-    // a one-to-one correspondence between a **Tweet** and a **TweetView** in this
+    // The CountdownView listens for changes to its model, re-rendering. Since there's
+    // a one-to-one correspondence between a **Countdown** and a **CountdownView** in this
     // app, we set a direct reference on the model for convenience.
     initialize: function() {
       _.bindAll(this, 'render', 'close');
@@ -174,7 +174,7 @@ $(function(){
       "click .tweet-clear a": "clearCompleted"
     },
 
-    // At initialization we bind to the relevant events on the `Tweets`
+    // At initialization we bind to the relevant events on the `Countdowns`
     // collection, when items are added or changed. Kick things off by
     // loading any preexisting tweets that might be saved in *localStorage*.
     initialize: function() {
@@ -182,56 +182,56 @@ $(function(){
 
       this.input    = this.$("#new-tweet");
 
-      Tweets.bind('add',     this.addOne);
-      Tweets.bind('refresh', this.addAll);
-      Tweets.bind('all',     this.render);
+      Countdowns.bind('add',     this.addOne);
+      Countdowns.bind('refresh', this.addAll);
+      Countdowns.bind('all',     this.render);
 
-      Tweets.fetch();
+      Countdowns.fetch();
     },
 
     // Re-rendering the App just means refreshing the statistics -- the rest
     // of the app doesn't change.
     render: function() {
-      var done = Tweets.done().length;
+      var done = Countdowns.done().length;
       this.$('#tweet-stats').html(this.statsTemplate({
-        total:      Tweets.length,
-        done:       Tweets.done().length,
-        remaining:  Tweets.remaining().length
+        total:      Countdowns.length,
+        done:       Countdowns.done().length,
+        remaining:  Countdowns.remaining().length
       }));
     },
 
     // Add a single tweet item to the list by creating a view for it, and
     // appending its element to the `<ul>`.
     addOne: function(tweet) {
-      var view = new TweetView({model: tweet});
+      var view = new CountdownView({model: tweet});
       this.$("#tweet-list").append(view.render().el);
     },
 
-    // Add all items in the **Tweets** collection at once.
+    // Add all items in the **Countdowns** collection at once.
     addAll: function() {
-      Tweets.each(this.addOne);
+      Countdowns.each(this.addOne);
     },
 
-    // Generate the attributes for a new Tweet item.
+    // Generate the attributes for a new Countdown item.
     newAttributes: function() {
       return {
         content: this.input.val(),
-        order:   Tweets.nextOrder(),
+        order:   Countdowns.nextOrder(),
         done:    false
       };
     },
 
-    // If you hit return in the main input field, create new **Tweet** model,
+    // If you hit return in the main input field, create new **Countdown** model,
     // persisting it to *localStorage*.
     createOnEnter: function(e) {
       if (e.keyCode != 13) return;
-      Tweets.create(this.newAttributes());
+      Countdowns.create(this.newAttributes());
       this.input.val('');
     },
 
     // Clear all done tweet items, destroying their models.
     clearCompleted: function() {
-      _.each(Tweets.done(), function(tweet){ tweet.clear(); });
+      _.each(Countdowns.done(), function(tweet){ tweet.clear(); });
       return false;
     }
 
