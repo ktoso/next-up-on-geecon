@@ -84,7 +84,7 @@ $(function(){
     tagName:  "li",
 
     // Cache the template function for a single item.
-    template: _.template($('#item-template').html()),
+    template: _.template($('#tweet-template').html()),
 
     // The DOM events specific to an item.
     events: {
@@ -170,8 +170,7 @@ $(function(){
     // Delegated events for creating new items, and clearing completed ones.
     events: {
       "fetched tweets": "createOnEnter",
-      "keypress #new-tweet":  "createOnEnter",
-      "click .tweet-clear a": "clearCompleted"
+      "keypress #new-tweet":  "createOnEnter"
     },
 
     // At initialization we bind to the relevant events on the `Countdowns`
@@ -227,12 +226,6 @@ $(function(){
       if (e.keyCode != 13) return;
       Countdowns.create(this.newAttributes());
       this.input.val('');
-    },
-
-    // Clear all done tweet items, destroying their models.
-    clearCompleted: function() {
-      _.each(Countdowns.done(), function(tweet){ tweet.clear(); });
-      return false;
     }
 
   });

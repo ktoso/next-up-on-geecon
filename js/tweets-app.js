@@ -9,9 +9,17 @@ $(function() {
 
         // Default attributes for the tweet.
         defaults: {
-            author: "@GeeCON",
-            createdAt: new Date(),
-            content: "empty tweet..."
+            id:                  "",
+            createdAt:           new Date(),
+            text:                "",
+            source:              "",
+            truncated:           "",
+            inReplyToStatusId:   "",
+            inReplyToUserId:     "",
+            favorited:           false,
+            inReplyToScreenName: "",
+            geo:                 "",
+            user:                "null"
         },
 
         // Ensure that each tweet created has `content`.
@@ -66,16 +74,16 @@ $(function() {
     window.TweetView = Backbone.View.extend({
 
         //... is a list tag.
-        tagName:  "li",
+        tagName:  "article",
 
         // Cache the template function for a single item.
-        template: _.template($('#item-template').html()),
+        template: _.template($('#tweet-template').html()),
 
         // The DOM events specific to an item.
         events: {
-            "dblclick div.tweet-content" : "edit",
-            "click span.tweet-destroy"   : "clear",
-            "keypress .tweet-input"      : "updateOnEnter"
+//            "dblclick div.tweet-content" : "edit",
+//            "click span.tweet-destroy"   : "clear",
+//            "keypress .tweet-input"      : "updateOnEnter"
         },
 
         // The TweetView listens for changes to its model, re-rendering. Since there's
@@ -89,6 +97,8 @@ $(function() {
 
         // Re-render the contents of the tweet item.
         render: function() {
+            console.log(this.model.toJSON());
+
             $(this.el).html(this.template(this.model.toJSON()));
             this.setContent();
             return this;
@@ -97,23 +107,16 @@ $(function() {
         // To avoid XSS (not that it would be harmful in this particular app),
         // we use `jQuery.text` to set the contents of the tweet item.
         setContent: function() {
+            var text = this.model.get('text');
+            var user = this.model.get('user');
             var content = this.model.get('content');
-            this.$('.tweet-content').text(content);
-            this.input = this.$('.tweet-input');
-            this.input.bind('blur', this.close);
-            this.input.val(content);
-        },
 
-        // Switch this view into `"editing"` mode, displaying the input field.
-        edit: function() {
-            $(this.el).addClass("editing");
-            this.input.focus();
-        },
+            console.log("setContent");
 
-        // Close the `"editing"` mode, saving changes to the tweet.
-        close: function() {
-            this.model.save({content: this.input.val()});
-            $(this.el).removeClass("editing");
+//            this.$('.tweet-content').text(content);
+//            this.input = this.$('.tweet-input');
+//            this.input.bind('blur', this.close);
+//            this.input.val(content);
         },
 
         // If you hit `enter`, we're through editing the item.
@@ -143,13 +146,8 @@ $(function() {
         // the App already present in the HTML.
         el: $("#tweetsapp"),
 
-        // Our template for the line of statistics at the bottom of the app.
-        statsTemplate: _.template($('#stats-template').html()),
-
         // Delegated events for creating new items, and clearing completed ones.
         events: {
-            "fetched tweets": "createOnEnter",
-            "keypress #new-tweet":  "createOnEnter",
             "click .tweet-clear a": "clearCompleted"
         },
 
@@ -159,24 +157,14 @@ $(function() {
         initialize: function() {
             _.bindAll(this, 'addOne', 'addAll', 'render');
 
-            // setup anywhere twitter client
-            twttr.anywhere(function (T) {
-//                T.linkifyUsers();
-                 T.User.find('ktosopl').timeline().first(20).each(function(status) {
-//                T.Status.find('#geecon').first(20).filter(filterer).each(function(status){
-                    $("#tweet-list").append("<li>" +
-                            "" + status.text + "<br/>" +
-                            "<strong>" +status.user.screenName + "</strong> @ " + status.createdAt + "<br/>" +
-                            "</li>")
-                });
-            });
-
             this.input = this.$("#new-tweet");
 
             Tweets.bind('add', this.addOne);
             Tweets.bind('refresh', this.addAll);
             Tweets.bind('all', this.render);
 
+            setInterval(this.reFetch, 35 /*s*/ * 1000);
+            this.reFetch();
             Tweets.fetch();
         },
 
@@ -187,9 +175,7 @@ $(function() {
         // Re-rendering the App just means refreshing the statistics -- the rest
         // of the app doesn't change.
         render: function() {
-            this.$('#tweet-stats').html(this.statsTemplate({
-                total:      Tweets.length
-            }));
+            // todo need to do anything here?
         },
 
         // Add a single tweet item to the list by creating a view for it, and
@@ -204,20 +190,29 @@ $(function() {
             Tweets.each(this.addOne);
         },
 
+        reFetch: function() {
+            // setup anywhere twitter client
+            twttr.anywhere(function (T) {
+                T.User.find('ktosopl').timeline().first(20).each(function(status) {
+//                T.Status.find('#geecon').first(20).filter(filterer).each(function(status){
+
+                    Tweets.create(status);
+//
+//                    $("#tweet-list").append("<article class=\"tweet\">" +
+//                            "<p>" + status.text + "</p>" +
+//                            "<small> <strong>" + status.user.screenName + " </strong> @ " + status.createdAt + " <br/></small></article>");
+//                    T.linkifyUsers();
+                });
+
+            });
+        },
+
         // Generate the attributes for a new Tweet item.
         newAttributes: function() {
             return {
                 content: this.input.val(),
                 order:   Tweets.nextOrder()
             };
-        },
-
-        // If you hit return in the main input field, create new **Tweet** model,
-        // persisting it to *localStorage*.
-        createOnEnter: function(e) {
-            if (e.keyCode != 13) return;
-            Tweets.create(this.newAttributes());
-            this.input.val('');
         }
 
     });
