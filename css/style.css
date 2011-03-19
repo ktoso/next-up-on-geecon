@@ -43,7 +43,7 @@ body {
     color: #333333;
 }
 
-#todoapp {
+#tweetsapp {
     float: right;
     clear: none;
     width: 480px;
@@ -56,7 +56,7 @@ body {
     box-shadow: rgba(0, 0, 0, 0.2) 0 5px 6px 0;
 }
 
-#todoapp h1 {
+#tweetsapp h1 {
     font-size: 36px;
     font-weight: bold;
     text-align: center;
@@ -64,11 +64,19 @@ body {
     line-height: 1;
 }
 
-#create-todo {
+#tweetsapp h2 {
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    padding: 20px 0 30px 0;
+    line-height: 1;
+}
+
+#create-tweet {
     position: relative;
 }
 
-#create-todo input {
+#create-tweet input {
     width: 466px;
     background: white;
     color: black;
@@ -85,11 +93,11 @@ body {
     box-shadow: rgba(0, 0, 0, 0.2) 0 1px 2px 0 inset;
 }
 
-#create-todo input::-webkit-input-placeholder {
+#create-tweet input::-webkit-input-placeholder {
     font-style: italic;
 }
 
-#create-todo span {
+#create-tweet span {
     position: absolute;
     z-index: 999;
     width: 170px;
@@ -97,11 +105,11 @@ body {
     margin-left: -85px;
 }
 
-#todo-list {
+#tweet-list {
     margin-top: 10px;
 }
 
-#todo-list li {
+#tweet-list li {
     padding: 12px 20px 11px 0;
     position: relative;
     font-size: 24px;
@@ -109,7 +117,7 @@ body {
     border-bottom: 1px solid #cccccc;
 }
 
-#todo-list li:after {
+#tweet-list li:after {
     content: "\0020";
     display: block;
     height: 0;
@@ -118,21 +126,21 @@ body {
     visibility: hidden;
 }
 
-#todo-list li.editing {
+#tweet-list li.editing {
     padding: 0;
     border-bottom: 0;
 }
 
-#todo-list .editing .display,
-#todo-list .edit {
+#tweet-list .editing .display,
+#tweet-list .edit {
     display: none;
 }
 
-#todo-list .editing .edit {
+#tweet-list .editing .edit {
     display: block;
 }
 
-#todo-list .editing input {
+#tweet-list .editing input {
     width: 444px;
     font-size: 24px;
     font-family: inherit;
@@ -148,19 +156,19 @@ body {
     box-shadow: rgba(0, 0, 0, 0.2) 0 1px 2px 0 inset;
 }
 
-#todo-list .check {
+#tweet-list .check {
     position: relative;
     top: 9px;
     margin: 0 10px 0 7px;
     float: left;
 }
 
-#todo-list .done .todo-content {
+#tweet-list .done .tweet-content {
     text-decoration: line-through;
     color: #777777;
 }
 
-#todo-list .todo-destroy {
+#tweet-list .tweet-destroy {
     position: absolute;
     right: 5px;
     top: 14px;
@@ -171,21 +179,21 @@ body {
     background: url(destroy.png) no-repeat 0 0;
 }
 
-#todo-list li:hover .todo-destroy {
+#tweet-list li:hover .tweet-destroy {
     display: block;
 }
 
-#todo-list .todo-destroy:hover {
+#tweet-list .tweet-destroy:hover {
     background-position: 0 -20px;
 }
 
-#todo-stats {
+#tweet-stats {
     *zoom: 1;
     margin-top: 10px;
     color: #777777;
 }
 
-#todo-stats:after {
+#tweet-stats:after {
     content: "\0020";
     display: block;
     height: 0;
@@ -194,29 +202,29 @@ body {
     visibility: hidden;
 }
 
-#todo-stats .todo-count {
+#tweet-stats .tweet-count {
     float: left;
 }
 
-#todo-stats .todo-count .number {
+#tweet-stats .tweet-count .number {
     font-weight: bold;
     color: #333333;
 }
 
-#todo-stats .todo-clear {
+#tweet-stats .tweet-clear {
     float: right;
 }
 
-#todo-stats .todo-clear a {
+#tweet-stats .tweet-clear a {
     color: #777777;
     font-size: 12px;
 }
 
-#todo-stats .todo-clear a:visited {
+#tweet-stats .tweet-clear a:visited {
     color: #777777;
 }
 
-#todo-stats .todo-clear a:hover {
+#tweet-stats .tweet-clear a:hover {
     color: #336699;
 }
 
