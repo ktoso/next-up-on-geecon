@@ -31,6 +31,15 @@ a img {
     border: none;
 }
 
+a {
+    color: #777777;
+}
+
+a:hover {
+    color: #777777;
+    text-decoration: none;
+}
+
 body, html {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 12px;
@@ -170,7 +179,16 @@ body, html {
 
 #tweet-list p {
     float: left;
-    clear: both;
+    clear: right;
+    width: 410px;
+}
+
+#tweet-list .tweet img {
+    float: left;
+    clear: none;
+    width: 48px;
+    height: 48px;
+    padding-right: 5px;
 }
 
 #tweet-list small {
@@ -179,47 +197,7 @@ body, html {
     float: left;
     clear: both;
     width: 100%;
-}
-
-#tweet-stats {
-    *zoom: 1;
-    margin-top: 10px;
-    color: #777777;
-}
-
-#tweet-stats:after {
-    content: "\0020";
-    display: block;
-    height: 0;
-    clear: both;
-    overflow: hidden;
-    visibility: hidden;
-}
-
-#tweet-stats .tweet-count {
-    float: left;
-}
-
-#tweet-stats .tweet-count .number {
-    font-weight: bold;
-    color: #333333;
-}
-
-#tweet-stats .tweet-clear {
-    float: right;
-}
-
-#tweet-stats .tweet-clear a {
-    color: #777777;
-    font-size: 12px;
-}
-
-#tweet-stats .tweet-clear a:visited {
-    color: #777777;
-}
-
-#tweet-stats .tweet-clear a:hover {
-    color: #336699;
+    text-align:right;
 }
 
 #instructions {

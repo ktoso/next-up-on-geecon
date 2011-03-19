@@ -9,24 +9,27 @@ $(function() {
 
         // Default attributes for the tweet.
         defaults: {
-            id:                  "",
-            createdAt:           new Date(),
-            text:                "",
-            source:              "",
-            truncated:           "",
-            inReplyToStatusId:   "",
-            inReplyToUserId:     "",
-            favorited:           false,
-            inReplyToScreenName: "",
-            geo:                 "",
-            user:                null
+            from_user_id_str:  "",
+            profile_image_url: "",
+            created_at:        new Date(),
+            id_str:            "",
+            metadata:          "",
+            to_user_id:        "",
+            text:              "",
+            id:                "",
+            from_user_id:      "",
+            geo:               "",
+            from_user:         "",
+            iso_language_code: "en",
+            source:            ""
         },
 
         // Ensure that each tweet created has `content`.
         initialize: function() {
-            if (!this.get("content")) {
-                this.set({"content": this.defaults.content});
-            }
+//            if (!this.get("content")) {
+//                this.set({"content": this.defaults.content});
+//            }
+            this.set({"relative_time": relativeTime(this.get('created_at'))})
         },
 
         // Remove this tweet from *localStorage* and delete its view.
@@ -57,9 +60,9 @@ $(function() {
             return this.last().get('order') + 1;
         },
 
-        // Tweets are sorted by their original insertion order.
+        // Tweets are sorted by their creation date
         comparator: function(tweet) {
-            return tweet.get('order');
+            return tweet.get('created_at');
         }
 
     });
@@ -136,6 +139,9 @@ $(function() {
         // the App already present in the HTML.
         el: $("#tweetsapp"),
 
+        // used to get "only new" tweets, will be set during reFetch
+        refresh_url: '',
+
         // Delegated events for creating new items, and clearing completed ones.
         events: {
             "click .tweet-clear a": "clearCompleted"
@@ -173,6 +179,9 @@ $(function() {
         addOne: function(tweet) {
             var view = new TweetView({model: tweet});
             this.$("#tweet-list").append(view.render().el);
+            twttr.anywhere(function (T){
+                T.linkifyUsers();
+            });
         },
 
         // Add all items in the **Tweets** collection at once.
@@ -181,14 +190,14 @@ $(function() {
         },
 
         reFetch: function() {
-            // setup anywhere twitter client
-            twttr.anywhere(function (T) {
-                T.User.find('ktosopl').timeline().first(20).each(function(status) {
-//                T.Status.find('#geecon').first(20).filter(filterer).each(function(status){
-                    Tweets.create(status);
-                });
+            var geecon = 'geecon';
 
-            });
+            $.getJSON('http://search.twitter.com/search.json?q=' + geecon + '&callback=?',
+                    function(data) {
+                        $.each(data.results, function(index, tweet) {
+                            Tweets.create(tweet);
+                        });
+                    });
         },
 
         // Generate the attributes for a new Tweet item.
@@ -198,10 +207,9 @@ $(function() {
                 order:   Tweets.nextOrder()
             };
         }
-
     });
 
-    // Finally, we kick things off by creating the **App**.
+// Finally, we kick things off by creating the **App**.
     window.App = new AppView;
 
 });

@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>Backbone Demo: tweets</title>
+    <title>Next Up On GeeCON 2011</title>
     <link href="css/style.css" media="all" rel="stylesheet" type="text/css"/>
     <script src="js/backbone/test/vendor/json2.js"></script>
     <script src="js/backbone/test/vendor/jquery-1.5.js"></script>
@@ -10,6 +10,8 @@
 
     <script src="js/backbone/backbone.js"></script>
     <script src="js/backbone/examples/backbone-localstorage.js"></script>
+
+    <script src="js/tools.js"></script>
 
     <script src="http://platform.twitter.com/anywhere.js?id=uBGv4o7I1o3O7XkMZONaNw&v=1" type="text/javascript"></script>
     <script src="js/tweets-app.js"></script>
@@ -43,11 +45,12 @@
 
 <script type="text/template" id="tweet-template">
     <article class="tweet">
+        <img src="<%= profile_image_url %>" alt="@<%= from_user %>"/>
         <p>
             <%= text %>
         </p>
         <small>
-            <strong><%= user.screenName %> </strong> @ <%= createdAt %> <br/>
+            <%= relative_time %> by <strong>@<%= from_user %> </strong>
         </small>
     </article>
 </script>
