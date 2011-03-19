@@ -1,0 +1,8 @@
+# idea files
+*.iml
+.idea
+
+# backup files
+*~
+*.bak
+*.tmp
