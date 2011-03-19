@@ -37,6 +37,7 @@ body, html {
     line-height: 1.3em;
     background: #eeeeee;
     color: #333333;
+    overflow: hidden;
     height: 95%;
 }
 
@@ -105,7 +106,6 @@ body, html {
 }
 
 #tweet-list {
-    margin-top: 10px;
 }
 
 #tweet-list article {

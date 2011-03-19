@@ -74,7 +74,7 @@ $(function() {
     window.TweetView = Backbone.View.extend({
 
         //... is a list tag.
-        tagName:  "article",
+        tagName:  "li",
 
         // Cache the template function for a single item.
         template: _.template($('#tweet-template').html()),
@@ -97,8 +97,6 @@ $(function() {
 
         // Re-render the contents of the tweet item.
         render: function() {
-            console.log(this.model.toJSON());
-
             $(this.el).html(this.template(this.model.toJSON()));
             this.setContent();
             return this;
@@ -109,14 +107,6 @@ $(function() {
         setContent: function() {
             var text = this.model.get('text');
             var user = this.model.get('user');
-            var content = this.model.get('content');
-
-            console.log("setContent");
-
-//            this.$('.tweet-content').text(content);
-//            this.input = this.$('.tweet-input');
-//            this.input.bind('blur', this.close);
-//            this.input.val(content);
         },
 
         // If you hit `enter`, we're through editing the item.
@@ -195,13 +185,7 @@ $(function() {
             twttr.anywhere(function (T) {
                 T.User.find('ktosopl').timeline().first(20).each(function(status) {
 //                T.Status.find('#geecon').first(20).filter(filterer).each(function(status){
-
                     Tweets.create(status);
-//
-//                    $("#tweet-list").append("<article class=\"tweet\">" +
-//                            "<p>" + status.text + "</p>" +
-//                            "<small> <strong>" + status.user.screenName + " </strong> @ " + status.createdAt + " <br/></small></article>");
-//                    T.linkifyUsers();
                 });
 
             });

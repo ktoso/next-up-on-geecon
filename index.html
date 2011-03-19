@@ -26,20 +26,11 @@
     </div>
 
     <div class="content">
-
-        <!--<div id="create-tweet">-->
-        <!--<input id="new-tweet" placeholder="What needs to be done?" type="text"/>-->
-        <!--<span class="ui-tooltip-top" style="display:none;">Press Enter to save this task</span>-->
-        <!--</div>-->
-
         <div id="tweets">
             <ul id="tweet-list">
                 <!-- will contain tweets -->
             </ul>
         </div>
-
-        <div id="tweet-stats"></div>
-
     </div>
 
 </section>
@@ -53,10 +44,10 @@
 <script type="text/template" id="tweet-template">
     <article class="tweet">
         <p>
-            <%= status.text %>
+            <%= text %>
         </p>
         <small>
-            <strong><%= status.user.screenName %> </strong> @ <%= status.createdAt %> <br/>
+            <strong><%= user.screenName %> </strong> @ <%= createdAt %> <br/>
         </small>
     </article>
 </script>
