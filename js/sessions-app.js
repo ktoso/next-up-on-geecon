@@ -205,7 +205,7 @@ $(function() {
             var sessionElement = $(view.render().el);
 
             sessionElement.addClass('this-room');
-            sessionElement.appendTo(sessionList).hide().fadeIn(1100);
+            sessionElement.appendTo(sessionList).hide().fadeIn(1000);
 
         },
 
