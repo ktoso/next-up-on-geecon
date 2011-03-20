@@ -341,9 +341,12 @@ span .geecon-hashtag {
 /*                             session                                                   */
 #sessionsapp {
     clear: none;
-    display: block;
+    display: inline-block;
     float: left;
     height: 95%;
+    position: relative;
+    top: 40px;
+    left: 25px;
     width: 68%;
 }
 
