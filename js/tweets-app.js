@@ -12,7 +12,6 @@ $(function() {
             from_user_id_str:  "",
             profile_image_url: "",
             created_at:        null,
-            relative_time:     "A few seconds ago",
             id_str:            "",
             metadata:          "",
             to_user_id:        "",
@@ -143,7 +142,7 @@ $(function() {
 
 
         // refresh tweets interfal (in ms)
-        INTERVAL: 35 * 1000,
+        INTERVAL: 12 * 1000,
 
         // we'll start prepending them if only updates start coming in
         prependTweets: false,
@@ -172,11 +171,14 @@ $(function() {
                 it.clear();
             });
 
-            this.fetchTweets();
             this.intervalID = setInterval((function(self) {
-                return function() {
-                    self.fetchTweets();
-                }
+                var fun = function() {
+                    self.fetchTweets(function() {
+                        self.enchantTweets();
+                    });
+                };
+                fun();
+                return fun;
             })(this), this.INTERVAL);
         },
 
@@ -200,10 +202,13 @@ $(function() {
                 tweetElement.appendTo(tweetList).hide().slideDown();
             }
 
-            enchantTweets();
+            tweetElement.geekify('#geecon');
+            tweetElement.find('span .geecon-hashtag').text(' ');
         },
 
         enchantTweets: function() {
+            console.log("enchanting tweets...");
+
             // swap #geecon hashtag with image :-)
             var allTweets = $('#tweet-list article');
             allTweets.geekify('#geecon');
@@ -213,14 +218,17 @@ $(function() {
             twttr.anywhere(function (T) {
                 T.linkifyUsers();
             });
+
+            console.log('done enchanting tweets.');
         },
 
         // Add all items in the **Tweets** collection at once.
         addAll: function() {
             Tweets.each(this.addOne);
+            this.enchantTweets();
         },
 
-        fetchTweets: function() {
+        fetchTweets: function(callWhenDone) {
             var callUrl = 'http://search.twitter.com/search.json';
             var geeconQuery = 'q=geecon';
             var callback = '&callback=?'; // needed for getJSON to use JSONP
@@ -240,10 +248,11 @@ $(function() {
                         console.log(data);
 
                         $.each(data.results, function(index, tweet) {
-                            tweet.relative_time = relativeTime(tweet.created_at);
                             tweet.prependMe = self.prependTweets;
                             Tweets.create(tweet);
                         });
+
+                        callWhenDone();
 
                         self.refresh_url = data.refresh_url;
                         console.log("Saved refresh_url as: " + self.refresh_url);
