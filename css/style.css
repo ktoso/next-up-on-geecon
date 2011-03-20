@@ -53,8 +53,8 @@ body, html {
 #tweetsapp {
     float: right;
     clear: none;
-    width: 480px;
     margin: 30px;
+    width: 25%;
     height: 90%;
     overflow: hidden;
     background: white;
@@ -339,7 +339,26 @@ span .geecon-hashtag {
 }
 
 /*                             session                                                   */
+#sessionsapp {
+    clear: none;
+    display: block;
+    float: left;
+    height: 95%;
+    width: 68%;
+}
+
+#sessionsapp ul {
+    height: 100%;
+}
+
+#sessionsapp li {
+    height: 33%;
+    width: 100%;
+}
+
 #sessionsapp article {
+    width: 100%;
+    text-align: center;
     border-bottom: 3px solid #999;
 }
 
