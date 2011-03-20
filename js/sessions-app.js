@@ -204,7 +204,9 @@ $(function() {
             var sessionList = this.$("#session-list");
             var sessionElement = $(view.render().el);
 
-            sessionElement.appendTo(sessionList).hide().fadeIn();
+            sessionElement.addClass('this-room');
+            sessionElement.appendTo(sessionList).hide().fadeIn('slow');
+
         },
 
         // Add all items in the **Sessions** collection at once.
