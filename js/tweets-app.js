@@ -161,8 +161,6 @@ $(function() {
         initialize: function() {
             _.bindAll(this, 'addOne', 'addAll', 'render');
 
-            this.input = this.$("#new-tweet");
-
             Tweets.bind('add', this.addOne);
             Tweets.bind('refresh', this.addAll);
             Tweets.bind('all', this.render);

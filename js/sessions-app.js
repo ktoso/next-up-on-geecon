@@ -148,8 +148,6 @@ $(function() {
         initialize: function() {
             _.bindAll(this, 'addOne', 'addAll', 'render');
 
-            this.input = this.$("#new-session");
-
             Sessions.bind('add', this.addOne);
             Sessions.bind('refresh', this.addAll);
             Sessions.bind('all', this.render);
@@ -183,7 +181,7 @@ $(function() {
 //                            var sessionDay = Date.parse(session.onDay);
 //                            if (sessionDay.equals().today()) {
                                 console.log("Saving today's session '" + session.topic + "' by " + session.speaker);
-                                Session.create(session);
+                                Sessions.create(session);
 //                            }
                         });
                     });
