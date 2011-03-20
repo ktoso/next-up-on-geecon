@@ -134,6 +134,9 @@ $(function() {
         // refresh the timer each second
         INTERVAL: 1000,
 
+        // pass #3 to the site to state "this room is room number 3"
+        MY_ROOM: parseInt(location.hash),
+
         // the location of our agenda file
         AGENDA: 'data/agenda.json',
 
@@ -156,6 +159,8 @@ $(function() {
             $.each(Sessions, function(it) {
                 it.clear();
             });
+
+            console.log("This room's number is: " + this.MY_ROOM);
 
             // jquery error handler
             $("#debug").ajaxError(function(event, request, settings) {
@@ -185,8 +190,8 @@ $(function() {
                         $.each(data.agenda, function(index, session) {
 //                            var sessionDay = Date.parse(session.onDay);
 //                            if (sessionDay.equals().today()) {
-                                console.log("Saving today's session '" + session.topic + "' by " + session.speaker);
-                                Sessions.create(session);
+                            console.log("Saving today's session '" + session.topic + "' by " + session.speaker);
+                            Sessions.create(session);
 //                            }
                         });
                     });
