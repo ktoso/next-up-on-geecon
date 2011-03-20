@@ -9,18 +9,19 @@ $(function() {
 
         // Default attributes for the tweet.
         defaults: {
-            onDay:    '',
-            startsAt: '',
+            onDay:      '',
+            startsAt:   '',
 
             inRoom:     '',
-            speaker:  '',
-            topic:    ''
+            isThisRoom: false,
+            speaker:    '',
+            topic:      ''
         },
 
         // Ensure that each tweet created has `content`.
         initialize: function() {
-            if (!this.get('prependMe')) {
-                this.set({'prependMe': this.defaults.prependMe});
+            if (!this.get('isThisRoom')) {
+                this.set({'isThisRoom': this.defaults.isThisRoom});
             }
         },
 
@@ -76,9 +77,6 @@ $(function() {
 
         // The DOM events specific to an item.
         events: {
-//            "dblclick div.session-content" : "edit",
-//            "click span.session-destroy"   : "clear",
-//            "keypress .session-input"      : "updateOnEnter"
         },
 
         // The SessionView listens for changes to its model, re-rendering. Since there's
@@ -188,11 +186,12 @@ $(function() {
                         console.log(data);
 
                         $.each(data.agenda, function(index, session) {
-//                            var sessionDay = Date.parse(session.onDay);
-//                            if (sessionDay.equals().today()) {
-                            console.log("Saving today's session '" + session.topic + "' by " + session.speaker);
-                            Sessions.create(session);
-//                            }
+                            var sessionDay = Date.parse(session.onDay);
+                            if (sessionDay.equals().today()) {
+                                console.log("Saving today's session '" + session.topic + "' by " + session.speaker);
+                                session.isThisRoom = session.inRoom == this.THIS_ROOM;
+                                Sessions.create(session);
+                            }
                         });
                     });
         },
@@ -205,11 +204,7 @@ $(function() {
             var sessionList = this.$("#session-list");
             var sessionElement = $(view.render().el);
 
-            if (session.get('prependMe')) {
-                sessionElement.prependTo(sessionList).hide().slideDown();
-            } else {
-                sessionElement.appendTo(sessionList).hide().slideDown();
-            }
+            sessionElement.appendTo(sessionList).hide().fadeIn();
         },
 
         // Add all items in the **Sessions** collection at once.
