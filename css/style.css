@@ -51,14 +51,15 @@ body, html {
 }
 
 #tweetsapp {
-    float: right;
-    clear: none;
-    margin: 30px;
-    width: 25%;
+    background: white;
     height: 90%;
     overflow: hidden;
-    background: white;
     padding: 20px;
+    position: fixed;
+    right: 25px;
+    top: 25px;
+    width: 25%;
+    z-index: 555;
     -moz-box-shadow: rgba(0, 0, 0, 0.2) 0 5px 6px 0;
     -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0 5px 6px 0;
     -o-box-shadow: rgba(0, 0, 0, 0.2) 0 5px 6px 0;
@@ -231,7 +232,7 @@ footer a {
 */
 .ui-tooltip, .ui-tooltip-top, .ui-tooltip-right, .ui-tooltip-bottom, .ui-tooltip-left {
     color: #ffffff;
-    cursor: normal;
+    cursor: auto;
     display: -moz-inline-stack;
     display: inline-block;
     font-size: 12px;
@@ -345,9 +346,9 @@ span .geecon-hashtag {
     float: left;
     height: 95%;
     position: relative;
-    top: 40px;
-    left: 25px;
-    width: 68%;
+    top: 25px;
+    width: 72%;
+    z-index: 1;
 }
 
 #sessionsapp ul {
