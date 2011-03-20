@@ -1,7 +1,7 @@
 {
     "agenda": [
         {
-            "onDay": "1",
+            "onDay": "0",
             "startsAt": "16:00",
 
             "inRoom": "5",
@@ -11,7 +11,7 @@
             "topic": ""
         },
         {
-            "onDay": "1",
+            "onDay": "0",
             "startsAt": "16:00",
 
             "inRoom": "5",
@@ -21,7 +21,7 @@
             "topic": ""
         },
         {
-            "onDay": "1",
+            "onDay": "0",
             "startsAt": "16:00",
 
             "inRoom": "5",
