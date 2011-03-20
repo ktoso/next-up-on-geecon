@@ -55,21 +55,21 @@
     </article>
 </script>
 
-<script type="text/template" id="stats-template">
-    <% if (total) { %>
-        <span class="tweet-count">
-          <span class="number"><%= remaining %></span>
-          <span class="word"><%= remaining == 1 ? 'item' : 'items' %></span> left.
-        </span>
-    <% } %>
-    <% if (done) { %>
-        <span class="tweet-clear">
-          <a href="#">
-              Clear <span class="number-done"><%= done %></span>
-              completed <span class="word-done"><%= done == 1 ? 'item' : 'items' %></span>
-          </a>
-        </span>
-    <% } %>
+<script type="text/template" id="session-template">
+    <article class="session">
+        <h1><%= speaker %></h1>
+        <h2><%= topic %></h2>
+    </article>
+</script>
+
+<script type="text/template" id="timer-template">
+    <div class="timer">
+        <% if(timeLeft > 0) {%>
+            All sessions start in... <%= minutes %>m <%= seconds %>s
+        <% } else { %>
+            Right now!
+        <% } %>
+    </div>
 </script>
 
 </body>
