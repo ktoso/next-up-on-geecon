@@ -135,7 +135,7 @@ $(function() {
         INTERVAL: 1000,
 
         // pass #3 to the site to state "this room is room number 3"
-        MY_ROOM: parseInt(location.hash),
+        THIS_ROOM: parseInt(location.hash.substr(1)),
 
         // the location of our agenda file
         AGENDA: 'data/agenda.json',
@@ -160,7 +160,7 @@ $(function() {
                 it.clear();
             });
 
-            console.log("This room's number is: " + this.MY_ROOM);
+            console.log("This room's number is: " + this.THIS_ROOM);
 
             // jquery error handler
             $("#debug").ajaxError(function(event, request, settings) {
