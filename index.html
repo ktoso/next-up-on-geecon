@@ -7,25 +7,25 @@
     <link href="css/style.css" media="all" rel="stylesheet" type="text/css"/>
 
     <!-- backbone dependencies -->
-    <script src="js/backbone/test/vendor/json2.js"></script>
-    <script src="js/backbone/test/vendor/jquery-1.5.js"></script>
-    <script src="js/backbone/test/vendor/underscore-1.1.4.js"></script>
+    <script src="js/backbone/test/vendor/json2.js" type="text/javascript"></script>
+    <script src="js/backbone/test/vendor/jquery-1.5.js" type="text/javascript"></script>
+    <script src="js/backbone/test/vendor/underscore-1.1.4.js" type="text/javascript"></script>
 
     <!-- backbone js -->
-    <script src="js/backbone/backbone.js"></script>
-    <script src="js/backbone/examples/backbone-localstorage.js"></script>
+    <script src="js/backbone/backbone.js" type="text/javascript"></script>
+    <script src="js/backbone/examples/backbone-localstorage.js" type="text/javascript"></script>
 
     <!-- our tooling functions -->
-    <script src="js/date.js"></script>
-    <script src="js/tools.js"></script>
+    <script src="js/date.js" type="text/javascript"></script>
+    <script src="js/tools.js" type="text/javascript"></script>
 
     <!-- APPS -->
+    <!-- session app -->
+    <script src="js/sessions-app.js" type="text/javascript"></script>
+
     <!-- twitter app -->
     <script src="http://platform.twitter.com/anywhere.js?id=uBGv4o7I1o3O7XkMZONaNw&v=1" type="text/javascript"></script>
-    <script src="js/tweets-app.js"></script>
-
-    <!-- session app -->
-    <script src="js/sessions-app.js"></script>
+    <script src="js/tweets-app.js" type="text/javascript"></script>
 
     <!-- countdown app -->
     <!--<script src="js/countdown-app.js"></script>-->
@@ -62,6 +62,7 @@
 </section>
 
 <footer>
+    <div id="debug"></div>
     GeeCON 2011 - <a href="https://github.com/ktoso/next-up-on-geecon">fork us on GitHub</a>!
 </footer>
 
@@ -70,6 +71,7 @@
 <script type="text/template" id="tweet-template">
     <article class="tweet">
         <img src="<%= profile_image_url %>" alt="@<%= from_user %>"/>
+
         <p>
             <%= text %>
         </p>
@@ -82,6 +84,7 @@
 <script type="text/template" id="session-template">
     <article class="session">
         <h1><%= speaker %></h1>
+
         <h2><%= topic %></h2>
         <span> in <%= roomName %> (<%= inRoom %>)</span>
     </article>
@@ -91,9 +94,9 @@
     <div class="timer">
         All sessions start in...
         <% if(timeLeft > 0) {%>
-            <%= minutes %>m <%= seconds %>s
+        <%= minutes %>m <%= seconds %>s
         <% } else { %>
-            Right now!
+        Right now!
         <% } %>
     </div>
 </script>
