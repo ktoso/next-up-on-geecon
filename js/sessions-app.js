@@ -180,11 +180,11 @@ $(function() {
                         console.log(data);
 
                         $.each(data.agenda, function(index, session) {
-                            var sessionDay = Date.parse(session.onDay);
-                            if (sessionDay.equals().today()) {
+//                            var sessionDay = Date.parse(session.onDay);
+//                            if (sessionDay.equals().today()) {
                                 console.log("Saving today's session '" + session.topic + "' by " + session.speaker);
                                 Session.create(session);
-                            }
+//                            }
                         });
                     });
         },
