@@ -194,11 +194,10 @@ $(function() {
             var tweetList = this.$("#tweet-list");
             var tweetElement = $(view.render().el);
 
-            console.log("Rendering (prepend=" + tweet.get('prependMe') + ") tweet");
             if (tweet.get('prependMe')) {
-                tweetElement.prependTo(tweetList).slideDown();
+                tweetElement.prependTo(tweetList).hide().slideDown();
             } else {
-                tweetElement.appendTo(tweetList).slideDown();
+                tweetElement.appendTo(tweetList).hide().slideDown();
             }
             twttr.anywhere(function (T) {
                 T.linkifyUsers();
