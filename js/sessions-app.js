@@ -129,10 +129,10 @@ $(function() {
         TODAY: Date.today(),
 
         // the date of the first day with sessions (day: 1) in the data JSON
-        DAY_1: new Date(),
+        DAY_1: Date.today(),
 
-        // refresh sessions interval (in ms)
-        INTERVAL: 35 * 1000,
+        // refresh the timer each second
+        INTERVAL: 1000,
 
         // the location of our agenda file
         AGENDA: 'data/agenda.json',
@@ -155,6 +155,12 @@ $(function() {
             Sessions.bind('all', this.render);
 
             console.log("Loading agenda...");
+
+            $("#debug").ajaxError(function(event, request, settings) {
+                $(this).append("<li>Error requesting page " + settings.url + "</li>");
+                console.log(settings);
+            });
+
             this.loadAgenda();
         },
 
@@ -165,19 +171,24 @@ $(function() {
         },
 
         loadAgenda: function () {
-            // load the agenda JSON
-            $.getJSON(this.AGENDA, function(data) {
-                console.log("fetched agenda...");
+            var agendaLocation = this.AGENDA + "?nocache=" + Math.random();
+            console.log("Fetching agenda from: " + agendaLocation);
 
-                $.each(data.agenda, function(index, session) {
-                    var sessionDay = Date.format(session.onDay);
-                    console.log("today is " + Date.today() + " and sessionDay is " + sessionDay)
-                    if(sessionDay.is().today()){
-                        console.log(session);
-                        Session.create(session);
-                    }
-                });
-            });
+            var self = this;
+            $.getJSON(agendaLocation,
+                    function(data, textStatus) {
+                        console.log("fetched agenda...");
+                        console.log(data);
+
+                        $.each(data.agenda, function(index, session) {
+                            var sessionDay = Date.format(session.onDay);
+                            console.log("today is " + Date.today() + " and sessionDay is " + sessionDay)
+                            if (sessionDay.is().today()) {
+                                console.log(session);
+                                Session.create(session);
+                            }
+                        });
+                    });
         },
 
         // Add a single session item to the list by creating a view for it, and
@@ -198,37 +209,8 @@ $(function() {
         // Add all items in the **Sessions** collection at once.
         addAll: function() {
             Sessions.each(this.addOne);
-        },
-
-        fetchSessions: function() {
-            var callUrl = 'http://search.twitter.com/search.json';
-            var geeconQuery = 'q=geecon';
-            var callback = '&callback=?'; // needed for getJSON to use JSONP
-
-            if (this.refresh_url) {
-                this.prependSessions = true;
-                callUrl += this.refresh_url + callback;
-            } else {
-                callUrl += "?" + geeconQuery + callback;
-            }
-
-            console.log('Calling: ' + callUrl);
-            var self = this;
-            $.getJSON(callUrl,
-                    function(data) {
-
-                        console.log(data);
-
-                        $.each(data.results, function(index, session) {
-                            session.relative_time = relativeTime(session.created_at);
-                            session.prependMe = self.prependSessions;
-                            Sessions.create(session);
-                        });
-
-                        self.refresh_url = data.refresh_url;
-                        console.log("Saved refresh_url as: " + self.refresh_url);
-                    });
         }
+
     });
 
 // Finally, we kick things off by creating the **App**.

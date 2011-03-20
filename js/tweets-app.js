@@ -207,7 +207,7 @@ $(function() {
         },
 
         enchantTweets: function() {
-            console.log("enchanting tweets...");
+//            console.log("enchanting tweets...");
 
             // swap #geecon hashtag with image :-)
             var allTweets = $('#tweet-list article');
@@ -219,7 +219,7 @@ $(function() {
                 T.linkifyUsers();
             });
 
-            console.log('done enchanting tweets.');
+//            console.log('done enchanting tweets.');
         },
 
         // Add all items in the **Tweets** collection at once.
@@ -240,23 +240,23 @@ $(function() {
                 callUrl += "?" + geeconQuery + callback;
             }
 
-            console.log('Calling: ' + callUrl);
-            var self = this;
-            $.getJSON(callUrl,
-                    function(data) {
+//            console.log('Calling: ' + callUrl);
+                var self = this;
+                $.getJSON(callUrl,
+                        function(data) {
 
-                        console.log(data);
+//                        console.log(data);
 
-                        $.each(data.results, function(index, tweet) {
-                            tweet.prependMe = self.prependTweets;
-                            Tweets.create(tweet);
+                            $.each(data.results, function(index, tweet) {
+                                tweet.prependMe = self.prependTweets;
+                                Tweets.create(tweet);
+                            });
+
+                            callWhenDone();
+
+                            self.refresh_url = data.refresh_url;
+//                        console.log("Saved refresh_url as: " + self.refresh_url);
                         });
-
-                        callWhenDone();
-
-                        self.refresh_url = data.refresh_url;
-                        console.log("Saved refresh_url as: " + self.refresh_url);
-                    });
         }
     });
 
