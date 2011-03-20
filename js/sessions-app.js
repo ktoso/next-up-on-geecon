@@ -73,7 +73,7 @@ $(function() {
         tagName:  "div",
 
         // Cache the template function for a single item.
-        template: _.template($('#session-template').html()),
+        template: _.template($('#sessions-template').html()),
 
         // The DOM events specific to an item.
         events: {
@@ -90,6 +90,7 @@ $(function() {
 
         // Re-render the contents of the session item.
         render: function() {
+            console.log("will render: " + this.model.get('title'));
             $(this.el).html(this.template(this.model.toJSON()));
             this.setContent();
             return this;
