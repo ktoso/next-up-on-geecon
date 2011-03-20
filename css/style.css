@@ -357,36 +357,43 @@ span .geecon-hashtag {
 #sessionsapp li {
     height: 33%;
     width: 100%;
+    border-bottom: 3px solid #999;
 }
 
 #sessionsapp article {
     width: 100%;
     text-align: center;
-    border-bottom: 3px solid #999;
+}
+
+#sessionsapp article h1,
+#sessionsapp article h2 {
+    font-weight: bold;
 }
 
 #sessionsapp article h1 {
     font-size: 2.5em;
-    line-height: 2.5em;
+    line-height: 2.3em;
 }
 
 #sessionsapp article h2 {
     font-size: 2.0em;
-    line-height: 2.0em;
+    line-height: 1.8em;
 }
 
 #sessionsapp article span {
     display: block;
+    font-size: 1.4em;
+    line-height: 1.4em;
 }
 
 #sessionsapp article .this-room h1 {
     font-size: 2.7em;
-    line-height: 2.7em;
+    line-height: 2.5em;
 }
 
 #sessionsapp article .this-room h2 {
     font-size: 2.2em;
-    line-height: 2.2em;
+    line-height: 2em;
 }
 
 /*                             timer                                                     */
