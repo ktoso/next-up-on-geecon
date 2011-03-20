@@ -141,8 +141,8 @@ $(function() {
         el: $("#tweetsapp"),
 
 
-        // refresh tweets interfal (in ms)
-        INTERVAL: 12 * 1000,
+        // refresh tweets interval (in ms)
+        INTERVAL: 15 * 1000,
 
         // we'll start prepending them if only updates start coming in
         prependTweets: false,

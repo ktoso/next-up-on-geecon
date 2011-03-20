@@ -4,31 +4,31 @@
             "onDay": "20.03.2011",
             "startsAt": "20:00",
 
-            "inRoom": "3",
+            "inRoom": "1",
             "roomName": "Boolean room",
 
-            "speaker": "Josh Long",
-            "topic": ""
-        },
-        {
-            "onDay": "20.03.2011",
-            "startsAt": "20:00",
-
-            "inRoom": "5",
-            "roomName": "Double room",
-
-            "speaker": "Josh Long",
-            "topic": ""
+            "speaker": "Andrea Provaglio",
+            "topic": "Your Agile Process is not Enough"
         },
         {
             "onDay": "20.03.2011",
             "startsAt": "20:00",
 
             "inRoom": "2",
+            "roomName": "Double room",
+
+            "speaker": "Patrycja Wegrzynowicz",
+            "topic": "Static Analysis in Search for Performance Anti-Patterns"
+        },
+        {
+            "onDay": "20.03.2011",
+            "startsAt": "20:00",
+
+            "inRoom": "3",
             "roomName": "Volatile room",
 
-            "speaker": "Josh Long",
-            "topic": ""
+            "speaker": "Andres Almiray",
+            "topic": "Polyglot Programming"
         },
 
 
