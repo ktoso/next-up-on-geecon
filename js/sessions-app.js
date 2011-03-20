@@ -177,13 +177,11 @@ $(function() {
             var self = this;
             $.getJSON(agendaLocation,
                     function(data) {
-                        console.log("fetched agenda...");
                         console.log(data);
 
                         $.each(data.agenda, function(index, session) {
                             var sessionDay = Date.parse(session.onDay);
                             if (sessionDay.equals().today()) {
-                                console.log(session);
                                 Session.create(session);
                             }
                         });
