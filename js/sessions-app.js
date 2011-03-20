@@ -199,8 +199,6 @@ $(function() {
         // Add a single session item to the list by creating a view for it, and
         // appending its element to the `<ul>`.
         addOne: function(session) {
-            console.log("rendering session: " + session.get('topic'));
-
             var view = new SessionView({model: session});
 
             var sessionList = this.$("#session-list");
