@@ -12,7 +12,6 @@ $(function() {
             onDay:    '',
             startsAt: '',
 
-
             inRoom:     '',
             speaker:  '',
             topic:    ''
@@ -20,7 +19,7 @@ $(function() {
 
         // Ensure that each tweet created has `content`.
         initialize: function() {
-            if(!this.get('prependMe')){
+            if (!this.get('prependMe')) {
                 this.set({'prependMe': this.defaults.prependMe});
             }
         },
@@ -44,7 +43,7 @@ $(function() {
         model: Session,
 
         // Save all of the tweet items under the `"tweets"` namespace.
-        localStorage: new Store("tweets"),
+        localStorage: new Store("sessions"),
 
         // We keep the Sessions in sequential order, despite being saved by unordered
         // GUID in the database. This generates the next order number for new items.
@@ -55,7 +54,7 @@ $(function() {
 
         // Sessions are sorted by their creation date
         comparator: function(tweet) {
-            return tweet.get('id_str');
+            return session.get('id_str');
         }
 
     });
@@ -66,11 +65,11 @@ $(function() {
     // Session Item View
     // -------------------------------------------------------------------------------------------------------------------
 
-    // The DOM element for a tweet item...
+    // The DOM element for a session item...
     window.SessionView = Backbone.View.extend({
 
         //... is a list tag.
-        tagName:  "li",
+        tagName:  "div",
 
         // Cache the template function for a single item.
         template: _.template($('#session-template').html()),
@@ -101,13 +100,7 @@ $(function() {
         // To avoid XSS (not that it would be harmful in this particular app),
         // we use `jQuery.text` to set the contents of the session item.
         setContent: function() {
-            var text = this.model.get('text');
-            var user = this.model.get('user');
-        },
-
-        // If you hit `enter`, we're through editing the item.
-        updateOnEnter: function(e) {
-            if (e.keyCode == 13) this.close();
+//            var text = this.model.get('text');
         },
 
         // Remove this view from the DOM.
@@ -132,17 +125,17 @@ $(function() {
         // the App already present in the HTML.
         el: $("#sessionsapp"),
 
+        // the today date, for further use
+        TODAY: Date.today(),
+
         // the date of the first day with sessions (day: 1) in the data JSON
         DAY_1: new Date(),
 
-        // refresh sessions interfal (in ms)
+        // refresh sessions interval (in ms)
         INTERVAL: 35 * 1000,
 
-        // we'll start prepending them if only updates start coming in
-        prependSessions: false,
-
-        // used to get "only new" sessions, will be set during reFetch
-        refresh_url: null,
+        // the location of our agenda file
+        AGENDA: 'data/agenda.json',
 
         // Delegated events for creating new items, and clearing completed ones.
         events: {
@@ -161,12 +154,30 @@ $(function() {
             Sessions.bind('refresh', this.addAll);
             Sessions.bind('all', this.render);
 
+            console.log("Loading agenda...");
+            this.loadAgenda();
         },
 
         // Re-rendering the App just means refreshing the statistics -- the rest
         // of the app doesn't change.
         render: function() {
             // todo need to do anything here?
+        },
+
+        loadAgenda: function () {
+            // load the agenda JSON
+            $.getJSON(this.AGENDA, function(data) {
+                console.log("fetched agenda...");
+
+                $.each(data.agenda, function(index, session) {
+                    var sessionDay = Date.format(session.onDay);
+                    console.log("today is " + Date.today() + " and sessionDay is " + sessionDay)
+                    if(sessionDay.is().today()){
+                        console.log(session);
+                        Session.create(session);
+                    }
+                });
+            });
         },
 
         // Add a single session item to the list by creating a view for it, and

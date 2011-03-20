@@ -328,6 +328,7 @@ footer a {
     -webkit-transform: rotate(180deg);
 }
 
+/*                             geecon hashtag replacement                               */
 span .geecon-hashtag {
     background: url("../images/geecon-small.png") no-repeat scroll 0 0 transparent;
     bottom: -1px;
@@ -335,4 +336,25 @@ span .geecon-hashtag {
     height: 18px;
     position: relative;
     width: 76px;
+}
+
+/*                             session                                                   */
+#sessionsapp article {
+    border-bottom: 3px solid #999;
+}
+
+#sessionsapp article h1 {
+    font-size: 2.5em;
+}
+
+#sessionsapp article h2 {
+    font-size: 2.0em;
+}
+
+/*                             timer                                                     */
+div .timer {
+    border: 3px solid #999;
+    padding: 10px;
+    font-size: 1.6em;
+    font-weight: bold;
 }
