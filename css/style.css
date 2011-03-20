@@ -351,6 +351,14 @@ span .geecon-hashtag {
     font-size: 2.0em;
 }
 
+#sessionsapp article .this-room h1 {
+    font-size: 2.7em;
+}
+
+#sessionsapp article .this-room h2 {
+    font-size: 2.2em;
+}
+
 /*                             timer                                                     */
 div .timer {
     border: 3px solid #999;
