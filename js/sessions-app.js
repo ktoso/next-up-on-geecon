@@ -90,7 +90,6 @@ $(function() {
 
         // Re-render the contents of the session item.
         render: function() {
-            console.log("will render: " + this.model);
             $(this.el).html(this.template(this.model.toJSON()));
             this.setContent();
             return this;
@@ -200,7 +199,7 @@ $(function() {
         // Add a single session item to the list by creating a view for it, and
         // appending its element to the `<ul>`.
         addOne: function(session) {
-            console.log("rendering session: " + session.topic);
+            console.log("rendering session: " + session.get('topic'));
 
             var view = new SessionView({model: session});
 
