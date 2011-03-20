@@ -181,7 +181,7 @@ $(function() {
                         console.log(data);
 
                         $.each(data.agenda, function(index, session) {
-                            var sessionDay = Date.format(session.onDay);
+                            var sessionDay = Date.parse(session.onDay);
                             console.log("today is " + Date.today() + " and sessionDay is " + sessionDay)
                             if (sessionDay.is().today()) {
                                 console.log(session);
