@@ -1,8 +1,8 @@
 {
     "agenda": [
         {
-            "onDay": "0",
-            "startsAt": "16:00",
+            "onDay": "20-03-2011",
+            "startsAt": "20:00",
 
             "inRoom": "5",
             "roomName": "Double room",
@@ -11,8 +11,8 @@
             "topic": ""
         },
         {
-            "onDay": "0",
-            "startsAt": "16:00",
+            "onDay": "20-03-2011",
+            "startsAt": "20:00",
 
             "inRoom": "5",
             "roomName": "Double room",
@@ -21,8 +21,8 @@
             "topic": ""
         },
         {
-            "onDay": "0",
-            "startsAt": "16:00",
+            "onDay": "20-03-2011",
+            "startsAt": "20:00",
 
             "inRoom": "5",
             "roomName": "Double room",
