@@ -53,8 +53,8 @@ $(function() {
         },
 
         // Sessions are sorted by their creation date
-        comparator: function(tweet) {
-            return session.get('id_str');
+        comparator: function(session) {
+            return session.get('inRoom');
         }
 
     });
@@ -151,6 +151,11 @@ $(function() {
             Sessions.bind('add', this.addOne);
             Sessions.bind('refresh', this.addAll);
             Sessions.bind('all', this.render);
+
+            // clean up local cache
+            $.each(Sessions, function(it) {
+                it.clear();
+            });
 
             // jquery error handler
             $("#debug").ajaxError(function(event, request, settings) {
