@@ -70,7 +70,7 @@ $(function() {
     window.SessionView = Backbone.View.extend({
 
         //... is a list tag.
-        tagName:  "div",
+        tagName:  "li",
 
         // Cache the template function for a single item.
         template: _.template($('#session-template').html()),
