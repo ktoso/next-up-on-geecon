@@ -154,8 +154,7 @@ $(function() {
             Sessions.bind('refresh', this.addAll);
             Sessions.bind('all', this.render);
 
-            console.log("Loading agenda...");
-
+            // jquery error handler
             $("#debug").ajaxError(function(event, request, settings) {
                 $(this).append("<li>Error requesting page " + settings.url + "</li>");
                 console.log(settings);
@@ -183,6 +182,7 @@ $(function() {
                         $.each(data.agenda, function(index, session) {
                             var sessionDay = Date.parse(session.onDay);
                             if (sessionDay.equals().today()) {
+                                console.log("Saving today's session '" + session.topic + "' by " + session.speaker);
                                 Session.create(session);
                             }
                         });
