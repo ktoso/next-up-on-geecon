@@ -40,7 +40,7 @@
             "roomName": "Boolean room",
 
             "speaker": "Josh Long",
-            "topic": ""
+            "topic": "The first topic today"
         },
         {
             "onDay": "22.03.2011",
@@ -50,7 +50,7 @@
             "roomName": "Double room",
 
             "speaker": "Josh Long",
-            "topic": ""
+            "topic": "Some other topic"
         },
         {
             "onDay": "22.03.2011",
@@ -60,7 +60,7 @@
             "roomName": "Volatile room",
 
             "speaker": "Josh Long",
-            "topic": ""
-        },
+            "topic": "Static Analysis in Search for Performance Anti-Patterns"
+        }
     ]
 }
