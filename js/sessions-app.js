@@ -29,7 +29,7 @@ $(function() {
 
         // Ensure that each tweet created has `content`.
         initialize: function() {
-            if (!this.get('prependMe')) {
+            if(!this.get('prependMe')){
                 this.set({'prependMe': this.defaults.prependMe});
             }
         },
@@ -199,17 +199,6 @@ $(function() {
             } else {
                 tweetElement.appendTo(tweetList).hide().slideDown();
             }
-
-            enchantTweets();
-        },
-
-        enchantTweets: function() {
-            // swap #geecon hashtag with image :-)
-            var allTweets = $('#tweet-list article');
-            allTweets.geekify('#geecon');
-            allTweets.find('span .geecon-hashtag').text(' ');
-
-            // @ktosopl links
             twttr.anywhere(function (T) {
                 T.linkifyUsers();
             });

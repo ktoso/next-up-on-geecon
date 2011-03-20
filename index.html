@@ -5,22 +5,44 @@
     <title>Next Up On GeeCON 2011</title>
 
     <link href="css/style.css" media="all" rel="stylesheet" type="text/css"/>
+
+    <!-- backbone dependencies -->
     <script src="js/backbone/test/vendor/json2.js"></script>
     <script src="js/backbone/test/vendor/jquery-1.5.js"></script>
     <script src="js/backbone/test/vendor/underscore-1.1.4.js"></script>
 
+    <!-- backbone js -->
     <script src="js/backbone/backbone.js"></script>
     <script src="js/backbone/examples/backbone-localstorage.js"></script>
 
+    <!-- our tooling functions -->
     <script src="js/tools.js"></script>
 
+    <!-- APPS -->
+    <!-- twitter app -->
     <script src="http://platform.twitter.com/anywhere.js?id=uBGv4o7I1o3O7XkMZONaNw&v=1" type="text/javascript"></script>
     <script src="js/tweets-app.js"></script>
 
-    <!--<script src="js/countdowns-app.js"></script>-->
+    <!-- session app -->
+    <script src="js/sessions-app.js"></script>
+
+    <!-- countdown app -->
+    <!--<script src="js/countdown-app.js"></script>-->
 </head>
 
 <body>
+
+<section id="sessionsapp">
+    <article id="room-1">
+        <!-- will contain session data -->
+    </article>
+    <article id="room-2">
+        <!-- will contain session data -->
+    </article>
+    <article id="room-3">
+        <!-- will contain session data -->
+    </article>
+</section>
 
 <section id="tweetsapp">
 
@@ -65,8 +87,9 @@
 
 <script type="text/template" id="timer-template">
     <div class="timer">
+        All sessions start in...
         <% if(timeLeft > 0) {%>
-            All sessions start in... <%= minutes %>m <%= seconds %>s
+            <%= minutes %>m <%= seconds %>s
         <% } else { %>
             Right now!
         <% } %>

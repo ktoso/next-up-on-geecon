@@ -197,7 +197,7 @@ body, html {
     float: left;
     clear: both;
     width: 100%;
-    text-align:right;
+    text-align: right;
 }
 
 #instructions {
@@ -326,4 +326,13 @@ footer a {
     -moz-transform: rotate(180deg);
     -khtml-transform: rotate(180deg);
     -webkit-transform: rotate(180deg);
+}
+
+span .geecon-hashtag {
+    background: url("../images/geecon-small.png") no-repeat scroll 0 0 transparent;
+    bottom: -1px;
+    display: inline-block;
+    height: 18px;
+    position: relative;
+    width: 76px;
 }
