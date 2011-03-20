@@ -187,7 +187,7 @@ $(function() {
 
                         $.each(data.agenda, function(index, session) {
                             var sessionDay = Date.parse(session.onDay);
-                            if (sessionDay.equals().today()) {
+                            if (sessionDay.equals(Date.today())) {
                                 console.log("Saving today's session '" + session.topic + "' by " + session.speaker);
                                 session.isThisRoom = session.inRoom == this.THIS_ROOM;
                                 Sessions.create(session);
