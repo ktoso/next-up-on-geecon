@@ -5,26 +5,17 @@ $(function() {
     // -------------------------------------------------------------------------------------------------------------------
 
     // Our basic **tweet** model has `content` and `order` attributes.
-    window.Tweet = Backbone.Model.extend({
+    window.Session = Backbone.Model.extend({
 
         // Default attributes for the tweet.
         defaults: {
-            from_user_id_str:  "",
-            profile_image_url: "",
-            created_at:        null,
-            relative_time:     "A few seconds ago",
-            id_str:            "",
-            metadata:          "",
-            to_user_id:        "",
-            text:              "",
-            id:                "",
-            from_user_id:      "",
-            geo:               "",
-            from_user:         "",
-            iso_language_code: "en",
-            source:            "",
+            onDay:    '',
+            startsAt: '',
 
-            prependMe:         false
+
+            inRoom:     '',
+            speaker:  '',
+            topic:    ''
         },
 
         // Ensure that each tweet created has `content`.
@@ -47,52 +38,52 @@ $(function() {
 
     // The collection of tweets is backed by *localStorage* instead of a remote
     // server.
-    window.TweetList = Backbone.Collection.extend({
+    window.SessionList = Backbone.Collection.extend({
 
         // Reference to this collection's model.
-        model: Tweet,
+        model: Session,
 
         // Save all of the tweet items under the `"tweets"` namespace.
         localStorage: new Store("tweets"),
 
-        // We keep the Tweets in sequential order, despite being saved by unordered
+        // We keep the Sessions in sequential order, despite being saved by unordered
         // GUID in the database. This generates the next order number for new items.
         nextOrder: function() {
             if (!this.length) return 1;
             return this.last().get('order') + 1;
         },
 
-        // Tweets are sorted by their creation date
+        // Sessions are sorted by their creation date
         comparator: function(tweet) {
             return tweet.get('id_str');
         }
 
     });
 
-    // Create our global collection of **Tweets**.
-    window.Tweets = new TweetList;
+    // Create our global collection of **Sessions**.
+    window.Sessions = new SessionList;
 
-    // Tweet Item View
+    // Session Item View
     // -------------------------------------------------------------------------------------------------------------------
 
     // The DOM element for a tweet item...
-    window.TweetView = Backbone.View.extend({
+    window.SessionView = Backbone.View.extend({
 
         //... is a list tag.
         tagName:  "li",
 
         // Cache the template function for a single item.
-        template: _.template($('#tweet-template').html()),
+        template: _.template($('#session-template').html()),
 
         // The DOM events specific to an item.
         events: {
-//            "dblclick div.tweet-content" : "edit",
-//            "click span.tweet-destroy"   : "clear",
-//            "keypress .tweet-input"      : "updateOnEnter"
+//            "dblclick div.session-content" : "edit",
+//            "click span.session-destroy"   : "clear",
+//            "keypress .session-input"      : "updateOnEnter"
         },
 
-        // The TweetView listens for changes to its model, re-rendering. Since there's
-        // a one-to-one correspondence between a **Tweet** and a **TweetView** in this
+        // The SessionView listens for changes to its model, re-rendering. Since there's
+        // a one-to-one correspondence between a **Session** and a **SessionView** in this
         // app, we set a direct reference on the model for convenience.
         initialize: function() {
             _.bindAll(this, 'render', 'close');
@@ -100,7 +91,7 @@ $(function() {
             this.model.view = this;
         },
 
-        // Re-render the contents of the tweet item.
+        // Re-render the contents of the session item.
         render: function() {
             $(this.el).html(this.template(this.model.toJSON()));
             this.setContent();
@@ -108,7 +99,7 @@ $(function() {
         },
 
         // To avoid XSS (not that it would be harmful in this particular app),
-        // we use `jQuery.text` to set the contents of the tweet item.
+        // we use `jQuery.text` to set the contents of the session item.
         setContent: function() {
             var text = this.model.get('text');
             var user = this.model.get('user');
@@ -139,45 +130,37 @@ $(function() {
 
         // Instead of generating a new element, bind to the existing skeleton of
         // the App already present in the HTML.
-        el: $("#tweetsapp"),
+        el: $("#sessionsapp"),
 
+        // the date of the first day with sessions (day: 1) in the data JSON
+        DAY_1: new Date(),
 
-        // refresh tweets interfal (in ms)
+        // refresh sessions interfal (in ms)
         INTERVAL: 35 * 1000,
 
         // we'll start prepending them if only updates start coming in
-        prependTweets: false,
+        prependSessions: false,
 
-        // used to get "only new" tweets, will be set during reFetch
+        // used to get "only new" sessions, will be set during reFetch
         refresh_url: null,
 
         // Delegated events for creating new items, and clearing completed ones.
         events: {
-            "click .tweet-clear a": "clearCompleted"
+            "click .session-clear a": "clearCompleted"
         },
 
-        // At initialization we bind to the relevant events on the `Tweets`
+        // At initialization we bind to the relevant events on the `Sessions`
         // collection, when items are added or changed. Kick things off by
-        // loading any preexisting tweets that might be saved in *localStorage*.
+        // loading any preexisting sessions that might be saved in *localStorage*.
         initialize: function() {
             _.bindAll(this, 'addOne', 'addAll', 'render');
 
-            this.input = this.$("#new-tweet");
+            this.input = this.$("#new-session");
 
-            Tweets.bind('add', this.addOne);
-            Tweets.bind('refresh', this.addAll);
-            Tweets.bind('all', this.render);
+            Sessions.bind('add', this.addOne);
+            Sessions.bind('refresh', this.addAll);
+            Sessions.bind('all', this.render);
 
-            $.each(Tweets, function(it) {
-                it.clear();
-            });
-
-            this.fetchTweets();
-            this.intervalID = setInterval((function(self) {
-                return function() {
-                    self.fetchTweets();
-                }
-            })(this), this.INTERVAL);
         },
 
         // Re-rendering the App just means refreshing the statistics -- the rest
@@ -186,36 +169,33 @@ $(function() {
             // todo need to do anything here?
         },
 
-        // Add a single tweet item to the list by creating a view for it, and
+        // Add a single session item to the list by creating a view for it, and
         // appending its element to the `<ul>`.
-        addOne: function(tweet) {
-            var view = new TweetView({model: tweet});
+        addOne: function(session) {
+            var view = new SessionView({model: session});
 
-            var tweetList = this.$("#tweet-list");
-            var tweetElement = $(view.render().el);
+            var sessionList = this.$("#session-list");
+            var sessionElement = $(view.render().el);
 
-            if (tweet.get('prependMe')) {
-                tweetElement.prependTo(tweetList).hide().slideDown();
+            if (session.get('prependMe')) {
+                sessionElement.prependTo(sessionList).hide().slideDown();
             } else {
-                tweetElement.appendTo(tweetList).hide().slideDown();
+                sessionElement.appendTo(sessionList).hide().slideDown();
             }
-            twttr.anywhere(function (T) {
-                T.linkifyUsers();
-            });
         },
 
-        // Add all items in the **Tweets** collection at once.
+        // Add all items in the **Sessions** collection at once.
         addAll: function() {
-            Tweets.each(this.addOne);
+            Sessions.each(this.addOne);
         },
 
-        fetchTweets: function() {
+        fetchSessions: function() {
             var callUrl = 'http://search.twitter.com/search.json';
             var geeconQuery = 'q=geecon';
             var callback = '&callback=?'; // needed for getJSON to use JSONP
 
             if (this.refresh_url) {
-                this.prependTweets = true;
+                this.prependSessions = true;
                 callUrl += this.refresh_url + callback;
             } else {
                 callUrl += "?" + geeconQuery + callback;
@@ -228,10 +208,10 @@ $(function() {
 
                         console.log(data);
 
-                        $.each(data.results, function(index, tweet) {
-                            tweet.relative_time = relativeTime(tweet.created_at);
-                            tweet.prependMe = self.prependTweets;
-                            Tweets.create(tweet);
+                        $.each(data.results, function(index, session) {
+                            session.relative_time = relativeTime(session.created_at);
+                            session.prependMe = self.prependSessions;
+                            Sessions.create(session);
                         });
 
                         self.refresh_url = data.refresh_url;

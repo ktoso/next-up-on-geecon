@@ -1,0 +1,34 @@
+{
+    "agenda": [
+        {
+            "onDay": 1,
+            "startsAt": "16:00",
+
+            "inRoom": 5,
+            "roomName": "Double room",
+
+            "speaker": "Josh Long",
+            "topic": ""
+        },
+        {
+            "onDay": 1,
+            "startsAt": "16:00",
+
+            "inRoom": 5,
+            "roomName": "Double room",
+
+            "speaker": "Josh Long",
+            "topic": ""
+        },
+        {
+            "onDay": 1,
+            "startsAt": "16:00",
+
+            "inRoom": 5,
+            "roomName": "Double room",
+
+            "speaker": "Josh Long",
+            "topic": ""
+        }
+    ]
+}
