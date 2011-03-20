@@ -171,7 +171,8 @@ $(function() {
         },
 
         loadAgenda: function () {
-            var agendaLocation = this.AGENDA + "?nocache=" + Math.random();
+            var noCachePlease = "?nocache=" + Math.random();
+            var agendaLocation = this.AGENDA + noCachePlease;
             console.log("Fetching agenda from: " + agendaLocation);
 
             var self = this;

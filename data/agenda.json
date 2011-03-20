@@ -1,7 +1,17 @@
 {
     "agenda": [
         {
-            "onDay": "20-03-2011",
+            "onDay": "20.03.2011",
+            "startsAt": "20:00",
+
+            "inRoom": "3",
+            "roomName": "Boolean room",
+
+            "speaker": "Josh Long",
+            "topic": ""
+        },
+        {
+            "onDay": "20.03.2011",
             "startsAt": "20:00",
 
             "inRoom": "5",
@@ -11,7 +21,29 @@
             "topic": ""
         },
         {
-            "onDay": "20-03-2011",
+            "onDay": "20.03.2011",
+            "startsAt": "20:00",
+
+            "inRoom": "2",
+            "roomName": "Volatile room",
+
+            "speaker": "Josh Long",
+            "topic": ""
+        },
+
+
+        {
+            "onDay": "21.03.2011",
+            "startsAt": "20:00",
+
+            "inRoom": "3",
+            "roomName": "Boolean room",
+
+            "speaker": "Josh Long",
+            "topic": ""
+        },
+        {
+            "onDay": "21.03.2011",
             "startsAt": "20:00",
 
             "inRoom": "5",
@@ -21,14 +53,14 @@
             "topic": ""
         },
         {
-            "onDay": "20-03-2011",
+            "onDay": "21.03.2011",
             "startsAt": "20:00",
 
-            "inRoom": "5",
-            "roomName": "Double room",
+            "inRoom": "2",
+            "roomName": "Volatile room",
 
             "speaker": "Josh Long",
             "topic": ""
-        }
+        },
     ]
 }
