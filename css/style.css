@@ -221,6 +221,7 @@ footer {
     text-align: center;
     position: fixed;
     bottom: 0;
+    left: 0;
 }
 
 footer a {
@@ -376,35 +377,42 @@ span .geecon-hashtag {
 
 #sessionsapp article h1 {
     font-size: 3.0em;
+    line-height: 2.0em;
 }
 
 #sessionsapp article h2 {
     font-size: 2.7em;
+    line-height: 0.8em;
+
+    color: #FECE0A;
+    font-style: italic;
+    line-height: 0.8em;
+    text-shadow: 1px 1px 3px black;
 }
 
 #sessionsapp article span {
     display: block;
+    margin-top: 1.2em;
     font-size: 1.8em;
 }
 
 #sessionsapp article .this-room h1 {
-    font-size: 3.0em;
-
     font-weight: bolder;
     text-shadow: 0 -1px 2px #000000;
 }
 
 #sessionsapp article .this-room h2 {
-    font-size: 2.7em;
-
     font-weight: bolder;
     text-shadow: 0 -1px 2px #000000;
 }
 
-/*                             timer                                                     */
-div .timer {
-    border: 3px solid #999;
-    padding: 10px;
-    font-size: 1.6em;
+/*                             countdown                                                     */
+#countdown-container {
+    font-size: 2.5em;
     font-weight: bold;
+    height: 3em;
+    line-height: 1.5em;
+    position: relative;
+    text-align: center;
+    top: -13%;
 }
