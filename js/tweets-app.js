@@ -22,11 +22,16 @@ $(function() {
             geo:               "",
             from_user:         "",
             iso_language_code: "en",
-            source:            ""
+            source:            "",
+
+            prependMe:         false
         },
 
         // Ensure that each tweet created has `content`.
         initialize: function() {
+            if(!this.get('prependMe')){
+                this.set({'prependMe': this.defaults.prependMe});
+            }
         },
 
         // Remove this tweet from *localStorage* and delete its view.
@@ -140,6 +145,9 @@ $(function() {
         // refresh tweets interfal (in ms)
         INTERVAL: 35 * 1000,
 
+        // we'll start prepending them if only updates start coming in
+        prependTweets: false,
+
         // used to get "only new" tweets, will be set during reFetch
         refresh_url: null,
 
@@ -165,9 +173,10 @@ $(function() {
             });
 
             this.fetchTweets();
-
             this.intervalID = setInterval((function(self) {
-                return function(){ self.fetchTweets(); }
+                return function() {
+                    self.fetchTweets();
+                }
             })(this), this.INTERVAL);
         },
 
@@ -181,7 +190,16 @@ $(function() {
         // appending its element to the `<ul>`.
         addOne: function(tweet) {
             var view = new TweetView({model: tweet});
-            this.$("#tweet-list").append(view.render().el).hide().slideDown('slow');
+
+            var tweetList = this.$("#tweet-list");
+            var tweetElement = $(view.render().el);
+
+            console.log("Rendering (prepend=" + tweet.get('prependMe') + ") tweet");
+            if (tweet.get('prependMe')) {
+                tweetElement.prependTo(tweetList).slideDown();
+            } else {
+                tweetElement.appendTo(tweetList).slideDown();
+            }
             twttr.anywhere(function (T) {
                 T.linkifyUsers();
             });
@@ -193,22 +211,19 @@ $(function() {
         },
 
         fetchTweets: function() {
-            var geeconQuery = 'q=geecon';
-
             var callUrl = 'http://search.twitter.com/search.json';
-            var callback = '&callback=?';
+            var geeconQuery = 'q=geecon';
+            var callback = '&callback=?'; // needed for getJSON to use JSONP
 
             if (this.refresh_url) {
-                console.log('refresh call...');
+                this.prependTweets = true;
                 callUrl += this.refresh_url + callback;
             } else {
-                console.log('initial call...');
                 callUrl += "?" + geeconQuery + callback;
             }
 
             console.log('Calling: ' + callUrl);
-
-            var super = this;
+            var self = this;
             $.getJSON(callUrl,
                     function(data) {
 
@@ -216,11 +231,12 @@ $(function() {
 
                         $.each(data.results, function(index, tweet) {
                             tweet.relative_time = relativeTime(tweet.created_at);
+                            tweet.prependMe = self.prependTweets;
                             Tweets.create(tweet);
                         });
 
-                        super.refresh_url = data.refresh_url;
-                        console.log("Saved refresh_url as: " + super.refresh_url);
+                        self.refresh_url = data.refresh_url;
+                        console.log("Saved refresh_url as: " + self.refresh_url);
                     });
         }
     });
