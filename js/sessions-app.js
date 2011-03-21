@@ -130,7 +130,7 @@ $(function() {
         DAY_1: Date.today(),
 
         // refresh the timer each second
-        INTERVAL: 10000,
+        INTERVAL: 1000,
 
         // pass #3 to the site to state "this room is room number 3"
         THIS_ROOM: parseInt(location.hash.substr(1)),
@@ -168,14 +168,19 @@ $(function() {
 
             this.loadAgenda();
 
-            setInterval(this.render, this.INTERVAL);
+            setInterval(this.updateCountdownNote, this.INTERVAL);
+        },
+
+        updateCountdownNote: function() {
+            console.log("funny note @" + Date.now());
+            var funnyNote = getRandomFunnyCountdownNote();
+            $('#funny-note').text(funnyNote);
         },
 
         // Re-rendering the App just means refreshing the statistics -- the rest
         // of the app doesn't change.
         render: function() {
-            var funnyNote = getRandomFunnyCountdownNote();
-            $('#funny-note').text(funnyNote);
+            // todo do anything here?
         },
 
         loadAgenda: function () {
