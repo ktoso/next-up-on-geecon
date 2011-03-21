@@ -417,10 +417,10 @@ span .geecon-hashtag {
     top: -13%;
 }
 
-#countdown-container {
+#countdown-container span {
     display: block;
 }
 
 #countdown {
-    display: block;
+
 }
