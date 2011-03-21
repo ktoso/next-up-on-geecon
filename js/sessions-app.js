@@ -252,9 +252,12 @@ $(function() {
 
             this.countUntil = minTime.startsAt;
 
+            var self = this;
             agenda = _.filter(agenda, function(speech) {
-                return minTime.startsAt == this.countUntil;
+                return speech.startsAt == self.countUntil;
             });
+
+            console.log(agenda);
 
             return agenda;
         },
