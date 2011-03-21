@@ -167,12 +167,15 @@ $(function() {
             });
 
             this.loadAgenda();
+
+            setInterval(this.render, this.INTERVAL);
         },
 
         // Re-rendering the App just means refreshing the statistics -- the rest
         // of the app doesn't change.
         render: function() {
-            // todo need to do anything here?
+            var funnyNote = getRandomFunnyCountdownNote();
+            $('#funny-note').text(funnyNote);
         },
 
         loadAgenda: function () {

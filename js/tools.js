@@ -104,3 +104,20 @@ function msAsMinSec(ms) {
 
     return minutes + "m " + seconds + "s";
 }
+
+function getRandomFunnyCountdownNote() {
+    var notes = [
+        'Will rock the house in...',
+        'Deploying sessions, please wait...',
+        'The show will begin in...',
+        'Elvis will enter the building in...',
+        "We'll let the groove out in...",
+        "Downloading awesomeness...",
+        "Resolving dependencies..."
+        //todo add more fun notes here
+    ];
+
+    var i = Math.floor(Math.random() * notes.length);
+
+    return notes[i];
+}
