@@ -1,0 +1,114 @@
+/*
+ * Copyright 2011 GeeCON.org. All rights reserved.
+ *
+ * Redistribution and use in source and binary forms, with or without modification, are
+ * permitted provided that the following conditions are met:
+ *
+ *    1. Redistributions of source code must retain the above copyright notice, this list of
+ *       conditions and the following disclaimer.
+ *
+ *    2. Redistributions in binary form must reproduce the above copyright notice, this list
+ *       of conditions and the following disclaimer in the documentation and/or other materials
+ *       provided with the distribution.
+ *
+ * THIS SOFTWARE IS PROVIDED BY GeeCON.org ``AS IS'' AND ANY EXPRESS OR IMPLIED
+ * WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND
+ * FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL <COPYRIGHT HOLDER> OR
+ * CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+ * CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+ * SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON
+ * ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
+ * NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF
+ * ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+ *
+ * The views and conclusions contained in the software and documentation are those of the
+ * authors and should not be interpreted as representing official policies, either expressed
+ * or implied, of GeeCON.org.
+ */
+
+/*                             session                                                   */
+#sessionsapp {
+    clear: none;
+    display: inline-block;
+    float: left;
+    height: 95%;
+    position: relative;
+    top: 25px;
+    width: 72%;
+    z-index: 1;
+}
+
+#sessionsapp ul {
+    height: 100%;
+}
+
+#sessionsapp li {
+    height: 25%;
+    width: 100%;
+    border-bottom: 3px solid #999;
+}
+
+#sessionsapp article {
+    display: block;
+    position: relative;
+    text-align: center;
+    top: 20%;
+    width: 100%;
+}
+
+#sessionsapp article h1,
+#sessionsapp article h2 {
+    font-weight: bold;
+}
+
+#sessionsapp article h1 {
+    font-size: 3.0em;
+    line-height: 2.0em;
+}
+
+#sessionsapp article h2 {
+    font-size: 2.7em;
+    line-height: 0.8em;
+
+    color: #FECE0A;
+    font-style: italic;
+    line-height: 0.8em;
+    text-shadow: 1px 1px 3px black;
+}
+
+#sessionsapp article span {
+    display: block;
+    margin-top: 1.2em;
+    font-size: 1.8em;
+}
+
+#sessionsapp article .this-room h1 {
+    font-weight: bolder;
+    text-shadow: 0 -1px 2px #000000;
+}
+
+#sessionsapp article .this-room h2 {
+    font-weight: bolder;
+    text-shadow: 0 -1px 2px #000000;
+}
+
+/*                             countdown                                                     */
+#countdown-container {
+    display: none; /*initially hide it */
+
+    font-size: 2.5em;
+    font-weight: bold;
+    height: 3em;
+    line-height: 1.5em;
+    position: relative;
+    text-align: center;
+    top: -13%;
+}
+
+#countdown-container span {
+    display: block;
+}
+
+#countdown {
+
+}

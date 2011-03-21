@@ -1,4 +1,31 @@
-// Load the application once the DOM is ready, using `jQuery.ready`:
+/*
+ * Copyright 2011 GeeCON.org. All rights reserved.
+ *
+ * Redistribution and use in source and binary forms, with or without modification, are
+ * permitted provided that the following conditions are met:
+ *
+ *    1. Redistributions of source code must retain the above copyright notice, this list of
+ *       conditions and the following disclaimer.
+ *
+ *    2. Redistributions in binary form must reproduce the above copyright notice, this list
+ *       of conditions and the following disclaimer in the documentation and/or other materials
+ *       provided with the distribution.
+ *
+ * THIS SOFTWARE IS PROVIDED BY GeeCON.org ``AS IS'' AND ANY EXPRESS OR IMPLIED
+ * WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND
+ * FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL <COPYRIGHT HOLDER> OR
+ * CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+ * CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+ * SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON
+ * ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
+ * NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF
+ * ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+ *
+ * The views and conclusions contained in the software and documentation are those of the
+ * authors and should not be interpreted as representing official policies, either expressed
+ * or implied, of GeeCON.org.
+ */
+
 $(function() {
 
     // tweet Model
@@ -54,13 +81,6 @@ $(function() {
         // Save all of the tweet items under the `"tweets"` namespace.
         localStorage: new Store("tweets"),
 
-        // We keep the Tweets in sequential order, despite being saved by unordered
-        // GUID in the database. This generates the next order number for new items.
-        nextOrder: function() {
-            if (!this.length) return 1;
-            return this.last().get('order') + 1;
-        },
-
         // Tweets are sorted by their creation date
         comparator: function(tweet) {
             return tweet.get('id_str');
@@ -85,9 +105,7 @@ $(function() {
 
         // The DOM events specific to an item.
         events: {
-//            "dblclick div.tweet-content" : "edit",
-//            "click span.tweet-destroy"   : "clear",
-//            "keypress .tweet-input"      : "updateOnEnter"
+            // no events
         },
 
         // The TweetView listens for changes to its model, re-rendering. Since there's
@@ -109,23 +127,7 @@ $(function() {
         // To avoid XSS (not that it would be harmful in this particular app),
         // we use `jQuery.text` to set the contents of the tweet item.
         setContent: function() {
-            var text = this.model.get('text');
-            var user = this.model.get('user');
-        },
-
-        // If you hit `enter`, we're through editing the item.
-        updateOnEnter: function(e) {
-            if (e.keyCode == 13) this.close();
-        },
-
-        // Remove this view from the DOM.
-        remove: function() {
-            $(this.el).remove();
-        },
-
-        // Remove the item, destroy the model.
-        clear: function() {
-            this.model.clear();
+            // no content to be set implicitly
         }
 
     });
@@ -140,7 +142,6 @@ $(function() {
         // the App already present in the HTML.
         el: $("#tweetsapp"),
 
-
         // refresh tweets interval (in ms)
         INTERVAL: 15 * 1000,
 
@@ -152,7 +153,7 @@ $(function() {
 
         // Delegated events for creating new items, and clearing completed ones.
         events: {
-            "click .tweet-clear a": "clearCompleted"
+            // no events
         },
 
         // At initialization we bind to the relevant events on the `Tweets`
