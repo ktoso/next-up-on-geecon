@@ -22,4 +22,4 @@ License
 -------
 I'm releasing this code under the **FreeBSD License**, thus it's OpenSource and Free Software. 
 
-Keep in mind that you **MUST** keep the copyright notice in your app based on top of this one, for more details, please visit: 
+Keep in mind that you **MUST** keep the copyright notice in your app based on top of this one, for more details, please visit <a href="http://en.wikipedia.org/wiki/BSD_licenses">wikipedia</a>, or better contact me about your doubts. Anyways, I'll happily agree to let you use this software as long as you mention GeeCON abd keep the copyright notice :-)
