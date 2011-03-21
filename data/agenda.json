@@ -63,7 +63,7 @@
         },
         {
             "onDay": "21.03.2011",
-            "startsAt": "20:00",
+            "startsAt": "23:00",
 
             "inRoom": "1",
             "roomName": "Boolean room",
@@ -73,7 +73,7 @@
         },
         {
             "onDay": "21.03.2011",
-            "startsAt": "20:00",
+            "startsAt": "23:00",
 
             "inRoom": "2",
             "roomName": "Double room",
@@ -83,7 +83,7 @@
         },
         {
             "onDay": "21.03.2011",
-            "startsAt": "20:00",
+            "startsAt": "23:00",
 
             "inRoom": "3",
             "roomName": "Volatile room",
