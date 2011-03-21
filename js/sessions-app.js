@@ -171,10 +171,11 @@ $(function() {
 
             this.loadAgenda();
 
-//            setInterval((function(self) {
-//                return self.updateCountdownNote
-//            })(this), this.MIN);
-//
+            this.updateCountdownNote();
+            setInterval((function(self) {
+                return self.updateCountdownNote
+            })(this), this.MIN);
+
 //            setInterval((function(self) {
 //                return self.updateCountdown;
 //            })(this), this.SEC);
