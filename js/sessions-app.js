@@ -124,7 +124,7 @@ $(function() {
         el: $("#sessionsapp"),
 
         // countdown element containing "#m #s"
-        countdown: $('#countdown'),
+        el_countdown: $('#countdown'),
 
         // the today date, for further use
         TODAY: Date.today(),
@@ -192,11 +192,11 @@ $(function() {
         updateCountdown: function() {
             var time = Date.parse() - Date.now();
             if (time < 0) {
-                this.countdown.text('');
+                this.el_countdown.text('');
                 return;
             }
             var minSec = msAsMinSec(time);
-            this.countdown.text(minSec);
+            this.el_countdown.text(minSec);
         },
 
         updateCountdownNote: function() {
