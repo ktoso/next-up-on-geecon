@@ -188,9 +188,9 @@ $(function() {
             var timeLeft = Date.parse(this.countUntil) - Date.now();
             var minSec = msAsMinSec(timeLeft);
 
-            if (/0m 0s/.test(minSec)) {
-                this.updateCountdownNote('Starting sessions');
-            } else if (/ 0s/.test(minSec)) {
+            if (/^0m 0s/.test(minSec)) {
+                this.updateCountdownNote('Sessions start');
+            } else if (/ 0s$/.test(minSec)) {
                 this.updateCountdownNote();
             }
 
@@ -207,6 +207,8 @@ $(function() {
             $('#funny-note').text(message);
         },
 
+        // fetch the agenda.json file (with no caching) and
+        // load only those sessions that matter to us right now
         loadAgenda: function () {
             var noCachePlease = "?nocache=" + Math.random();
             var agendaLocation = this.AGENDA + noCachePlease;
