@@ -111,13 +111,12 @@ function getRandomFunnyCountdownNote() {
         'Deploying sessions, please wait...',
         'The show will begin in...',
         'Elvis will enter the building in...',
-        "We'll let the groove out in...",
-        "Downloading awesomeness...",
         "Resolving dependencies...",
-        "Predicting future...",
+        "Predicting the future...",
         "Playing lotto...",
         "Searching for speaker...",
         "Deciphering your passwords...",
+        "Cloning into /home/geecon...",
         "Please wait..."
         //todo add more fun notes here
     ];
