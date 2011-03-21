@@ -3,6 +3,12 @@ Next Up On GeeCON
 Is a (more or less) simple **pure JavaScript** app that'll be used to display data about upcomming sessions during breaks during **GeeCON 2011** in Cracow.
 The app will be displayed on big cinema screens... :-)
 
+So, what is **GeeCON** actually...?
+-----------------------------------
+**<a href="http://geecon.org/">GeeCON</a>** is a JVM centric (Java, Scala, Groovy, JRuby etc...) 4 day long conference organized by 
+the <a href="http://www.java.pl">Polish Java User Group</a> and the <a href="http://www.jug.poznan.pl/">Poznań Java User Group</a> each year in May - since 2009.
+It's quite big there's always lots of interesting (and eager to have a chat about coding) people there and I'd highly recommend you'd <a href="http://geecon.org">check it out</a> if you haven't yet heard about it. :-)
+
 Used tech
 ---------
 The app relies on the following frameworks to get things done:
