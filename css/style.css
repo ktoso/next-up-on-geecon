@@ -416,3 +416,11 @@ span .geecon-hashtag {
     text-align: center;
     top: -13%;
 }
+
+#countdown-container {
+    display: block;
+}
+
+#countdown {
+
+}
