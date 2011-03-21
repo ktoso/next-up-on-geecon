@@ -98,7 +98,7 @@ function msAsMinSec(ms) {
         return "right now!"
     }
 
-    var seconds = ms / 1000;
+    var seconds = Math.floor(ms / 1000);
     var minutes = Math.floor(seconds / 60);
     seconds %= 60;
 

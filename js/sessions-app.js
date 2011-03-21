@@ -171,19 +171,42 @@ $(function() {
 
             this.loadAgenda();
 
-            setInterval(this.updateCountdownNote, this.MIN);
-        },
+            this.intervalEachMin = setInterval(function(self) {
+                var fun = function() {
+                    return self.updateCountdownNote;
+                };
+                fun();
+                return fun;
+            }, this.MIN);
 
-        updateCountdownNote: function() {
-            console.log("funny note @" + Date.now());
-            var funnyNote = getRandomFunnyCountdownNote();
-            $('#funny-note').text(funnyNote);
+            this.intervalEachSec = setInterval(function(self) {
+                var fun = function() {
+                    return self.updateCountdown;
+                };
+                fun();
+                return fun;
+            }, this.SEC);
         },
 
         // Re-rendering the App just means refreshing the statistics -- the rest
         // of the app doesn't change.
         render: function() {
             // todo do anything here?
+        },
+
+        updateCountdown: function() {
+            console.log("halo");
+//            var timeLeft = Date.parse(this.coutUntil) - Date.now();
+            var timeLeft = Date.parse("17:00") - Date.now();
+            var minSec = this.msAsMinSec(timeLeft);
+            console.log("time left: " + minSec);
+
+            $('#countdown').text(minSec);
+        },
+
+        updateCountdownNote: function() {
+            var funnyNote = getRandomFunnyCountdownNote();
+            $('#funny-note').text(funnyNote);
         },
 
         loadAgenda: function () {
@@ -196,15 +219,41 @@ $(function() {
                     function(data) {
                         console.log(data);
 
-                        $.each(data.agenda, function(index, session) {
+                        data.agenda = self.filterAgendaForOnlyNextSpeeches(data.agenda);
+
+                        _.each(data.agenda, function(session) {
                             var sessionDay = Date.parse(session.onDay);
                             if (sessionDay.equals(self.TODAY)) {
-                                console.log("Saving today's session '" + session.topic + "' by " + session.speaker);
+                                console.log("Saving session (" + session.onDay + " @ " + session.startsAt + "), '" + session.topic + "' by " + session.speaker);
                                 session.isThisRoom = session.inRoom == this.THIS_ROOM;
                                 Sessions.create(session);
                             }
                         });
                     });
+        },
+
+        // filter agenda to contain only the immediate next speeches
+        // for example it's 21 May 2011 15:15, so only speeches on this day
+        // and starting after 15:15 would be kept in the agenda
+        filterAgendaForOnlyNextSpeeches: function(agenda) {
+            var now = Date.now();
+            var today = Date.today();
+
+            agenda = _.filter(agenda, function(speech) {
+                var day = Date.parse(speech.onDay);
+                var starts = Date.parse(speech.startsAt);
+                return day.equals(today) && now.compareTo(starts) == -1 /*starts is in the future, somehow isAfter won't work... */;
+            });
+
+            var minTime = _.min(agenda, function(speech) {
+                return Date.parse(speech.startsAt);
+            });
+
+            agenda = _.filter(agenda, function(speech) {
+                return minTime.startsAt == speech.startsAt;
+            });
+
+            return agenda;
         },
 
         // Add a single session item to the list by creating a view for it, and
