@@ -130,7 +130,7 @@ $(function() {
         DAY_1: Date.today(),
 
         // refresh the timer each second
-        INTERVAL: 1000,
+        INTERVAL: 10000,
 
         // pass #3 to the site to state "this room is room number 3"
         THIS_ROOM: parseInt(location.hash.substr(1)),
