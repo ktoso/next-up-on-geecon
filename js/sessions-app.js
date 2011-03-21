@@ -216,6 +216,7 @@ $(function() {
 
                         $.each(data.agenda, function(index, session) {
                             var sessionDay = Date.parse(session.onDay);
+                            console.log("Checking session '" + session.topic + "' by " + session.speaker + " on " + session.onDay);
                             if (sessionDay.equals(self.TODAY)) {
                                 console.log("Saving today's session '" + session.topic + "' by " + session.speaker);
                                 session.isThisRoom = session.inRoom == this.THIS_ROOM;
