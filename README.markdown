@@ -5,6 +5,7 @@ The app will be displayed on big cinema screens... :-)
 
 So, what is **GeeCON** actually...?
 -----------------------------------
+<img src="https://github.com/ktoso/next-up-on-geecon/raw/master/images/geecon.png" alt="GeeCON logo"/>
 **<a href="http://geecon.org/">GeeCON</a>** is a JVM centric (Java, Scala, Groovy, JRuby etc...) 4 day long conference organized by 
 the <a href="http://www.java.pl">Polish Java User Group</a> and the <a href="http://www.jug.poznan.pl/">Poznań Java User Group</a> each year in May - since 2009.
 It's quite big there's always lots of interesting (and eager to have a chat about coding) people there and I'd highly recommend you'd <a href="http://geecon.org">check it out</a> if you haven't yet heard about it. :-)
