@@ -123,18 +123,15 @@ $(function() {
         // the App already present in the HTML.
         el: $("#sessionsapp"),
 
-        // the today date, for further use
-        TODAY: Date.today(),
-
-        // the date of the first day with sessions (day: 1) in the data JSON
-        DAY_1: Date.today(),
-
         // refresh intervals, for timer and countdown note
         SEC: 1000,
         MIN: 60000,
 
         // pass #3 to the site to state "this room is room number 3"
         THIS_ROOM: parseInt(location.hash.substr(1)),
+
+        // count until this time (variable used by the countdown, and set after agenda fetch)
+        countUntil: 0,
 
         // the location of our agenda file
         AGENDA: 'data/agenda.json',
@@ -171,21 +168,14 @@ $(function() {
 
             this.loadAgenda();
 
-            this.intervalEachMin = setInterval(function(self) {
+            this.updateCountdownNote();
+            this.intervalEachSec = setInterval((function(self) {
                 var fun = function() {
-                    return self.updateCountdownNote;
+                    self.updateCountdown();
                 };
                 fun();
                 return fun;
-            }, this.MIN);
-
-            this.intervalEachSec = setInterval(function(self) {
-                var fun = function() {
-                    return self.updateCountdown;
-                };
-                fun();
-                return fun;
-            }, this.SEC);
+            })(this), this.SEC);
         },
 
         // Re-rendering the App just means refreshing the statistics -- the rest
@@ -195,18 +185,26 @@ $(function() {
         },
 
         updateCountdown: function() {
-            console.log("halo");
-//            var timeLeft = Date.parse(this.coutUntil) - Date.now();
-            var timeLeft = Date.parse("17:00") - Date.now();
-            var minSec = this.msAsMinSec(timeLeft);
-            console.log("time left: " + minSec);
+            var timeLeft = Date.parse(this.countUntil) - Date.now();
+            var minSec = msAsMinSec(timeLeft);
+
+            if (/0m 0s/.test(minSec)) {
+                this.updateCountdownNote('Starting sessions');
+            } else if (/ 0s/.test(minSec)) {
+                this.updateCountdownNote();
+            }
 
             $('#countdown').text(minSec);
         },
 
-        updateCountdownNote: function() {
-            var funnyNote = getRandomFunnyCountdownNote();
-            $('#funny-note').text(funnyNote);
+        // update the countdown text to the given message, or if none given,
+        // just take a random one using getRandomFunnyCountdownNote();
+        updateCountdownNote: function(message) {
+            if (!message) {
+                message = getRandomFunnyCountdownNote();
+            }
+
+            $('#funny-note').text(message);
         },
 
         loadAgenda: function () {
@@ -221,9 +219,10 @@ $(function() {
 
                         data.agenda = self.filterAgendaForOnlyNextSpeeches(data.agenda);
 
+                        var today = Date.today();
                         _.each(data.agenda, function(session) {
                             var sessionDay = Date.parse(session.onDay);
-                            if (sessionDay.equals(self.TODAY)) {
+                            if (sessionDay.equals(today)) {
                                 console.log("Saving session (" + session.onDay + " @ " + session.startsAt + "), '" + session.topic + "' by " + session.speaker);
                                 session.isThisRoom = session.inRoom == this.THIS_ROOM;
                                 Sessions.create(session);
@@ -249,8 +248,10 @@ $(function() {
                 return Date.parse(speech.startsAt);
             });
 
+            this.countUntil = minTime.startsAt;
+
             agenda = _.filter(agenda, function(speech) {
-                return minTime.startsAt == speech.startsAt;
+                return minTime.startsAt == this.countUntil;
             });
 
             return agenda;

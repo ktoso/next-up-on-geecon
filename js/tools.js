@@ -117,7 +117,8 @@ function getRandomFunnyCountdownNote() {
         "Searching for speaker...",
         "Deciphering your passwords...",
         "Cloning into /home/geecon...",
-        "Please wait..."
+        "Please wait...",
+        "Performing zergling-rush..."
         //todo add more fun notes here
     ];
 
