@@ -113,7 +113,11 @@ function getRandomFunnyCountdownNote() {
         'Elvis will enter the building in...',
         "We'll let the groove out in...",
         "Downloading awesomeness...",
-        "Resolving dependencies..."
+        "Resolving dependencies...",
+        "Predicting future...",
+        "Playing lotto...",
+        "Deciphering your passwords...",
+        "Please wait..."
         //todo add more fun notes here
     ];
 
