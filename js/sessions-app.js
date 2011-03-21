@@ -172,6 +172,7 @@ $(function() {
         },
 
         updateCountdownNote: function() {
+            console.log("funny note @" + Date.now());
             var funnyNote = getRandomFunnyCountdownNote();
             $('#funny-note').text(funnyNote);
         },

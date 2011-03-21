@@ -116,6 +116,7 @@ function getRandomFunnyCountdownNote() {
         "Resolving dependencies...",
         "Predicting future...",
         "Playing lotto...",
+        "Searching for speaker...",
         "Deciphering your passwords...",
         "Please wait..."
         //todo add more fun notes here
