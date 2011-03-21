@@ -408,6 +408,8 @@ span .geecon-hashtag {
 
 /*                             countdown                                                     */
 #countdown-container {
+    display: none; /*initially hide it */
+
     font-size: 2.5em;
     font-weight: bold;
     height: 3em;

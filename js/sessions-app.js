@@ -161,6 +161,8 @@ $(function() {
 
             console.log("This room's number is: " + this.THIS_ROOM);
 
+            $('#countdown-container').fadeIn('slow');
+
             // jquery error handler
             $("#debug").ajaxError(function(event, request, settings) {
                 $(this).append("<li>Error requesting page " + settings.url + "</li>");
@@ -214,7 +216,7 @@ $(function() {
             var sessionElement = $(view.render().el);
 
             sessionElement.addClass('this-room');
-            sessionElement.appendTo(sessionList).hide().fadeIn(1000);
+            sessionElement.appendTo(sessionList).hide().fadeIn('slow');
 
         },
 
