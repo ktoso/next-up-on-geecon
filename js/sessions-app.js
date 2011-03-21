@@ -123,6 +123,9 @@ $(function() {
         // the App already present in the HTML.
         el: $("#sessionsapp"),
 
+        // countdown element containing "#m #s"
+        countdown: $('#countdown'),
+
         // the today date, for further use
         TODAY: Date.today(),
 
@@ -171,19 +174,34 @@ $(function() {
 
             this.loadAgenda();
 
-            setInterval(this.updateCountdownNote, this.MIN);
-        },
+            setInterval((function(self) {
+                return self.updateCountdownNote
+            })(this), this.MIN);
 
-        updateCountdownNote: function() {
-            console.log("funny note @" + Date.now());
-            var funnyNote = getRandomFunnyCountdownNote();
-            $('#funny-note').text(funnyNote);
+            setInterval((function(self) {
+                return self.updateCountdown;
+            })(this), this.SEC);
         },
 
         // Re-rendering the App just means refreshing the statistics -- the rest
         // of the app doesn't change.
         render: function() {
             // todo do anything here?
+        },
+
+        updateCountdown: function() {
+            var time = Date.parse() - Date.now();
+            if (time < 0) {
+                this.countdown.text('');
+                return;
+            }
+            var minSec = msAsMinSec(time);
+            this.countdown.text(minSec);
+        },
+
+        updateCountdownNote: function() {
+            var funnyNote = getRandomFunnyCountdownNote();
+            $('#funny-note').text(funnyNote);
         },
 
         loadAgenda: function () {

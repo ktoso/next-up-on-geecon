@@ -1,5 +1,38 @@
 {
+// -------------------- DAY 1 --------------------------------------------------------------
     "agenda": [
+
+        {
+            "onDay": "21.03.2011",
+            "startsAt": "18:00",
+
+            "inRoom": "1",
+            "roomName": "Boolean First room",
+
+            "speaker": "Andrea Provaglio",
+            "topic": "Your Agile Process is not Enough"
+        },
+        {
+            "onDay": "21.03.2011",
+            "startsAt": "18:00",
+
+            "inRoom": "2",
+            "roomName": "Double First room",
+
+            "speaker": "Patrycja Wegrzynowicz",
+            "topic": "Static Analysis in Search for Performance Anti-Patterns"
+        },
+        {
+            "onDay": "21.03.2011",
+            "startsAt": "18:00",
+
+            "inRoom": "3",
+            "roomName": "Volatile First room",
+
+            "speaker": "Andres Almiray",
+            "topic": "Polyglot Programming"
+        },
+        // ------------------------
         {
             "onDay": "21.03.2011",
             "startsAt": "20:00",
@@ -31,7 +64,7 @@
             "topic": "Polyglot Programming"
         },
 
-
+// -------------------- DAY 2 --------------------------------------------------------------
         {
             "onDay": "22.03.2011",
             "startsAt": "20:00",
