@@ -171,13 +171,13 @@ $(function() {
 
             this.loadAgenda();
 
-            setInterval((function(self) {
-                return self.updateCountdownNote
-            })(this), this.MIN);
-
-            setInterval((function(self) {
-                return self.updateCountdown;
-            })(this), this.SEC);
+//            setInterval((function(self) {
+//                return self.updateCountdownNote
+//            })(this), this.MIN);
+//
+//            setInterval((function(self) {
+//                return self.updateCountdown;
+//            })(this), this.SEC);
         },
 
         // Re-rendering the App just means refreshing the statistics -- the rest
@@ -189,7 +189,7 @@ $(function() {
         updateCountdown: function() {
             var el_countdown = $('#countdown');
 
-            var time = Date.parse() - Date.now();
+            var time = Date.parse(this.uptoTime) - Date.now();
             if (time < 0) {
                 el_countdown.text('');
                 return;
