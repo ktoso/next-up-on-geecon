@@ -92,3 +92,15 @@ function rtrim(str, chars) {
     chars = chars || "\\s";
     return str.replace(new RegExp("[" + chars + "]+$", "g"), "");
 }
+
+function msAsMinSec(ms) {
+    if (ms < 10) {
+        return "right now!"
+    }
+
+    var seconds = ms / 1000;
+    var minutes = Math.floor(seconds / 60);
+    seconds %= 60;
+
+    return minutes + "m " + seconds + "s";
+}
