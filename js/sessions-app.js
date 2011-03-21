@@ -129,8 +129,9 @@ $(function() {
         // the date of the first day with sessions (day: 1) in the data JSON
         DAY_1: Date.today(),
 
-        // refresh the timer each second
-        INTERVAL: 1000,
+        // refresh intervals, for timer and countdown note
+        SEC: 1000,
+        MIN: 60000,
 
         // pass #3 to the site to state "this room is room number 3"
         THIS_ROOM: parseInt(location.hash.substr(1)),
@@ -168,7 +169,7 @@ $(function() {
 
             this.loadAgenda();
 
-            setInterval(this.updateCountdownNote, this.INTERVAL);
+            setInterval(this.updateCountdownNote, this.MIN);
         },
 
         updateCountdownNote: function() {
