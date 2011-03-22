@@ -125,7 +125,7 @@ function getRandomFunnyCountdownNote() {
         "Playing lotto...",
         "Searching for speaker...",
         "Deciphering your passwords...",
-        "Cloning into geecon...",
+        "Cloning into egeecon...",
         "Please wait...",
         "Synchronizing nodes..."
         //todo add more fun notes here
