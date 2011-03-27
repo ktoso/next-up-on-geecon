@@ -3,7 +3,7 @@ Next Up On GeeCON
 Is a (more or less) simple **pure JavaScript** app that'll be used to display data about upcomming sessions during breaks during **GeeCON 2011** in Cracow.
 The app will be displayed on big cinema screens... :-)
 
-Want to see this app in action? Well, that's easy - just go to: http://ktoso.github.com/next-up-on-geecon
+Want to see this app in action? Well, that's easy - just go to: <a href="http://ktoso.github.com/next-up-on-geecon">http://ktoso.github.com/next-up-on-geecon</a>
 
 So, what is **GeeCON** actually...?
 -----------------------------------
