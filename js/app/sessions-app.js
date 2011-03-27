@@ -183,14 +183,14 @@ $(function() {
                 it.clear();
             });
 
-            console.log("This room's number is: " + this.THIS_ROOM);
+//            console.log("This room's number is: " + this.THIS_ROOM);
 
             $('#countdown-container').fadeIn('slow');
 
             // jquery error handler
             $("#debug").ajaxError(function(event, request, settings) {
                 $(this).append("<li>Error requesting page " + settings.url + "</li>");
-                console.log(settings);
+//                console.log(settings);
             });
 
             this.loadAgenda();
@@ -239,12 +239,12 @@ $(function() {
         loadAgenda: function () {
             var noCachePlease = "?nocache=" + Math.random();
             var agendaLocation = this.AGENDA + noCachePlease;
-            console.log("Fetching agenda from: " + agendaLocation);
+//            console.log("Fetching agenda from: " + agendaLocation);
 
             var self = this;
             $.getJSON(agendaLocation,
                     function(data) {
-                        console.log(data);
+//                        console.log(data);
 
                         data.agenda = self.filterAgendaForOnlyNextSpeeches(data.agenda);
 
@@ -252,7 +252,7 @@ $(function() {
                         _.each(data.agenda, function(session) {
                             var sessionDay = Date.parse(session.onDay);
                             if (sessionDay.equals(today)) {
-                                console.log("Saving session (" + session.onDay + " @ " + session.startsAt + "), '" + session.topic + "' by " + session.speaker);
+//                                console.log("Saving session (" + session.onDay + " @ " + session.startsAt + "), '" + session.topic + "' by " + session.speaker);
                                 session.isThisRoom = session.inRoom == this.THIS_ROOM;
                                 Sessions.create(session);
                             }
@@ -284,7 +284,7 @@ $(function() {
                 return speech.startsAt == self.countUntil;
             });
 
-            console.log(agenda);
+//            console.log(agenda);
 
             return agenda;
         },
