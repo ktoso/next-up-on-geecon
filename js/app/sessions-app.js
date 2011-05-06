@@ -275,9 +275,9 @@ $(function() {
 
             var minTime = _.min(agenda, function(speech) {
                 return Date.parse(speech.startsAt);
-            });
+            }, this);
 
-            this.countUntil = this.minTime.startsAt;
+            this.countUntil = minTime.startsAt;
 
             var self = this;
             agenda = _.filter(agenda, function(speech) {
