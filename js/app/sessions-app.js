@@ -251,11 +251,11 @@ $(function() {
                         var today = Date.today();
                         _.each(data.agenda, function(session) {
                             var sessionDay = Date.parse(session.onDay);
-                            if (sessionDay.equals(today)) {
+//                            if (sessionDay.equals(today)) {
 //                                console.log("Saving session (" + session.onDay + " @ " + session.startsAt + "), '" + session.topic + "' by " + session.speaker);
                                 session.isThisRoom = session.inRoom == this.THIS_ROOM;
                                 Sessions.create(session);
-                            }
+//                            }
                         });
                     });
         },
@@ -267,11 +267,11 @@ $(function() {
             var now = Date.now();
             var today = Date.today();
 
-//            agenda = _.filter(agenda, function(speech) {
-//                var day = Date.parse(speech.onDay);
-//                var starts = Date.parse(speech.startsAt);
-//                return day.equals(today) && now.compareTo(starts) == -1 /*starts is in the future, somehow isAfter won't work... */;
-//            });
+            agenda = _.filter(agenda, function(speech) {
+                var day = Date.parse(speech.onDay);
+                var starts = Date.parse(speech.startsAt);
+                return day.equals(today) && now.compareTo(starts) === -1 /*starts is in the future, somehow isAfter won't work... */;
+            });
 
             var minTime = _.min(agenda, function(speech) {
                 return Date.parse(speech.startsAt);
