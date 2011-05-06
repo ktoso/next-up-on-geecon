@@ -275,9 +275,13 @@ $(function() {
                 return day.equals(today) && now.compareTo(starts) === -1 /*starts is in the future, somehow isAfter won't work... */;
             });
 
+            console.log(agenda);
+
             var minTime = _.min(agenda, function(speech) {
                 return Date.parse(speech.startsAt);
             }, this);
+
+            console.log(minTime);
 
             if(minTime === undefined){
                 minTime = Date.parse(agenda[0].startsAt);
