@@ -277,7 +277,7 @@ $(function() {
                 return Date.parse(speech.startsAt);
             });
 
-            if(minTime === undefined){
+            if(minTime == undefined){
                 minTime = Date.parse(agenda[0].startsAt);
             }
 
