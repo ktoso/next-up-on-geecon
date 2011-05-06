@@ -161,7 +161,7 @@ $(function() {
         countUntil: 0,
 
         // the location of our agenda file
-        AGENDA: 'data/agenda.json',
+        AGENDA: 'file:///home/ktoso/coding/js/next-up-on-geecon/data/agenda.json',
 
         // Delegated events for creating new items, and clearing completed ones.
         events: {
@@ -239,12 +239,12 @@ $(function() {
         loadAgenda: function () {
             var noCachePlease = "?nocache=" + Math.random();
             var agendaLocation = this.AGENDA + noCachePlease;
-//            console.log("Fetching agenda from: " + agendaLocation);
+            console.log("Fetching agenda from: " + agendaLocation);
 
             var self = this;
             $.getJSON(agendaLocation,
                     function(data) {
-//                        console.log(data);
+                        console.log(data);
 
                         data.agenda = self.filterAgendaForOnlyNextSpeeches(data.agenda);
 
@@ -284,7 +284,7 @@ $(function() {
                 return speech.startsAt == self.countUntil;
             });
 
-//            console.log(agenda);
+            console.log(agenda);
 
             return agenda;
         },
