@@ -2,7 +2,7 @@
     "agenda": [
 
         {
-            "onDay": "6.5.2011",
+            "onDay": "5.6.2011",
             "startsAt": "19:30",
 
             "inRoom": "1",
@@ -12,7 +12,7 @@
             "topic": "Spring into the Next Decade"
         },
         {
-            "onDay": "6.5.2011",
+            "onDay": "5.6.2011",
             "startsAt": "19:30",
 
             "inRoom": "2",
@@ -22,7 +22,7 @@
             "topic": "Paradoxes of API Design"
         },
         {
-            "onDay": "6.5.2011",
+            "onDay": "5.6.2011",
             "startsAt": "19:30",
 
             "inRoom": "3",
