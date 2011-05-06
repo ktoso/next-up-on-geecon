@@ -2,8 +2,8 @@
     "agenda": [
 
         {
-            "onDay": "5.6.2011",
-            "startsAt": "19:30",
+            "onDay": "5.10.2011",
+            "startsAt": "9:30",
 
             "inRoom": "1",
             "roomName": "Room 10",
@@ -12,8 +12,8 @@
             "topic": "Spring into the Next Decade"
         },
         {
-            "onDay": "5.6.2011",
-            "startsAt": "19:30",
+            "onDay": "5.10.2011",
+            "startsAt": "9:30",
 
             "inRoom": "2",
             "roomName": "Room 9",
@@ -22,8 +22,8 @@
             "topic": "Paradoxes of API Design"
         },
         {
-            "onDay": "5.6.2011",
-            "startsAt": "19:30",
+            "onDay": "5.10.2011",
+            "startsAt": "9:30",
 
             "inRoom": "3",
             "roomName": "Room 8",
@@ -35,7 +35,7 @@
 
 
         {
-            "onDay": "10.5.2011",
+            "onDay": "5.10.2011",
             "startsAt": "13:30",
 
             "inRoom": "1",
@@ -45,7 +45,7 @@
             "topic": "Java EE 6 Tutorial"
         },
         {
-            "onDay": "10.5.2011",
+            "onDay": "5.10.2011",
             "startsAt": "13:30",
 
             "inRoom": "2",
@@ -55,7 +55,7 @@
             "topic": "Patterns and Anti-Patterns in Hibernate"
         },
         {
-            "onDay": "10.5.2011",
+            "onDay": "5.10.2011",
             "startsAt": "13:30",
 
             "inRoom": "3",
@@ -68,7 +68,7 @@
 
 
         {
-            "onDay": "10.5.2011",
+            "onDay": "5.10.2011",
             "startsAt": "16:50",
 
             "inRoom": "1",
@@ -78,7 +78,7 @@
             "topic": "Code Generation on the JVM"
         },
         {
-            "onDay": "10.5.2011",
+            "onDay": "5.10.2011",
             "startsAt": "16:50",
 
             "inRoom": "2",
@@ -88,7 +88,7 @@
             "topic": "Code Review with Git and Gerrit"
         },
         {
-            "onDay": "10.5.2011",
+            "onDay": "5.10.2011",
             "startsAt": "16:50",
 
             "inRoom": "3",
