@@ -277,7 +277,7 @@ $(function() {
                 return Date.parse(speech.startsAt);
             });
 
-            this.countUntil = minTime.startsAt;
+            this.countUntil = this.minTime.startsAt;
 
             var self = this;
             agenda = _.filter(agenda, function(speech) {
