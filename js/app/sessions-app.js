@@ -267,6 +267,8 @@ $(function() {
             var now = Date.now();
             var today = Date.today();
 
+            console.log(agenda);
+
             agenda = _.filter(agenda, function(speech) {
                 var day = Date.parse(speech.onDay);
                 var starts = Date.parse(speech.startsAt);
