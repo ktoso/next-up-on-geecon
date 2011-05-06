@@ -211,6 +211,8 @@ $(function() {
             // swap #geecon hashtag with image :-)
             var allTweets = $('#tweet-list article');
             allTweets.geekify('#geecon');
+            allTweets.geekify('@geecon');
+            allTweets.geekify('geecon');
             allTweets.find('span .geecon-hashtag').text(' ');
 
             // @ktosopl links
