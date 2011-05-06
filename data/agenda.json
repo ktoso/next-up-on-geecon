@@ -39,8 +39,6 @@
         },
 
 
-
-
         {
             "onDay": "5.10.2011",
             "startsAt": "13:30",
@@ -73,8 +71,6 @@
         },
 
 
-
-
         {
             "onDay": "5.10.2011",
             "startsAt": "16:50",
@@ -104,8 +100,457 @@
 
             "speaker": "Galder Zamarreño",
             "topic": "Ruby-on-Infinispan: Cloud-tastic Data Grids for Ruby apps"
+        },
+
+
+        {
+            "onDay": "5.11.2011",
+            "startsAt": "9:10",
+
+            "inRoom": "1",
+            "roomName": "Room 11",
+
+            "speaker": "Danny Coward",
+            "topic": "Java SE: The Road Ahead"
+        },
+
+
+        {
+            "onDay": "5.11.2011",
+            "startsAt": "11:10",
+
+            "inRoom": "1",
+            "roomName": "Room 11",
+
+            "speaker": "Juergen Hoeller",
+            "topic": "Enterprise Java in 2011 and Beyond: From Java EE 6 to Cloud Computing"
+        },
+
+
+        {
+            "onDay": "5.11.2011",
+            "startsAt": "11:25",
+
+            "inRoom": "1",
+            "roomName": "Room 12",
+
+            "speaker": "Heinz Kabutz",
+            "topic": "Reflection Madness"
+        },
+        {
+            "onDay": "5.11.2011",
+            "startsAt": "11:25",
+
+            "inRoom": "1",
+            "roomName": "Room 11",
+
+            "speaker": "Josh Long",
+            "topic": "The Social Service Bus"
+        },
+        {
+            "onDay": "5.11.2011",
+            "startsAt": "11:25",
+
+            "inRoom": "1",
+            "roomName": "Room 10",
+
+            "speaker": "Daniel Jamil",
+            "topic": "Cloud Computing. IT as a Service"
+        },
+
+
+        {
+            "onDay": "5.11.2011",
+            "startsAt": "13:25",
+
+            "inRoom": "1",
+            "roomName": "Room 12",
+
+            "speaker": "Juergen Hoeller",
+            "topic": "Modern Component Design with Spring 3.1"
+        },
+        {
+            "onDay": "5.11.2011",
+            "startsAt": "13:25",
+
+            "inRoom": "2",
+            "roomName": "Room 11",
+
+            "speaker": "Michaël Figuière, Cyrille Le Clerc",
+            "topic": "NoSQL & DataGrid from a Developer Perspective"
+        },
+        {
+            "onDay": "5.11.2011",
+            "startsAt": "13:25",
+
+            "inRoom": "3",
+            "roomName": "Room 10",
+
+            "speaker": "Danny Coward",
+            "topic": "What's new in JavaFX 2.0"
+        },
+
+
+        {
+            "onDay": "5.11.2011",
+            "startsAt": "14:40",
+
+            "inRoom": "1",
+            "roomName": "Room 12",
+
+            "speaker": "Jakub Podlesak",
+            "topic": "JAX-RS 2.0: What's Next for Java API for RESTful Web Services"
+        },
+        {
+            "onDay": "5.11.2011",
+            "startsAt": "14:40",
+
+            "inRoom": "2",
+            "roomName": "Room 11",
+
+            "speaker": "Nikita Ivanov",
+            "topic": "Distributed Computing with Scala and GridGain"
+        },
+        {
+            "onDay": "5.11.2011",
+            "startsAt": "14:40",
+
+            "inRoom": "3",
+            "roomName": "Room 10",
+
+            "speaker": "Heinz Kabutz",
+            "topic": "Productive Coder"
+        },
+
+
+        {
+            "onDay": "5.11.2011",
+            "startsAt": "14:40",
+
+            "inRoom": "1",
+            "roomName": "Room 12",
+
+            "speaker": "Jakub Podlesak",
+            "topic": "JAX-RS 2.0: What's Next for Java API for RESTful Web Services"
+        },
+        {
+            "onDay": "5.11.2011",
+            "startsAt": "14:40",
+
+            "inRoom": "2",
+            "roomName": "Room 11",
+
+            "speaker": "Nikita Ivanov",
+            "topic": "Distributed Computing with Scala and GridGain"
+        },
+        {
+            "onDay": "5.11.2011",
+            "startsAt": "14:40",
+
+            "inRoom": "3",
+            "roomName": "Room 10",
+
+            "speaker": "Heinz Kabutz",
+            "topic": "Productive Coder"
+        },
+
+
+        {
+            "onDay": "5.11.2011",
+            "startsAt": "16:05",
+
+            "inRoom": "1",
+            "roomName": "Room 12",
+
+            "speaker": "Antonio Goncalves",
+            "topic": "To inject or not to inject: CDI is the question"
+        },
+        {
+            "onDay": "5.11.2011",
+            "startsAt": "16:05",
+
+            "inRoom": "2",
+            "roomName": "Room 11",
+
+            "speaker": "David Pollak",
+            "topic": "Lift Web: Secure, Scalable, and Super Interactive"
+        },
+        {
+            "onDay": "5.11.2011",
+            "startsAt": "16:05",
+
+            "inRoom": "3",
+            "roomName": "Room 10",
+
+            "speaker": "Hamlet D'Arcy",
+            "topic": "New Ideas for Old Code"
+        },
+
+
+        {
+            "onDay": "5.11.2011",
+            "startsAt": "17:20",
+
+            "inRoom": "1",
+            "roomName": "Room 12",
+
+            "speaker": "Aslak Knutsen",
+            "topic": "Arquillian: Real Java enterprise testing"
+        },
+        {
+            "onDay": "5.11.2011",
+            "startsAt": "17:20",
+
+            "inRoom": "2",
+            "roomName": "Room 11",
+
+            "speaker": "Nicolas Leroux, Morten Kjetland",
+            "topic": "Play! framework: a revolution in the Java world"
+        },
+        {
+            "onDay": "5.11.2011",
+            "startsAt": "17:20",
+
+            "inRoom": "3",
+            "roomName": "Room 10",
+
+            "speaker": "Alexis Moussine-Pouchkine",
+            "topic": "Java EE 7 - flying above the cloud, a status on ongoing work"
+        },
+
+        {
+            "onDay": "5.11.2011",
+            "startsAt": "21:00",
+
+            "inRoom": "1",
+            "roomName": "Room 12",
+
+            "speaker": "Everyone",
+            "topic": "Pauza (on Floriańska 18)"
+        },
+        {
+            "onDay": "5.11.2011",
+            "startsAt": "21:00",
+
+            "inRoom": "2",
+            "roomName": "Room 11",
+
+            "speaker": "Everyone",
+            "topic": "Pauza (on Floriańska 18)"
+        },
+        {
+            "onDay": "5.11.2011",
+            "startsAt": "21:00",
+
+            "inRoom": "3",
+            "roomName": "Room 10",
+
+            "speaker": "Everyone",
+            "topic": "Pauza (on Floriańska 18)"
+        },
+
+
+        {
+            "onDay": "5.12.2011",
+            "startsAt": "9:00",
+
+            "inRoom": "1",
+            "roomName": "Room 11",
+
+            "speaker": "Jim Webber",
+            "topic": "Revisiting SOA for the 21st Century"
+        },
+
+
+        {
+            "onDay": "5.12.2011",
+            "startsAt": "10:15",
+
+            "inRoom": "1",
+            "roomName": "Room 12",
+
+            "speaker": "Emmanuel Bernard",
+            "topic": "Hibernate Validator / Bean Validation Best practices"
+        },
+        {
+            "onDay": "5.12.2011",
+            "startsAt": "10:15",
+
+            "inRoom": "2",
+            "roomName": "Room 11",
+
+            "speaker": "Staffan Nöteberg",
+            "topic": "Regex - The future programming"
+        },
+        {
+            "onDay": "5.12.2011",
+            "startsAt": "10:15",
+
+            "inRoom": "3",
+            "roomName": "Room 10",
+
+            "speaker": "Stephen Chin",
+            "topic": "JavaFX 2.0 With Alternative Languages - Groovy, Clojure, Scala, Fantom, and Visage"
+        },
+
+
+        {
+            "onDay": "5.12.2011",
+            "startsAt": "11:30",
+
+            "inRoom": "1",
+            "roomName": "Room 12",
+
+            "speaker": "Eugene Ciurana",
+            "topic": "The No-Nonsense Guide to Hadoop and HBase in Enterprise Apps"
+        },
+        {
+            "onDay": "5.12.2011",
+            "startsAt": "11:30",
+
+            "inRoom": "2",
+            "roomName": "Room 11",
+
+            "speaker": "Bartosz Kowalewski",
+            "topic": "Is OSGi ready for wide adoption?"
+        },
+        {
+            "onDay": "5.12.2011",
+            "startsAt": "11:30",
+
+            "inRoom": "3",
+            "roomName": "Room 10",
+
+            "speaker": "Martijn Verburg",
+            "topic": "How to open source internal software at a mega-corp"
+        },
+
+
+        {
+            "onDay": "5.12.2011",
+            "startsAt": "13:30",
+
+            "inRoom": "1",
+            "roomName": "Room 12",
+
+            "speaker": "Joonas Lehtinen",
+            "topic": "RIA Security - Broken By Design"
+        },
+        {
+            "onDay": "5.12.2011",
+            "startsAt": "13:30",
+
+            "inRoom": "2",
+            "roomName": "Room 11",
+
+            "speaker": "Marek Matczak",
+            "topic": "10 common pitfalls when using Hibernate"
+        },
+        {
+            "onDay": "5.12.2011",
+            "startsAt": "13:30",
+
+            "inRoom": "3",
+            "roomName": "Room 10",
+
+            "speaker": "Václav Pech",
+            "topic": "Pick low-hanging fruit"
+        },
+
+
+        {
+            "onDay": "5.12.2011",
+            "startsAt": "14:45",
+
+            "inRoom": "1",
+            "roomName": "Room 12",
+
+            "speaker": "Bruno Bossola",
+            "topic": "Git - (a) Gentle InTroduction"
+        },
+        {
+            "onDay": "5.12.2011",
+            "startsAt": "14:45",
+
+            "inRoom": "2",
+            "roomName": "Room 11",
+
+            "speaker": "Emmanuel Bernard",
+            "topic": "Hibernate OGM: JPA on Infinispan: when PaaS persistence meets Java EE"
+        },
+        {
+            "onDay": "5.12.2011",
+            "startsAt": "14:45",
+
+            "inRoom": "3",
+            "roomName": "Room 10",
+
+            "speaker": "Anton Arhipov",
+            "topic": "Bytecode for discriminating developers"
+        },
+
+
+        {
+            "onDay": "5.12.2011",
+            "startsAt": "16:10",
+
+            "inRoom": "1",
+            "roomName": "Room 12",
+
+            "speaker": "Eugene Ciurana",
+            "topic": "TBD"
+        },
+        {
+            "onDay": "5.12.2011",
+            "startsAt": "16:10",
+
+            "inRoom": "2",
+            "roomName": "Room 11",
+
+            "speaker": "Patrycja Wegrzynowicz",
+            "topic": "Static Analysis in Search for Performance Anti-Patterns"
+        },
+        {
+            "onDay": "5.12.2011",
+            "startsAt": "16:10",
+
+            "inRoom": "3",
+            "roomName": "Room 10",
+
+            "speaker": "Andres Almiray",
+            "topic": "Polyglot Programming"
+        },
+
+
+        {
+            "onDay": "5.12.2011",
+            "startsAt": "17:25",
+
+            "inRoom": "1",
+            "roomName": "Room 12",
+
+            "speaker": "Martijn Verburg",
+            "topic": "The Diabolical Developer"
+        },
+        {
+            "onDay": "5.12.2011",
+            "startsAt": "17:25",
+
+            "inRoom": "2",
+            "roomName": "Room 11",
+
+            "speaker": "Jim Webber",
+            "topic": "A programmatic introduction to Neo4j"
+        },
+        {
+            "onDay": "5.12.2011",
+            "startsAt": "17:25",
+
+            "inRoom": "3",
+            "roomName": "Room 10",
+
+            "speaker": "Michael Hüttermann",
+            "topic": "Agile Application Lifecycle Management (ALM)"
         }
-
-
     ]
 }
