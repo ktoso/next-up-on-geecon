@@ -161,7 +161,7 @@ $(function() {
         countUntil: 0,
 
         // the location of our agenda file
-        AGENDA: 'file:///home/ktoso/coding/js/next-up-on-geecon/data/agenda.json',
+        AGENDA: 'data/agenda.json',
 
         // Delegated events for creating new items, and clearing completed ones.
         events: {
