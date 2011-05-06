@@ -277,6 +277,10 @@ $(function() {
                 return Date.parse(speech.startsAt);
             }, this);
 
+            if(minTime === undefined){
+                minTime = Date.parse(agenda[0].startsAt);
+            }
+
             this.countUntil = minTime.startsAt;
 
             var self = this;
