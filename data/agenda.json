@@ -3,7 +3,7 @@
 
         {
             "onDay": "6.05.2011",
-            "startsAt": "9:30",
+            "startsAt": "19:30",
 
             "inRoom": "1",
             "roomName": "Room 10",
@@ -13,7 +13,7 @@
         },
         {
             "onDay": "6.05.2011",
-            "startsAt": "9:30",
+            "startsAt": "19:30",
 
             "inRoom": "2",
             "roomName": "Room 9",
@@ -23,7 +23,7 @@
         },
         {
             "onDay": "6.05.2011",
-            "startsAt": "9:30",
+            "startsAt": "19:30",
 
             "inRoom": "3",
             "roomName": "Room 8",
