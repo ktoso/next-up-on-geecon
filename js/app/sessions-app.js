@@ -267,17 +267,15 @@ $(function() {
             var now = Date.now();
             var today = Date.today();
 
-//            agenda = _.filter(agenda, function(speech) {
-//                var day = Date.parse(speech.onDay);
-//                var starts = Date.parse(speech.startsAt);
-//                return day.equals(today) && now.compareTo(starts) == -1; /*starts is in the future, somehow isAfter won't work... */
-//            });
+            agenda = _.filter(agenda, function(speech) {
+                var day = Date.parse(speech.onDay);
+                var starts = Date.parse(speech.startsAt);
+                return day.equals(today) && now.compareTo(starts) == -1; /*starts is in the future, somehow isAfter won't work... */
+            });
 
             var minTime = _.min(agenda, function(speech) {
                 return Date.parse(speech.startsAt);
             });
-
-            console.log(minTime);
 
             if(minTime === undefined){
                 minTime = Date.parse(agenda[0].startsAt);
@@ -289,8 +287,6 @@ $(function() {
             agenda = _.filter(agenda, function(speech) {
                 return speech.startsAt == self.countUntil;
             });
-
-            console.log(agenda);
 
             return agenda;
         },
