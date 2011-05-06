@@ -2,125 +2,102 @@
     "agenda": [
 
         {
-            "onDay": "23.03.2011",
-            "startsAt": "6:00",
+            "onDay": "10.05.2011",
+            "startsAt": "9:30",
 
             "inRoom": "1",
-            "roomName": "Boolean First room",
+            "roomName": "Room 10",
 
-            "speaker": "Andrea Provaglio",
-            "topic": "Your Agile Process is not Enough"
+            "speaker": "Josh Long",
+            "topic": "Spring into the Next Decade"
         },
         {
-            "onDay": "23.03.2011",
-            "startsAt": "6:00",
+            "onDay": "10.05.2011",
+            "startsAt": "9:30",
 
             "inRoom": "2",
-            "roomName": "Double First room",
+            "roomName": "Room 9",
 
-            "speaker": "Patrycja Wegrzynowicz",
-            "topic": "Static Analysis in Search for Performance Anti-Patterns"
+            "speaker": "Jaroslav Tulach",
+            "topic": "Paradoxes of API Design"
         },
         {
-            "onDay": "23.03.2011",
-            "startsAt": "6:00",
+            "onDay": "10.05.2011",
+            "startsAt": "9:30",
 
             "inRoom": "3",
-            "roomName": "Volatile First room",
+            "roomName": "Room 8",
 
             "speaker": "Andres Almiray",
-            "topic": "Polyglot Programming"
+            "topic": "The Groovy Ecosystem"
         },
+
+
+
         {
-            "onDay": "21.03.2011",
-            "startsAt": "19:00",
+            "onDay": "10.05.2011",
+            "startsAt": "13:30",
 
             "inRoom": "1",
-            "roomName": "First Boolean room",
+            "roomName": "Room 10",
 
-            "speaker": "Andrea Provaglio",
-            "topic": "Your Agile Process is not Enough"
+            "speaker": "Antonio Goncalves + Alexis Moussine-Pouchkine",
+            "topic": "Java EE 6 Tutorial"
         },
         {
-            "onDay": "21.03.2011",
-            "startsAt": "19:00",
+            "onDay": "10.05.2011",
+            "startsAt": "13:30",
 
             "inRoom": "2",
-            "roomName": "First Double room",
+            "roomName": "Room 9",
 
             "speaker": "Patrycja Wegrzynowicz",
-            "topic": "Static Analysis in Search for Performance Anti-Patterns"
+            "topic": "Patterns and Anti-Patterns in Hibernate"
         },
         {
-            "onDay": "21.03.2011",
-            "startsAt": "19:00",
+            "onDay": "10.05.2011",
+            "startsAt": "13:30",
 
             "inRoom": "3",
-            "roomName": "First Volatile room",
+            "roomName": "Room 8",
 
-            "speaker": "Andres Almiray",
-            "topic": "Polyglot Programming"
+            "speaker": "David Pollak",
+            "topic": "Lift Tutorial"
         },
+
+
+
         {
-            "onDay": "21.03.2011",
-            "startsAt": "23:00",
+            "onDay": "10.05.2011",
+            "startsAt": "16:50",
 
             "inRoom": "1",
-            "roomName": "Boolean room",
+            "roomName": "Room 10",
 
-            "speaker": "Andrea Provaglio",
-            "topic": "Your Agile Process is not Enough"
+            "speaker": "Hamlet D'Arcy",
+            "topic": "Code Generation on the JVM"
         },
         {
-            "onDay": "21.03.2011",
-            "startsAt": "23:00",
+            "onDay": "10.05.2011",
+            "startsAt": "16:50",
 
             "inRoom": "2",
-            "roomName": "Double room",
+            "roomName": "Room 9",
 
-            "speaker": "Patrycja Wegrzynowicz",
-            "topic": "Static Analysis in Search for Performance Anti-Patterns"
+            "speaker": "Chris Aniszczyk",
+            "topic": "Code Review with Git and Gerrit"
         },
         {
-            "onDay": "21.03.2011",
-            "startsAt": "23:00",
+            "onDay": "10.05.2011",
+            "startsAt": "16:50",
 
             "inRoom": "3",
-            "roomName": "Volatile room",
+            "roomName": "Room 8",
 
-            "speaker": "Andres Almiray",
-            "topic": "Polyglot Programming"
-        },
-
-        {
-            "onDay": "22.03.2011",
-            "startsAt": "20:00",
-
-            "inRoom": "3",
-            "roomName": "Boolean room",
-
-            "speaker": "Josh Long",
-            "topic": "The first topic today"
-        },
-        {
-            "onDay": "22.03.2011",
-            "startsAt": "20:00",
-
-            "inRoom": "5",
-            "roomName": "Double room",
-
-            "speaker": "Josh Long",
-            "topic": "Some other topic"
-        },
-        {
-            "onDay": "22.03.2011",
-            "startsAt": "20:00",
-
-            "inRoom": "2",
-            "roomName": "Volatile room",
-
-            "speaker": "Josh Long",
-            "topic": "Static Analysis in Search for Performance Anti-Patterns"
+            "speaker": "Galder Zamarreño",
+            "topic": "Ruby-on-Infinispan: Cloud-tastic Data Grids for Ruby apps"
         }
+
+
     ]
 }
