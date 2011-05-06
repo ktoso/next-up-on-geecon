@@ -202,6 +202,10 @@ $(function() {
             }
 
             tweetElement.geekify('#geecon');
+            tweetElement.geekify('@geecon');
+            tweetElement.geekify('GeeCON');
+            tweetElement.geekify('GeeCon');
+            tweetElement.geekify('geecon');
             tweetElement.find('span .geecon-hashtag').text(' ');
         },
 
@@ -211,6 +215,10 @@ $(function() {
             // swap #geecon hashtag with image :-)
             var allTweets = $('#tweet-list article');
             allTweets.geekify('#geecon');
+            allTweets.geekify('@geecon');
+            allTweets.geekify('GeeCON');
+            allTweets.geekify('GeeCon');
+            allTweets.geekify('geecon');
             allTweets.find('span .geecon-hashtag').text(' ');
 
             // @ktosopl links
