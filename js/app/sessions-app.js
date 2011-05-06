@@ -251,11 +251,11 @@ $(function() {
                         var today = Date.today();
                         _.each(data.agenda, function(session) {
                             var sessionDay = Date.parse(session.onDay);
-//                            if (sessionDay.equals(today)) {
+                            if (sessionDay.equals(today)) {
 //                                console.log("Saving session (" + session.onDay + " @ " + session.startsAt + "), '" + session.topic + "' by " + session.speaker);
                                 session.isThisRoom = session.inRoom == this.THIS_ROOM;
                                 Sessions.create(session);
-//                            }
+                            }
                         });
                     });
         },
