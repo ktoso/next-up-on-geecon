@@ -239,12 +239,12 @@ $(function() {
         loadAgenda: function () {
             var noCachePlease = "?nocache=" + Math.random();
             var agendaLocation = this.AGENDA + noCachePlease;
-            console.log("Fetching agenda from: " + agendaLocation);
+//            console.log("Fetching agenda from: " + agendaLocation);
 
             var self = this;
             $.getJSON(agendaLocation,
                     function(data) {
-                        console.log(data);
+//                        console.log(data);
 
                         data.agenda = self.filterAgendaForOnlyNextSpeeches(data.agenda);
 
@@ -267,15 +267,11 @@ $(function() {
             var now = Date.now();
             var today = Date.today();
 
-            console.log(agenda);
-
-            agenda = _.filter(agenda, function(speech) {
-                var day = Date.parse(speech.onDay);
-                var starts = Date.parse(speech.startsAt);
-                return day.equals(today); //&& now.compareTo(starts) == -1; /*starts is in the future, somehow isAfter won't work... */
-            });
-
-            console.log(agenda);
+//            agenda = _.filter(agenda, function(speech) {
+//                var day = Date.parse(speech.onDay);
+//                var starts = Date.parse(speech.startsAt);
+//                return day.equals(today) && now.compareTo(starts) == -1; /*starts is in the future, somehow isAfter won't work... */
+//            });
 
             var minTime = _.min(agenda, function(speech) {
                 return Date.parse(speech.startsAt);
