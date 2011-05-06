@@ -278,7 +278,7 @@ $(function() {
             });
 
             if(minTime == undefined){
-                minTime = Date.parse(agenda[0].startsAt);
+                minTime = Date.parse(agenda.get(0).startsAt);
             }
 
             this.countUntil = minTime.startsAt;
