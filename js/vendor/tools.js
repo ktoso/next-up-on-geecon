@@ -33,15 +33,31 @@ function relativeTime(pastTime) {
 
     var difference = parseInt((currentStamp - origStamp) / 1000);
 
-    if (difference < 0) return false;
+    if (difference < 0) {
+        return false;
+    }
 
-    if (difference <= 5)                return "Just now";
-    if (difference <= 20)            return "Seconds ago";
-    if (difference <= 60)            return "A minute ago";
-    if (difference < 3600)            return parseInt(difference / 60) + " minutes ago";
-    if (difference <= 1.5 * 3600)         return "One hour ago";
-    if (difference < 23.5 * 3600)        return Math.round(difference / 3600) + " hours ago";
-    if (difference < 1.5 * 24 * 3600)    return "One day ago";
+    if (difference <= 5) {
+        return "Just now";
+    }
+    if (difference <= 20) {
+        return "Seconds ago";
+    }
+    if (difference <= 60) {
+        return "A minute ago";
+    }
+    if (difference < 3600) {
+        return parseInt(difference / 60) + " minutes ago";
+    }
+    if (difference <= 1.5 * 3600) {
+        return "One hour ago";
+    }
+    if (difference < 23.5 * 3600) {
+        return Math.round(difference / 3600) + " hours ago";
+    }
+    if (difference < 1.5 * 24 * 3600) {
+        return "One day ago";
+    }
 
     var dateArr = pastTime.split(' ');
     return dateArr[4].replace(/\:\d+$/, '') + ' ' + dateArr[2] + ' ' + dateArr[1] + (dateArr[3] != curDate.getFullYear() ? ' ' + dateArr[3] : '');
@@ -117,17 +133,22 @@ function msAsMinSec(ms) {
 function getRandomFunnyCountdownNote() {
     var notes = [
         'Will rock the house in...',
-        'Deploying sessions, please wait...',
+        'Validating sessions...',
         'The show will begin in...',
         'Elvis will enter the building in...',
         "Resolving dependencies...",
         "Predicting the future...",
-        "Playing lotto...",
         "Searching for speaker...",
         "Deciphering your passwords...",
         "Cloning into GeeCON...",
-        "Please wait...",
-        "Synchronizing nodes..."
+        "Synchronizing nodes...",
+        "This screen will auto destruct in NaN minutes...",
+        "Press any key to continue...",
+        "Compilation complete, please insert another coder...",
+        "Segmentation fault: core dumped",
+        "Looking for extraterrestrial beings...",
+        "Implementing presentation...",
+        "Downloading speaker..."
         //todo add more fun notes here
     ];
 
