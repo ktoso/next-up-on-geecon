@@ -272,7 +272,7 @@ $(function() {
             agenda = _.filter(agenda, function(speech) {
                 var day = Date.parse(speech.onDay);
                 var starts = Date.parse(speech.startsAt);
-                return day.equals(today)&& now.compareTo(starts) == -1;
+                return day.equals(today) && now.compareTo(starts) == -1;
 //                          && starts.isAfter(now);
                         /*starts is in the future, somehow isAfter won't work... */
             });
@@ -284,7 +284,7 @@ $(function() {
 //                return day.equals(today);// && now.compareTo(starts) == -1; /*starts is in the future, somehow isAfter won't work... */
 //            });
 
-            console.log(agenda);
+            console.log(agenda.length);
 
 
             var minTime = _.min(agenda, function(speech) {
@@ -296,7 +296,7 @@ $(function() {
                     return startsAt.startsAt;
                 }
             });
-            console.log(agenda);
+            console.log(agenda.length);
 
             this.countUntil = minTime;
 
@@ -305,7 +305,7 @@ $(function() {
                 return speech.startsAt == self.countUntil;
             });
 
-            console.log(agenda);
+            console.log(agenda.length);
 
             return agenda;
         },
