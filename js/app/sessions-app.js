@@ -288,25 +288,25 @@ $(function() {
             console.log(agenda);
 
 
-            var minTime = _.min(agenda, function(speech) {
-                var startsAt = Date.parse(speech.startsAt);
-                if(now.compareTo(startsAt) == 1){
-//                    it's a past event
-                    return 9999999;
-                } else {
-                    return startsAt.startsAt;
-                }
-            });
-            console.log(agenda.length);
-
-            this.countUntil = minTime;
-
-            var self = this;
-            agenda = _.filter(agenda, function(speech) {
-                return speech.startsAt == self.countUntil;
-            });
-
-            console.log(agenda.length);
+//            var minTime = _.min(agenda, function(speech) {
+//                var startsAt = Date.parse(speech.startsAt);
+//                if(now.compareTo(startsAt) == 1){
+////                    it's a past event
+//                    return 9999999;
+//                } else {
+//                    return startsAt.startsAt;
+//                }
+//            });
+//            console.log(agenda.length);
+//
+//            this.countUntil = minTime;
+//
+//            var self = this;
+//            agenda = _.filter(agenda, function(speech) {
+//                return speech.startsAt == self.countUntil;
+//            });
+//
+//            console.log(agenda.length);
 
             return agenda;
         },
