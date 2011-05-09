@@ -268,6 +268,7 @@ $(function() {
             var today = Date.today();
 
             // filter for today
+            console.log(agenda);
             agenda = _.filter(agenda, function(speech) {
                 var day = Date.parse(speech.onDay);
                 var starts = Date.parse(speech.startsAt);
@@ -284,6 +285,9 @@ $(function() {
 //                return day.equals(today);// && now.compareTo(starts) == -1; /*starts is in the future, somehow isAfter won't work... */
 //            });
 
+            console.log(agenda);
+
+
             var minTime = _.min(agenda, function(speech) {
                 var startsAt = Date.parse(speech.startsAt);
                 if(now.compareTo(startsAt) == 1){
@@ -293,6 +297,7 @@ $(function() {
                     return startsAt.startsAt;
                 }
             });
+            console.log(agenda);
 
             this.countUntil = minTime;
 
@@ -300,6 +305,8 @@ $(function() {
             agenda = _.filter(agenda, function(speech) {
                 return speech.startsAt == self.countUntil;
             });
+
+            console.log(agenda);
 
             return agenda;
         },
