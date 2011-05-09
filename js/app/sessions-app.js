@@ -285,6 +285,7 @@ $(function() {
 //            });
 
             console.log(agenda.length);
+            console.log(agenda);
 
 
             var minTime = _.min(agenda, function(speech) {
