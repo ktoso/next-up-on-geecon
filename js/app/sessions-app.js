@@ -274,7 +274,13 @@ $(function() {
             });
 
             var minTime = _.min(agenda, function(speech) {
-                return Date.parse(speech.startsAt);
+                var startsAt = Date.parse(speech.startsAt);
+                if(startsAt < now){
+                    // it's a past event
+                    return 99999;
+                } else {
+                    return startsAt;
+                }
             });
 
             this.countUntil = minTime.startsAt;
