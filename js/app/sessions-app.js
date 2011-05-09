@@ -267,16 +267,27 @@ $(function() {
             var now = Date.now();
             var today = Date.today();
 
+            // filter for today
             agenda = _.filter(agenda, function(speech) {
                 var day = Date.parse(speech.onDay);
                 var starts = Date.parse(speech.startsAt);
-                return day.equals(today);// && now.compareTo(starts) == -1; /*starts is in the future, somehow isAfter won't work... */
+                return day.equals(today)
+                          && starts.isAfter(now);
+//                        && now.compareTo(starts) == -1;
+                        /*starts is in the future, somehow isAfter won't work... */
             });
+
+            // filter out past events
+//            agenda = _.filter(agenda, function(speech) {
+//                var day = Date.parse(speech.onDay);
+//                var starts = Date.parse(speech.startsAt);
+//                return day.equals(today);// && now.compareTo(starts) == -1; /*starts is in the future, somehow isAfter won't work... */
+//            });
 
             var minTime = _.min(agenda, function(speech) {
                 var startsAt = Date.parse(speech.startsAt);
                 if(now.compareTo(startsAt) == 1){
-                    // it's a past event
+//                    it's a past event
                     return 9999999;
                 } else {
                     return startsAt.startsAt;
