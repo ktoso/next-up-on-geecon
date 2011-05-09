@@ -217,6 +217,7 @@ $(function() {
 
             if (/^0m 0s/.test(minSec)) {
                 this.updateCountdownNote('Sessions start');
+                window.location = "";
             } else if (/ 0s$/.test(minSec)) {
                 this.updateCountdownNote();
             }
@@ -290,6 +291,8 @@ $(function() {
             if (agenda.length > 0) {
                 this.countUntil = agenda[0].startsAt;
             }
+
+            agenda = [agenda[0], agenda[1], agenda[2]]; // omg... nvm, faster than splice...
 
 //            var minTime = _.min(agenda, function(speech) {
 //                var startsAt = Date.parse(speech.startsAt);
