@@ -5,7 +5,7 @@
             "onDay": "5.10.2011",
             "startsAt": "1:00",
 
-            "__onDay": "5.10.2011",
+            "__onDay": "5.11.2011",
             "__startsAt": "9:30",
 
             "inRoom": "1",
@@ -17,7 +17,7 @@
         {
             "onDay": "5.10.2011",
             "startsAt": "1:00",
-            "__onDay": "5.10.2011",
+            "__onDay": "5.11.2011",
             "__startsAt": "9:30",
 
             "inRoom": "2",
@@ -29,7 +29,7 @@
         {
             "onDay": "5.10.2011",
             "startsAt": "1:00",
-            "__onDay": "5.10.2011",
+            "__onDay": "5.11.2011",
             "__startsAt": "9:30",
 
             "inRoom": "3",
@@ -43,7 +43,7 @@
         {
             "onDay": "5.10.2011",
             "startsAt": "1:30",
-            "__onDay": "5.10.2011",
+            "__onDay": "5.11.2011",
             "__startsAt": "13:30",
 
             "inRoom": "1",
@@ -55,7 +55,7 @@
         {
             "onDay": "5.10.2011",
             "startsAt": "1:30",
-            "__onDay": "5.10.2011",
+            "__onDay": "5.11.2011",
             "__startsAt": "13:30",
 
             "inRoom": "2",
@@ -67,7 +67,7 @@
         {
             "onDay": "5.10.2011",
             "startsAt": "1:30",
-            "__onDay": "5.10.2011",
+            "__onDay": "5.11.2011",
             "__startsAt": "13:30",
 
             "inRoom": "3",
@@ -79,7 +79,7 @@
 
 
         {
-            "onDay": "5.10.2011",
+            "onDay": "5.11.2011",
             "startsAt": "16:50",
 
             "inRoom": "1",
@@ -89,7 +89,7 @@
             "topic": "Code Generation on the JVM"
         },
         {
-            "onDay": "5.10.2011",
+            "onDay": "5.11.2011",
             "startsAt": "16:50",
 
             "inRoom": "2",
@@ -99,7 +99,7 @@
             "topic": "Code Review with Git and Gerrit"
         },
         {
-            "onDay": "5.10.2011",
+            "onDay": "5.11.2011",
             "startsAt": "16:50",
 
             "inRoom": "3",
@@ -110,8 +110,14 @@
         },
 
 
+
+
+
+
+
+
         {
-            "onDay": "5.11.2011",
+            "onDay": "5.12.2011",
             "startsAt": "9:10",
 
             "inRoom": "1",
@@ -123,7 +129,7 @@
 
 
         {
-            "onDay": "5.11.2011",
+            "onDay": "5.12.2011",
             "startsAt": "11:10",
 
             "inRoom": "1",
@@ -135,7 +141,7 @@
 
 
         {
-            "onDay": "5.11.2011",
+            "onDay": "5.12.2011",
             "startsAt": "11:25",
 
             "inRoom": "1",
@@ -145,7 +151,7 @@
             "topic": "Reflection Madness"
         },
         {
-            "onDay": "5.11.2011",
+            "onDay": "5.12.2011",
             "startsAt": "11:25",
 
             "inRoom": "1",
@@ -155,7 +161,7 @@
             "topic": "The Social Service Bus"
         },
         {
-            "onDay": "5.11.2011",
+            "onDay": "5.12.2011",
             "startsAt": "11:25",
 
             "inRoom": "1",
@@ -167,7 +173,7 @@
 
 
         {
-            "onDay": "5.11.2011",
+            "onDay": "5.12.2011",
             "startsAt": "13:25",
 
             "inRoom": "1",
@@ -177,7 +183,7 @@
             "topic": "Modern Component Design with Spring 3.1"
         },
         {
-            "onDay": "5.11.2011",
+            "onDay": "5.12.2011",
             "startsAt": "13:25",
 
             "inRoom": "2",
@@ -187,7 +193,7 @@
             "topic": "NoSQL & DataGrid from a Developer Perspective"
         },
         {
-            "onDay": "5.11.2011",
+            "onDay": "5.12.2011",
             "startsAt": "13:25",
 
             "inRoom": "3",
@@ -199,7 +205,7 @@
 
 
         {
-            "onDay": "5.11.2011",
+            "onDay": "5.12.2011",
             "startsAt": "14:40",
 
             "inRoom": "1",
@@ -209,7 +215,7 @@
             "topic": "JAX-RS 2.0: What's Next for Java API for RESTful Web Services"
         },
         {
-            "onDay": "5.11.2011",
+            "onDay": "5.12.2011",
             "startsAt": "14:40",
 
             "inRoom": "2",
@@ -219,7 +225,7 @@
             "topic": "Distributed Computing with Scala and GridGain"
         },
         {
-            "onDay": "5.11.2011",
+            "onDay": "5.12.2011",
             "startsAt": "14:40",
 
             "inRoom": "3",
@@ -231,7 +237,7 @@
 
 
         {
-            "onDay": "5.11.2011",
+            "onDay": "5.12.2011",
             "startsAt": "14:40",
 
             "inRoom": "1",
@@ -241,7 +247,7 @@
             "topic": "JAX-RS 2.0: What's Next for Java API for RESTful Web Services"
         },
         {
-            "onDay": "5.11.2011",
+            "onDay": "5.12.2011",
             "startsAt": "14:40",
 
             "inRoom": "2",
@@ -251,7 +257,7 @@
             "topic": "Distributed Computing with Scala and GridGain"
         },
         {
-            "onDay": "5.11.2011",
+            "onDay": "5.12.2011",
             "startsAt": "14:40",
 
             "inRoom": "3",
@@ -263,7 +269,7 @@
 
 
         {
-            "onDay": "5.11.2011",
+            "onDay": "5.12.2011",
             "startsAt": "16:05",
 
             "inRoom": "1",
@@ -273,7 +279,7 @@
             "topic": "To inject or not to inject: CDI is the question"
         },
         {
-            "onDay": "5.11.2011",
+            "onDay": "5.12.2011",
             "startsAt": "16:05",
 
             "inRoom": "2",
@@ -283,7 +289,7 @@
             "topic": "Lift Web: Secure, Scalable, and Super Interactive"
         },
         {
-            "onDay": "5.11.2011",
+            "onDay": "5.12.2011",
             "startsAt": "16:05",
 
             "inRoom": "3",
@@ -295,7 +301,7 @@
 
 
         {
-            "onDay": "5.11.2011",
+            "onDay": "5.12.2011",
             "startsAt": "17:20",
 
             "inRoom": "1",
@@ -305,7 +311,7 @@
             "topic": "Arquillian: Real Java enterprise testing"
         },
         {
-            "onDay": "5.11.2011",
+            "onDay": "5.12.2011",
             "startsAt": "17:20",
 
             "inRoom": "2",
@@ -315,7 +321,7 @@
             "topic": "Play! framework: a revolution in the Java world"
         },
         {
-            "onDay": "5.11.2011",
+            "onDay": "5.12.2011",
             "startsAt": "17:20",
 
             "inRoom": "3",
@@ -326,7 +332,7 @@
         },
 
         {
-            "onDay": "5.11.2011",
+            "onDay": "5.12.2011",
             "startsAt": "21:00",
 
             "inRoom": "1",
@@ -336,7 +342,7 @@
             "topic": "Pauza (on Floriańska 18)"
         },
         {
-            "onDay": "5.11.2011",
+            "onDay": "5.12.2011",
             "startsAt": "21:00",
 
             "inRoom": "2",
@@ -346,7 +352,7 @@
             "topic": "Pauza (on Floriańska 18)"
         },
         {
-            "onDay": "5.11.2011",
+            "onDay": "5.12.2011",
             "startsAt": "21:00",
 
             "inRoom": "3",
@@ -357,8 +363,12 @@
         },
 
 
+
+
+
+
         {
-            "onDay": "5.12.2011",
+            "onDay": "5.13.2011",
             "startsAt": "9:00",
 
             "inRoom": "1",
@@ -370,7 +380,7 @@
 
 
         {
-            "onDay": "5.12.2011",
+            "onDay": "5.13.2011",
             "startsAt": "10:15",
 
             "inRoom": "1",
@@ -380,7 +390,7 @@
             "topic": "Hibernate Validator / Bean Validation Best practices"
         },
         {
-            "onDay": "5.12.2011",
+            "onDay": "5.13.2011",
             "startsAt": "10:15",
 
             "inRoom": "2",
@@ -390,7 +400,7 @@
             "topic": "Regex - The future programming"
         },
         {
-            "onDay": "5.12.2011",
+            "onDay": "5.13.2011",
             "startsAt": "10:15",
 
             "inRoom": "3",
@@ -402,7 +412,7 @@
 
 
         {
-            "onDay": "5.12.2011",
+            "onDay": "5.13.2011",
             "startsAt": "11:30",
 
             "inRoom": "1",
@@ -412,7 +422,7 @@
             "topic": "The No-Nonsense Guide to Hadoop and HBase in Enterprise Apps"
         },
         {
-            "onDay": "5.12.2011",
+            "onDay": "5.13.2011",
             "startsAt": "11:30",
 
             "inRoom": "2",
@@ -422,7 +432,7 @@
             "topic": "Is OSGi ready for wide adoption?"
         },
         {
-            "onDay": "5.12.2011",
+            "onDay": "5.13.2011",
             "startsAt": "11:30",
 
             "inRoom": "3",
@@ -434,7 +444,7 @@
 
 
         {
-            "onDay": "5.12.2011",
+            "onDay": "5.13.2011",
             "startsAt": "13:30",
 
             "inRoom": "1",
@@ -444,7 +454,7 @@
             "topic": "RIA Security - Broken By Design"
         },
         {
-            "onDay": "5.12.2011",
+            "onDay": "5.13.2011",
             "startsAt": "13:30",
 
             "inRoom": "2",
@@ -454,7 +464,7 @@
             "topic": "10 common pitfalls when using Hibernate"
         },
         {
-            "onDay": "5.12.2011",
+            "onDay": "5.13.2011",
             "startsAt": "13:30",
 
             "inRoom": "3",
@@ -466,7 +476,7 @@
 
 
         {
-            "onDay": "5.12.2011",
+            "onDay": "5.13.2011",
             "startsAt": "14:45",
 
             "inRoom": "1",
@@ -476,7 +486,7 @@
             "topic": "Git - (a) Gentle InTroduction"
         },
         {
-            "onDay": "5.12.2011",
+            "onDay": "5.13.2011",
             "startsAt": "14:45",
 
             "inRoom": "2",
@@ -486,7 +496,7 @@
             "topic": "Hibernate OGM: JPA on Infinispan: when PaaS persistence meets Java EE"
         },
         {
-            "onDay": "5.12.2011",
+            "onDay": "5.13.2011",
             "startsAt": "14:45",
 
             "inRoom": "3",
@@ -498,7 +508,7 @@
 
 
         {
-            "onDay": "5.12.2011",
+            "onDay": "5.13.2011",
             "startsAt": "16:10",
 
             "inRoom": "1",
@@ -508,7 +518,7 @@
             "topic": "TBD"
         },
         {
-            "onDay": "5.12.2011",
+            "onDay": "5.13.2011",
             "startsAt": "16:10",
 
             "inRoom": "2",
@@ -518,7 +528,7 @@
             "topic": "Static Analysis in Search for Performance Anti-Patterns"
         },
         {
-            "onDay": "5.12.2011",
+            "onDay": "5.13.2011",
             "startsAt": "16:10",
 
             "inRoom": "3",
@@ -530,7 +540,7 @@
 
 
         {
-            "onDay": "5.12.2011",
+            "onDay": "5.13.2011",
             "startsAt": "17:25",
 
             "inRoom": "1",
@@ -540,7 +550,7 @@
             "topic": "The Diabolical Developer"
         },
         {
-            "onDay": "5.12.2011",
+            "onDay": "5.13.2011",
             "startsAt": "17:25",
 
             "inRoom": "2",
@@ -550,7 +560,7 @@
             "topic": "A programmatic introduction to Neo4j"
         },
         {
-            "onDay": "5.12.2011",
+            "onDay": "5.13.2011",
             "startsAt": "17:25",
 
             "inRoom": "3",
