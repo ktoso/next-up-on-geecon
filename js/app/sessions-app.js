@@ -272,9 +272,8 @@ $(function() {
             agenda = _.filter(agenda, function(speech) {
                 var day = Date.parse(speech.onDay);
                 var starts = Date.parse(speech.startsAt);
-                return day.equals(today)
+                return day.equals(today)&& now.compareTo(starts) == -1;
 //                          && starts.isAfter(now);
-                        && now.compareTo(starts) == -1;
                         /*starts is in the future, somehow isAfter won't work... */
             });
 
