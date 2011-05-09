@@ -125,9 +125,17 @@ function msAsMinSec(ms) {
 
     var seconds = Math.floor(ms / 1000);
     var minutes = Math.floor(seconds / 60);
-    seconds %= 60;
+    minutes = Math.floor(seconds / 60);
+    var hours = Math.floor(minutes / 60);
 
-    return minutes + "m " + seconds + "s";
+    seconds %= 60;
+    minutes %= 60;
+
+    if (hours != undefined && hours > 0) {
+        return hours + "h " + minutes + "m " + seconds + "s";
+    } else {
+        return minutes + "m " + seconds + "s";
+    }
 }
 
 function getRandomFunnyCountdownNote() {
