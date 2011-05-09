@@ -283,7 +283,7 @@ $(function() {
                 }
             });
 
-            this.countUntil = minTime.startsAt;
+            this.countUntil = minTime;
 
             var self = this;
             agenda = _.filter(agenda, function(speech) {
