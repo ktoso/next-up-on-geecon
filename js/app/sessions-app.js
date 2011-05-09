@@ -275,7 +275,7 @@ $(function() {
 
             var minTime = _.min(agenda, function(speech) {
                 var startsAt = Date.parse(speech.startsAt);
-                if(Date.compare(now, startsAt) == 1){
+                if(now.compareTo(startsAt) == 1){
                     // it's a past event
                     return 9999999;
                 } else {
