@@ -279,7 +279,7 @@ $(function() {
                     // it's a past event
                     return 9999999;
                 } else {
-                    return startsAt;
+                    return startsAt.startsAt;
                 }
             });
 
