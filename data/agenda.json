@@ -134,7 +134,7 @@
 
         {
             "onDay": "5.12.2011",
-            "startsAt": "11:10",
+            "startsAt": "10:10",
 
             "inRoom": "1",
             "roomName": "Room 11",
@@ -142,6 +142,8 @@
             "speaker": "Juergen Hoeller",
             "topic": "Enterprise Java in 2011 and Beyond: From Java EE 6 to Cloud Computing"
         },
+
+
 
 
         {
@@ -335,26 +337,9 @@
             "topic": "Java EE 7 - flying above the cloud, a status on ongoing work"
         },
 
-        {
-            "onDay": "5.12.2011",
-            "startsAt": "21:00",
 
-            "inRoom": "1",
-            "roomName": "Room 12",
 
-            "speaker": "Everyone",
-            "topic": "Pauza (on Floriańska 18)"
-        },
-        {
-            "onDay": "5.12.2011",
-            "startsAt": "21:00",
 
-            "inRoom": "2",
-            "roomName": "Room 11",
-
-            "speaker": "Everyone",
-            "topic": "Pauza (on Floriańska 18)"
-        },
         {
             "onDay": "5.12.2011",
             "startsAt": "21:00",
