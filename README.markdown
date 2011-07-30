@@ -20,6 +20,10 @@ The app relies on the following frameworks to get things done:
 * **jQuery** - a quite big yet powerful lib everybody knows I guess. It's used here primarily to bind the app into the DOM and modify it. Oh, and it's also used here for AJAX stuff.
 * **@anywhere** - I thought I'd use it (it's the new twitter API) but it turned out that it isn't supporting Status.search... (Though it's in it's documentation heh) so we're using plain old search.twitter.com here, and it runns really well ;-)
 
+Screenshot
+----------
+<img src="https://github.com/ktoso/next-up-on-geecon/raw/geekifyMostGeecons/docs/Next%20Up%20On%20GeeCON%202011_1300664698425.png" alt="example screenshot"/>
+
 License
 -------
 I'm releasing this code under the **FreeBSD License**, thus it's OpenSource and Free Software. 
