@@ -5,11 +5,13 @@ The app will be displayed on big cinema screens... :-)
 
 Want to see this app in action? Well, that's easy - just go to: <a href="http://ktoso.github.com/next-up-on-geecon">http://ktoso.github.com/next-up-on-geecon</a>
 
+
 So, what is **GeeCON** actually...?
 -----------------------------------
 <a href="http://geecon.org/"><img src="https://github.com/ktoso/next-up-on-geecon/raw/master/images/geecon.png" alt="GeeCON logo"/></a> is a JVM centric (Java, Scala, Groovy, JRuby etc...) 4 day long conference organized by 
 the <a href="http://www.java.pl">Polish Java User Group</a> and the <a href="http://www.jug.poznan.pl/">Poznań Java User Group</a> each year in May - since 2009.
 It's quite big there's always lots of interesting (and eager to have a chat about coding) people there and I'd highly recommend you'd <a href="http://geecon.org">check it out</a> if you haven't yet heard about it. :-)
+
 
 Used tech
 ---------
@@ -20,9 +22,11 @@ The app relies on the following frameworks to get things done:
 * **jQuery** - a quite big yet powerful lib everybody knows I guess. It's used here primarily to bind the app into the DOM and modify it. Oh, and it's also used here for AJAX stuff.
 * **@anywhere** - I thought I'd use it (it's the new twitter API) but it turned out that it isn't supporting Status.search... (Though it's in it's documentation heh) so we're using plain old search.twitter.com here, and it runns really well ;-)
 
+
 Screenshot
 ----------
 <img src="https://github.com/ktoso/next-up-on-geecon/raw/geekifyMostGeecons/docs/Next%20Up%20On%20GeeCON%202011_1300664698425.png" alt="example screenshot"/>
+
 
 License
 -------
