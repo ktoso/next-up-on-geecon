@@ -2,34 +2,24 @@
     "agenda": [
 
         {
-            "onDay": "5.11.2011",
-            "startsAt": "9:30",
+            "onDay": "5.10.2013",
+            "startsAt": "10:20",
 
             "inRoom": "1",
-            "roomName": "Room 10",
+            "roomName": "Room 1",
 
-            "speaker": "Josh Long",
-            "topic": "Spring into the Next Decade"
+            "speaker": "Patrick Copeland",
+            "topic": "Pretotyping"
         },
         {
-            "onDay": "5.11.2011",
-            "startsAt": "9:30",
-
-            "inRoom": "2",
-            "roomName": "Room 9",
-
-            "speaker": "Jaroslav Tulach",
-            "topic": "Paradoxes of API Design"
-        },
-        {
-            "onDay": "5.11.2011",
-            "startsAt": "9:30",
+            "onDay": "5.10.2013",
+            "startsAt": "10:20",
 
             "inRoom": "3",
-            "roomName": "Room 8",
+            "roomName": "Room 5",
 
-            "speaker": "Andres Almiray",
-            "topic": "The Groovy Ecosystem"
+            "speaker": "Patrick Copeland",
+            "topic": "Pretotyping - streaming"
         },
 
 
