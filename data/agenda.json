@@ -2,7 +2,7 @@
     "agenda": [
 
         {
-            "onDay": "5.10.2013",
+            "onDay": "5.15.2013",
             "startsAt": "10:20",
 
             "inRoom": "1",
@@ -12,34 +12,14 @@
             "topic": "Pretotyping"
         },
         {
-            "onDay": "5.10.2013",
+            "onDay": "5.15.2013",
             "startsAt": "10:20",
 
-            "inRoom": "2",
-            "roomName": "Room 2",
+            "inRoom": "5",
+            "roomName": "Room 5",
 
             "speaker": "Patrick Copeland",
-            "topic": "Pretotyping - streaming"
-        },
-        {
-            "onDay": "5.10.2013",
-            "startsAt": "10:20",
-
-            "inRoom": "3",
-            "roomName": "Room 3",
-
-            "speaker": "Patrick Copeland",
-            "topic": "Pretotyping - streaming"
-        },
-        {
-            "onDay": "5.10.2013",
-            "startsAt": "10:20",
-
-            "inRoom": "4",
-            "roomName": "Room 4",
-
-            "speaker": "Patrick Copeland",
-            "topic": "Pretotyping - streaming"
+            "topic": "Pretotyping (streamed)"
         },
 
 

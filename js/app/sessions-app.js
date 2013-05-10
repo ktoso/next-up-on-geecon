@@ -222,7 +222,8 @@ $(function() {
                 this.updateCountdownNote();
             }
 
-            $('#countdown').text(minSec);
+//          disable countdown - we have 4 tracks - it won't fit
+//            $('#countdown').text(minSec);
         },
 
         // update the countdown text to the given message, or if none given,
@@ -240,25 +241,25 @@ $(function() {
         loadAgenda: function () {
             var noCachePlease = "?nocache=" + Math.random();
             var agendaLocation = this.AGENDA + noCachePlease;
-//            console.log("Fetching agenda from: " + agendaLocation);
 
             var self = this;
             $.getJSON(agendaLocation,
-                    function(data) {
-//                        console.log(data);
+                function (data) {
+                  data.agenda = self.filterAgendaForOnlyNextSpeeches(data.agenda);
 
-                        data.agenda = self.filterAgendaForOnlyNextSpeeches(data.agenda);
+                  var today = Date.today();
 
-                        var today = Date.today();
-                        _.each(data.agenda, function(session) {
-                            var sessionDay = Date.parse(session.onDay);
-                            if (sessionDay.equals(today)) {
-//                                console.log("Saving session (" + session.onDay + " @ " + session.startsAt + "), '" + session.topic + "' by " + session.speaker);
-                                session.isThisRoom = session.inRoom == this.THIS_ROOM;
-                                Sessions.create(session);
-                            }
-                        });
-                    });
+                  for (var i = 0; i < data.agenda.length; i++) {
+                    var session = data.agenda[i];
+                    console.log(session);
+                    var sessionDay = Date.parse(session.onDay);
+                    if (sessionDay.equals(today)) {
+                      session.isThisRoom = session.inRoom == this.THIS_ROOM;
+                      Sessions.create(session);
+                    }
+                  }
+
+                });
         },
 
         // filter agenda to contain only the immediate next speeches
@@ -278,41 +279,9 @@ $(function() {
                         /*starts is in the future, somehow isAfter won't work... */
             });
 
-            // filter out past events
-//            agenda = _.filter(agenda, function(speech) {
-//                var day = Date.parse(speech.onDay);
-//                var starts = Date.parse(speech.startsAt);
-//                return day.equals(today);// && now.compareTo(starts) == -1; /*starts is in the future, somehow isAfter won't work... */
-//            });
-
-            console.log(agenda.length);
-            console.log(agenda);
-
             if (agenda.length > 0) {
                 this.countUntil = agenda[0].startsAt;
             }
-
-            agenda = [agenda[0], agenda[1], agenda[2]]; // omg... nvm, faster than splice...
-
-//            var minTime = _.min(agenda, function(speech) {
-//                var startsAt = Date.parse(speech.startsAt);
-//                if(now.compareTo(startsAt) == 1){
-////                    it's a past event
-//                    return 9999999;
-//                } else {
-//                    return startsAt.startsAt;
-//                }
-//            });
-//            console.log(agenda.length);
-//
-//            this.countUntil = minTime;
-//
-//            var self = this;
-//            agenda = _.filter(agenda, function(speech) {
-//                return speech.startsAt == self.countUntil;
-//            });
-//
-//            console.log(agenda.length);
 
             return agenda;
         },

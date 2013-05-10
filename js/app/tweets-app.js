@@ -236,34 +236,33 @@ $(function() {
         },
 
         fetchTweets: function(callWhenDone) {
-            var callUrl = 'http://search.twitter.com/search.json';
-            var geeconQuery = 'q=geecon';
-            var callback = '&callback=?'; // needed for getJSON to use JSONP
+          var callUrl = 'http://search.twitter.com/search.json';
+          var geeconQuery = 'q=geecon';
+          var callback = '&callback=?';
+          var rpp = '&rpp=50';
 
-            if (this.refresh_url) {
-                this.prependTweets = true;
-                callUrl += this.refresh_url + callback;
-            } else {
-                callUrl += "?" + geeconQuery + callback;
-            }
+          if (this.refresh_url) {
+            this.prependTweets = true;
+            callUrl += this.refresh_url + callback + rpp;
+          } else {
+            callUrl += "?" + geeconQuery + callback + rpp;
+          }
 
-//            console.log('Calling: ' + callUrl);
-                var self = this;
-                $.getJSON(callUrl,
-                        function(data) {
+          var self = this;
+          $.getJSON(callUrl,
+              function (data) {
 
-//                        console.log(data);
+                console.log(data);
 
-                            $.each(data.results, function(index, tweet) {
-                                tweet.prependMe = self.prependTweets;
-                                Tweets.create(tweet);
-                            });
+                $.each(data.results, function (index, tweet) {
+                  tweet.prependMe = self.prependTweets;
+                  Tweets.create(tweet);
+                });
 
-                            callWhenDone();
+                callWhenDone();
 
-                            self.refresh_url = data.refresh_url;
-//                        console.log("Saved refresh_url as: " + self.refresh_url);
-                        });
+                self.refresh_url = data.refresh_url;
+              });
         }
     });
 
