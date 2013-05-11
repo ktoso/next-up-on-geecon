@@ -217,7 +217,7 @@ $(function() {
 
             if (/^0m 0s/.test(minSec)) {
                 this.updateCountdownNote('Sessions start');
-                window.location = "";
+                document.location.reload();
             } else if (/ 0s$/.test(minSec)) {
                 this.updateCountdownNote();
             }
