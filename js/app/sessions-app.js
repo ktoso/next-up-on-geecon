@@ -1,5 +1,5 @@
 /*
- * Copyright 2011 GeeCON.org. All rights reserved.
+ * Copyright 2013 GeeCON.org. All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without modification, are
  * permitted provided that the following conditions are met:
@@ -245,7 +245,7 @@ $(function() {
             var self = this;
             $.getJSON(agendaLocation,
                 function (data) {
-                  data.agenda = self.filterAgendaForOnlyNextSpeeches(data.agenda);
+                  data.agenda = self.filterAgendaForOnlyNextSpeeches(data);
 
                   var today = Date.today();
 
@@ -263,7 +263,7 @@ $(function() {
         },
 
         // filter agenda to contain only the immediate next speeches
-        // for example it's 21 May 2011 15:15, so only speeches on this day
+        // for example it's 21 May 2013 15:15, so only speeches on this day
         // and starting after 15:15 would be kept in the agenda
         filterAgendaForOnlyNextSpeeches: function(agenda) {
             var now = Date.now();
