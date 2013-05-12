@@ -1,6 +1,6 @@
 [
   {
-    "onDay": "5.15.2013",
+    "onDay": "5.12.2013",
     "startsAt": "11:40",
     "inRoom": "1",
     "roomName": "1",
@@ -8,7 +8,7 @@
     "topic": "55 New Things In JDK 8"
   },
   {
-    "onDay": "5.15.2013",
+    "onDay": "5.12.2013",
     "startsAt": "11:40",
     "inRoom": "6",
     "roomName": "6",
@@ -16,7 +16,7 @@
     "topic": "Messaging and scheduled jobs made simple"
   },
   {
-    "onDay": "5.15.2013",
+    "onDay": "5.12.2013",
     "startsAt": "11:40",
     "inRoom": "10",
     "roomName": "10",
@@ -24,7 +24,7 @@
     "topic": "Do you really get your IDE?"
   },
   {
-    "onDay": "5.15.2013",
+    "onDay": "5.12.2013",
     "startsAt": "11:40",
     "inRoom": "12",
     "roomName": "12",
@@ -32,7 +32,7 @@
     "topic": "Compact Off-Heap Structures in the Java Language"
   },
   {
-    "onDay": "5.15.2013",
+    "onDay": "5.12.2013",
     "startsAt": "13:30",
     "inRoom": "1",
     "roomName": "1",
@@ -40,7 +40,7 @@
     "topic": "Software Developer Career Unplugged"
   },
   {
-    "onDay": "5.15.2013",
+    "onDay": "5.12.2013",
     "startsAt": "13:30",
     "inRoom": "6",
     "roomName": "6",
@@ -48,7 +48,7 @@
     "topic": "Open Source Monitoring for Java with Graphite"
   },
   {
-    "onDay": "5.15.2013",
+    "onDay": "5.12.2013",
     "startsAt": "13:30",
     "inRoom": "10",
     "roomName": "10",
@@ -56,7 +56,7 @@
     "topic": "Automation dogfooding"
   },
   {
-    "onDay": "5.15.2013",
+    "onDay": "5.12.2013",
     "startsAt": "13:30",
     "inRoom": "12",
     "roomName": "12",
@@ -64,7 +64,7 @@
     "topic": "G1 Tuning"
   },
   {
-    "onDay": "5.15.2013",
+    "onDay": "5.12.2013",
     "startsAt": "14:40",
     "inRoom": "1",
     "roomName": "1",
@@ -72,7 +72,7 @@
     "topic": "Living in a Post-Functional World"
   },
   {
-    "onDay": "5.15.2013",
+    "onDay": "5.12.2013",
     "startsAt": "14:40",
     "inRoom": "6",
     "roomName": "6",
@@ -80,7 +80,7 @@
     "topic": "How secure your web framework is?"
   },
   {
-    "onDay": "5.15.2013",
+    "onDay": "5.12.2013",
     "startsAt": "14:40",
     "inRoom": "10",
     "roomName": "10",
@@ -88,7 +88,7 @@
     "topic": "Large Scale Automation with Jenkins"
   },
   {
-    "onDay": "5.15.2013",
+    "onDay": "5.12.2013",
     "startsAt": "14:40",
     "inRoom": "12",
     "roomName": "12",
@@ -96,7 +96,7 @@
     "topic": "Caching In"
   },
   {
-    "onDay": "5.15.2013",
+    "onDay": "5.12.2013",
     "startsAt": "16:00",
     "inRoom": "1",
     "roomName": "1",
@@ -104,7 +104,7 @@
     "topic": "Nashorn: Implementing Dynamic Languages on the JVM"
   },
   {
-    "onDay": "5.15.2013",
+    "onDay": "5.12.2013",
     "startsAt": "16:00",
     "inRoom": "6",
     "roomName": "6",
@@ -112,7 +112,7 @@
     "topic": "Building quality in big IT systems - in practice"
   },
   {
-    "onDay": "5.15.2013",
+    "onDay": "5.12.2013",
     "startsAt": "16:00",
     "inRoom": "10",
     "roomName": "10",
@@ -120,7 +120,7 @@
     "topic": "Continuous delivery antipatterns"
   },
   {
-    "onDay": "5.15.2013",
+    "onDay": "5.12.2013",
     "startsAt": "16:00",
     "inRoom": "12",
     "roomName": "12",
@@ -128,7 +128,7 @@
     "topic": "High Performance Network Programming on the JVM"
   },
   {
-    "onDay": "5.15.2013",
+    "onDay": "5.12.2013",
     "startsAt": "17:10",
     "inRoom": "1",
     "roomName": "1",
@@ -136,7 +136,7 @@
     "topic": "Freaks of the Freaks: Talking About Minorities in IT"
   },
   {
-    "onDay": "5.15.2013",
+    "onDay": "5.12.2013",
     "startsAt": "17:10",
     "inRoom": "6",
     "roomName": "6",
@@ -144,7 +144,7 @@
     "topic": "Testing and Refactoring Legacy Code"
   },
   {
-    "onDay": "5.15.2013",
+    "onDay": "5.12.2013",
     "startsAt": "17:10",
     "inRoom": "10",
     "roomName": "10",
@@ -152,7 +152,7 @@
     "topic": "Developing for multi-component environment"
   },
   {
-    "onDay": "5.15.2013",
+    "onDay": "5.12.2013",
     "startsAt": "17:10",
     "inRoom": "12",
     "roomName": "12",
