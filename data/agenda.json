@@ -11,6 +11,30 @@
         "inRoom": "1", 
         "onDay": "5.15.2013", 
         "roomName": "1", 
+        "speaker": "Patrick Copeland", 
+        "startsAt": "10:20", 
+        "topic": "Pretotyping"
+    }, 
+    {
+        "inRoom": "1", 
+        "onDay": "5.15.2013", 
+        "roomName": "1", 
+        "speaker": "Patrick Copeland", 
+        "startsAt": "10:20", 
+        "topic": "Pretotyping"
+    }, 
+    {
+        "inRoom": "1", 
+        "onDay": "5.15.2013", 
+        "roomName": "5", 
+        "speaker": "Patrick Copeland", 
+        "startsAt": "10:20", 
+        "topic": "Pretotyping (Streaming)"
+    }, 
+    {
+        "inRoom": "1", 
+        "onDay": "5.15.2013", 
+        "roomName": "1", 
         "speaker": "Dalibor Topic", 
         "startsAt": "11:40", 
         "topic": "55 New Things In JDK 8"
