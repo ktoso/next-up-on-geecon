@@ -209,7 +209,6 @@ body, html {
 #tweet-list p {
     float: left;
     clear: right;
-    width: 410px;
 }
 
 #tweet-list .tweet img {
