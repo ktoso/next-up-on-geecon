@@ -191,6 +191,8 @@
         "startsAt": "17:10", 
         "topic": "Are Your GC Logs Speaking to You"
     }, 
+
+
     {
         "inRoom": "1", 
         "onDay": "5.16.2013", 
@@ -392,6 +394,32 @@
         "topic": "The Cultural Anthropology of Stack Exchange"
     }, 
     {
+        "inRoom": "2", 
+        "onDay": "5.16.2013", 
+        "roomName": "1", 
+        "speaker": "Joel Spolsky", 
+        "startsAt": "17:10", 
+        "topic": "The Cultural Anthropology of Stack Exchange"
+    }, 
+    {
+        "inRoom": "3", 
+        "onDay": "5.16.2013", 
+        "roomName": "1", 
+        "speaker": "Joel Spolsky", 
+        "startsAt": "17:10", 
+        "topic": "The Cultural Anthropology of Stack Exchange"
+    }, 
+    {
+        "inRoom": "4", 
+        "onDay": "5.16.2013", 
+        "roomName": "1", 
+        "speaker": "Joel Spolsky", 
+        "startsAt": "17:10", 
+        "topic": "The Cultural Anthropology of Stack Exchange"
+    }, 
+
+
+    {
         "inRoom": "1", 
         "onDay": "5.17.2013", 
         "roomName": "1", 
@@ -553,6 +581,30 @@
     }, 
     {
         "inRoom": "1", 
+        "onDay": "5.17.2013", 
+        "roomName": "1", 
+        "speaker": "Sven Peters", 
+        "startsAt": "16:00", 
+        "topic": "How To Do Kick-Ass Software Development"
+    }
+    {
+        "inRoom": "2", 
+        "onDay": "5.17.2013", 
+        "roomName": "1", 
+        "speaker": "Sven Peters", 
+        "startsAt": "16:00", 
+        "topic": "How To Do Kick-Ass Software Development"
+    }
+    {
+        "inRoom": "3", 
+        "onDay": "5.17.2013", 
+        "roomName": "1", 
+        "speaker": "Sven Peters", 
+        "startsAt": "16:00", 
+        "topic": "How To Do Kick-Ass Software Development"
+    }
+    {
+        "inRoom": "4", 
         "onDay": "5.17.2013", 
         "roomName": "1", 
         "speaker": "Sven Peters", 
