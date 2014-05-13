@@ -100,13 +100,13 @@
 
 <script type="text/template" id="tweet-template">
     <article class="tweet">
-        <img src="<%= profile_image_url %>" alt="@<%= from_user %>"/>
+        <img src="<%= user.profile_image_url %>" alt="@<%= user.screen_name %>"/>
 
         <p>
             <%= text %>
         </p>
         <small>
-            <%= relativeTime(created_at) %> by <strong>@<%= from_user %> </strong>
+            <%= relativeTime(created_at) %> by <strong>@<%= user.screen_name %> </strong>
         </small>
     </article>
 </script>
