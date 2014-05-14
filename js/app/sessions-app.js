@@ -142,7 +142,7 @@ $(function() {
 
     // The Application
     // -------------------------------------------------------------------------------------------------------------------
-
+	
     // Our overall **AppView** is the top-level piece of UI.
     window.AppView = Backbone.View.extend({
 
@@ -155,7 +155,8 @@ $(function() {
         MIN: 60000,
 
         // pass #3 to the site to state "this room is room number 3"
-        THIS_ROOM: parseInt(location.hash.substr(1)),
+
+        THIS_ROOM: location.hash.substr(1),
 
         // count until this time (variable used by the countdown, and set after agenda fetch)
         countUntil: 0,
@@ -247,6 +248,8 @@ $(function() {
                 function (data) {
                   data.agenda = self.filterAgendaForOnlyNextSpeeches(data);
 
+				  var THIS_ROOM = location.hash.substr(1);
+
                   var today = Date.today();
 
                   for (var i = 0; i < data.agenda.length; i++) {
@@ -254,7 +257,7 @@ $(function() {
                     console.log(session);
                     var sessionDay = Date.parse(session.onDay);
                     if (sessionDay.getDate() == today.getDate()) {
-                      session.isThisRoom = session.inRoom == this.THIS_ROOM;
+                      session.isThisRoom = session.inRoom == THIS_ROOM;
                       Sessions.create(session);
                     }
                   }
