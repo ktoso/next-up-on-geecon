@@ -253,7 +253,7 @@ $(function() {
                     var session = data.agenda[i];
                     console.log(session);
                     var sessionDay = Date.parse(session.onDay);
-                    if (sessionDay.equals(today)) {
+                    if (sessionDay.getDate() == today.getDate()) {
                       session.isThisRoom = session.inRoom == this.THIS_ROOM;
                       Sessions.create(session);
                     }
