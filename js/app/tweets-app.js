@@ -49,7 +49,8 @@ $(function() {
             from_user:         "",
             iso_language_code: "en",
             source:            "",
-
+            user:              "",
+            
             prependMe:         false
         },
 
@@ -236,7 +237,8 @@ $(function() {
         },
 
         fetchTweets: function(callWhenDone) {
-          var callUrl = 'http://search.twitter.com/search.json';
+          // it's running Mooch proxy from https://github.com/eloquent/mooch
+          var callUrl = 'http://boiling-peak-5721.herokuapp.com/1.1/search/tweets.json';
           var geeconQuery = 'q=geecon';
           var callback = '&callback=?';
           var rpp = '&rpp=50';
@@ -254,7 +256,7 @@ $(function() {
 
                 console.log(data);
 
-                $.each(data.results, function (index, tweet) {
+                $.each(data.statuses, function (index, tweet) {
                   tweet.prependMe = self.prependTweets;
                   Tweets.create(tweet);
                 });
