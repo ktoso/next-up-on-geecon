@@ -100,9 +100,9 @@
 
 <script type="text/template" id="tweet-template">
     <article class="tweet">
-        <img src="<%= user.profile_image_url %>" alt="@<%= user.screen_name %>"/>
-
         <p>
+        <img src="<%= user.profile_image_url %>" alt="@<%= user.screen_name %>" style="float: left;"/>
+
             <%= text %>
         </p>
         <small>
