@@ -31,7 +31,7 @@ function relativeTime(pastTime) {
     var curDate = new Date();
     var currentStamp = curDate.getTime();
 
-    var difference = parseInt((currentStamp - origStamp) / 1000);
+    var difference = parseInt((currentStamp - origStamp) / 1000 - (60*60*2));
 
     if (difference < 0) {
         return false;
