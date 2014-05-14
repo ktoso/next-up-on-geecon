@@ -24,7 +24,7 @@
         "topic": "How to get your kids started with Java programming?"
     },
     {
-        "inRoom": "6",
+        "inRoom": "5",
         "onDay": "5.14.2014",
         "roomName": "6",
         "speaker": "Jim Weaver",
@@ -32,7 +32,7 @@
         "topic": "What's New for Java 8"
     },
     {
-        "inRoom": "10",
+        "inRoom": "7",
         "onDay": "5.14.2014",
         "roomName": "10",
         "speaker": "Jakub Jurkiewicz",
@@ -40,7 +40,7 @@
         "topic": "Back to the Future - how to go back in time and provide better future for your agile team."
     },
     {
-        "inRoom": "12",
+        "inRoom": "11",
         "onDay": "5.14.2014",
         "roomName": "12",
         "speaker": "Marek Matczak",
@@ -48,7 +48,7 @@
         "topic": "AngularJS: Java developer's real-life experiences"
     },
     {
-        "inRoom": "1",
+        "inRoom": "12",
         "onDay": "5.14.2014",
         "roomName": "1",
         "speaker": "Vladimir Orany",
@@ -64,7 +64,7 @@
         "topic": "Idioms for building distributed apps with Elixir"
     },
     {
-        "inRoom": "6",
+        "inRoom": "5",
         "onDay": "5.14.2014",
         "roomName": "6",
         "speaker": "Sergey Kuksenko",
@@ -72,7 +72,7 @@
         "topic": "JDK8: Stream style"
     },
     {
-        "inRoom": "10",
+        "inRoom": "7",
         "onDay": "5.14.2014",
         "roomName": "10",
         "speaker": "Matt Harasymczuk",
@@ -80,7 +80,7 @@
         "topic": "Scrum, but.."
     },
     {
-        "inRoom": "12",
+        "inRoom": "11",
         "onDay": "5.14.2014",
         "roomName": "12",
         "speaker": "Patroklos Papapetrou",
@@ -88,7 +88,7 @@
         "topic": "Managing your Technical Debt with SonarQube"
     },
     {
-        "inRoom": "1",
+        "inRoom": "12",
         "onDay": "5.14.2014",
         "roomName": "1",
         "speaker": "Ken Sipe",
@@ -104,7 +104,7 @@
         "topic": "Mutation Analysis or What Code Coverage Doesn't Test"
     },
     {
-        "inRoom": "6",
+        "inRoom": "5",
         "onDay": "5.14.2014",
         "roomName": "6",
         "speaker": "Jim Weaver",
@@ -112,7 +112,7 @@
         "topic": "JavaFX Apps in the Real World"
     },
     {
-        "inRoom": "10",
+        "inRoom": "7",
         "onDay": "5.14.2014",
         "roomName": "10",
         "speaker": "Wiktor \u017bo\u0142nowski",
@@ -120,7 +120,7 @@
         "topic": "BDD & Agile Requirements - do it right!"
     },
     {
-        "inRoom": "12",
+        "inRoom": "11",
         "onDay": "5.14.2014",
         "roomName": "12",
         "speaker": "Johan Haleby",
@@ -128,7 +128,7 @@
         "topic": "Feel at ease and REST Assured"
     },
     {
-        "inRoom": "1",
+        "inRoom": "12",
         "onDay": "5.14.2014",
         "roomName": "1",
         "speaker": "Adam Warski",
@@ -144,7 +144,7 @@
         "topic": "Do-it-yourself usability design for developers"
     },
     {
-        "inRoom": "6",
+        "inRoom": "5",
         "onDay": "5.14.2014",
         "roomName": "6",
         "speaker": "Heather VanCura",
@@ -152,7 +152,7 @@
         "topic": "How to Participate in the Future of Java"
     },
     {
-        "inRoom": "10",
+        "inRoom": "7",
         "onDay": "5.14.2014",
         "roomName": "10",
         "speaker": "Michal Bartyzel",
@@ -160,7 +160,7 @@
         "topic": "Conversation Patterns for Software Professionals"
     },
     {
-        "inRoom": "12",
+        "inRoom": "11",
         "onDay": "5.14.2014",
         "roomName": "12",
         "speaker": "Kirk Pepperdine",
@@ -168,7 +168,7 @@
         "topic": "Looking To Better Concurrency in Java 8"
     },
     {
-        "inRoom": "1",
+        "inRoom": "12",
         "onDay": "5.14.2014",
         "roomName": "1",
         "speaker": "Tim Boudreau",
@@ -184,7 +184,7 @@
         "topic": "'I will never deploy on Fridays' - yeah, right..."
     },
     {
-        "inRoom": "6",
+        "inRoom": "5",
         "onDay": "5.14.2014",
         "roomName": "6",
         "speaker": "David Delabassee",
@@ -192,7 +192,7 @@
         "topic": "Project Avatar - Server-Side JavaScript on the Java Virtual Machine"
     },
     {
-        "inRoom": "10",
+        "inRoom": "7",
         "onDay": "5.14.2014",
         "roomName": "10",
         "speaker": "Peter Van de Voorde",
@@ -200,7 +200,7 @@
         "topic": "The social developer"
     },
     {
-        "inRoom": "12",
+        "inRoom": "11",
         "onDay": "5.14.2014",
         "roomName": "12",
         "speaker": "Discussion panel",
@@ -208,7 +208,7 @@
         "topic": "Early Adopters Panel"
     },
     {
-        "inRoom": "1",
+        "inRoom": "12",
         "onDay": "5.14.2014",
         "roomName": "1",
         "speaker": "Sang Shin",
