@@ -2,7 +2,6 @@
     {
         "inRoom": "1",
         "onDay": "5.14.2014",
-        "roomName": "1",
         "speaker": "Pavel Sekanina",
         "startsAt": "10:15",
         "topic": "Nothing comes for free"
@@ -10,7 +9,6 @@
     {
         "inRoom": "1",
         "onDay": "5.14.2014",
-        "roomName": "1",
         "speaker": "Jurgen Appelo",
         "startsAt": "10:30",
         "topic": "The 7 Duties of Great Software Professionals"
@@ -18,7 +16,6 @@
     {
         "inRoom": "1",
         "onDay": "5.14.2014",
-        "roomName": "1",
         "speaker": "Arun Gupta",
         "startsAt": "11:50",
         "topic": "How to get your kids started with Java programming?"
@@ -26,7 +23,6 @@
     {
         "inRoom": "5",
         "onDay": "5.14.2014",
-        "roomName": "6",
         "speaker": "Jim Weaver",
         "startsAt": "11:50",
         "topic": "What's New for Java 8"
@@ -34,7 +30,6 @@
     {
         "inRoom": "7",
         "onDay": "5.14.2014",
-        "roomName": "10",
         "speaker": "Jakub Jurkiewicz",
         "startsAt": "11:50",
         "topic": "Back to the Future - how to go back in time and provide better future for your agile team."
@@ -42,7 +37,6 @@
     {
         "inRoom": "11",
         "onDay": "5.14.2014",
-        "roomName": "12",
         "speaker": "Marek Matczak",
         "startsAt": "11:50",
         "topic": "AngularJS: Java developer's real-life experiences"
@@ -50,7 +44,6 @@
     {
         "inRoom": "12",
         "onDay": "5.14.2014",
-        "roomName": "1",
         "speaker": "Vladimir Orany",
         "startsAt": "11:50",
         "topic": "Gliding Gaelyk"
@@ -58,7 +51,6 @@
     {
         "inRoom": "1",
         "onDay": "5.14.2014",
-        "roomName": "1",
         "speaker": "Jos\u00e9 Valim",
         "startsAt": "13:40",
         "topic": "Idioms for building distributed apps with Elixir"
@@ -66,7 +58,6 @@
     {
         "inRoom": "5",
         "onDay": "5.14.2014",
-        "roomName": "6",
         "speaker": "Sergey Kuksenko",
         "startsAt": "13:40",
         "topic": "JDK8: Stream style"
@@ -74,7 +65,6 @@
     {
         "inRoom": "7",
         "onDay": "5.14.2014",
-        "roomName": "10",
         "speaker": "Matt Harasymczuk",
         "startsAt": "13:40",
         "topic": "Scrum, but.."
@@ -82,7 +72,6 @@
     {
         "inRoom": "11",
         "onDay": "5.14.2014",
-        "roomName": "12",
         "speaker": "Patroklos Papapetrou",
         "startsAt": "13:40",
         "topic": "Managing your Technical Debt with SonarQube"
@@ -90,7 +79,6 @@
     {
         "inRoom": "12",
         "onDay": "5.14.2014",
-        "roomName": "1",
         "speaker": "Ken Sipe",
         "startsAt": "13:40",
         "topic": "Go - The Language of the Cloud"
@@ -98,7 +86,6 @@
     {
         "inRoom": "1",
         "onDay": "5.14.2014",
-        "roomName": "1",
         "speaker": "Gleb Smirnov",
         "startsAt": "14:50",
         "topic": "Mutation Analysis or What Code Coverage Doesn't Test"
@@ -106,7 +93,6 @@
     {
         "inRoom": "5",
         "onDay": "5.14.2014",
-        "roomName": "6",
         "speaker": "Jim Weaver",
         "startsAt": "14:50",
         "topic": "JavaFX Apps in the Real World"
@@ -114,7 +100,6 @@
     {
         "inRoom": "7",
         "onDay": "5.14.2014",
-        "roomName": "10",
         "speaker": "Wiktor \u017bo\u0142nowski",
         "startsAt": "14:50",
         "topic": "BDD & Agile Requirements - do it right!"
@@ -122,7 +107,6 @@
     {
         "inRoom": "11",
         "onDay": "5.14.2014",
-        "roomName": "12",
         "speaker": "Johan Haleby",
         "startsAt": "14:50",
         "topic": "Feel at ease and REST Assured"
@@ -130,7 +114,6 @@
     {
         "inRoom": "12",
         "onDay": "5.14.2014",
-        "roomName": "1",
         "speaker": "Adam Warski",
         "startsAt": "14:50",
         "topic": "Keep it Simple with Scala"
@@ -138,7 +121,6 @@
     {
         "inRoom": "1",
         "onDay": "5.14.2014",
-        "roomName": "1",
         "speaker": "Michael Heinrichs",
         "startsAt": "16:10",
         "topic": "Do-it-yourself usability design for developers"
@@ -146,7 +128,6 @@
     {
         "inRoom": "5",
         "onDay": "5.14.2014",
-        "roomName": "6",
         "speaker": "Heather VanCura",
         "startsAt": "16:10",
         "topic": "How to Participate in the Future of Java"
@@ -154,7 +135,6 @@
     {
         "inRoom": "7",
         "onDay": "5.14.2014",
-        "roomName": "10",
         "speaker": "Michal Bartyzel",
         "startsAt": "16:10",
         "topic": "Conversation Patterns for Software Professionals"
@@ -162,7 +142,6 @@
     {
         "inRoom": "11",
         "onDay": "5.14.2014",
-        "roomName": "12",
         "speaker": "Kirk Pepperdine",
         "startsAt": "16:10",
         "topic": "Looking To Better Concurrency in Java 8"
@@ -170,7 +149,6 @@
     {
         "inRoom": "12",
         "onDay": "5.14.2014",
-        "roomName": "1",
         "speaker": "Tim Boudreau",
         "startsAt": "16:10",
         "topic": "Node.js for Java developers"
@@ -178,7 +156,6 @@
     {
         "inRoom": "1",
         "onDay": "5.14.2014",
-        "roomName": "1",
         "speaker": "Olga Madejska",
         "startsAt": "17:20",
         "topic": "'I will never deploy on Fridays' - yeah, right..."
@@ -186,7 +163,6 @@
     {
         "inRoom": "5",
         "onDay": "5.14.2014",
-        "roomName": "6",
         "speaker": "David Delabassee",
         "startsAt": "17:20",
         "topic": "Project Avatar - Server-Side JavaScript on the Java Virtual Machine"
@@ -194,7 +170,6 @@
     {
         "inRoom": "7",
         "onDay": "5.14.2014",
-        "roomName": "10",
         "speaker": "Peter Van de Voorde",
         "startsAt": "17:20",
         "topic": "The social developer"
@@ -202,7 +177,6 @@
     {
         "inRoom": "11",
         "onDay": "5.14.2014",
-        "roomName": "12",
         "speaker": "Discussion panel",
         "startsAt": "17:20",
         "topic": "Early Adopters Panel"
@@ -210,7 +184,6 @@
     {
         "inRoom": "12",
         "onDay": "5.14.2014",
-        "roomName": "1",
         "speaker": "Sang Shin",
         "startsAt": "17:20",
         "topic": "HTML5 for Java developers"
@@ -218,39 +191,34 @@
     {
         "inRoom": "1",
         "onDay": "5.15.2014",
-        "roomName": "1",
         "speaker": "Tim Boudreau",
         "startsAt": "09:00",
         "topic": "Everything You Were Taught About Java Is Wrong"
     },
     {
-        "inRoom": "6",
+        "inRoom": "5",
         "onDay": "5.15.2014",
-        "roomName": "6",
         "speaker": "Nitsan Wakart",
         "startsAt": "09:00",
         "topic": "Queue evolution: from 10M to 470M ops/sec"
     },
     {
-        "inRoom": "10",
+        "inRoom": "7",
         "onDay": "5.15.2014",
-        "roomName": "10",
         "speaker": "Hazem Saleh",
         "startsAt": "09:00",
         "topic": "Jasmine Automated Tests for JavaScript"
     },
     {
-        "inRoom": "12",
+        "inRoom": "11",
         "onDay": "5.15.2014",
-        "roomName": "12",
         "speaker": "Luk\u00e1\u0161 Fry\u010d",
         "startsAt": "09:00",
         "topic": "Arquillian: Helping web developers and QA get along"
     },
     {
-        "inRoom": "1",
+        "inRoom": "12",
         "onDay": "5.15.2014",
-        "roomName": "1",
         "speaker": "Tresch Anatole",
         "startsAt": "09:00",
         "topic": "Redesign of Legacy Frameworks"
@@ -258,39 +226,34 @@
     {
         "inRoom": "1",
         "onDay": "5.15.2014",
-        "roomName": "1",
         "speaker": "Peter Lawrey",
         "startsAt": "10:20",
         "topic": "GC Free Coding"
     },
     {
-        "inRoom": "6",
+        "inRoom": "5",
         "onDay": "5.15.2014",
-        "roomName": "6",
         "speaker": "Lukas Eder",
         "startsAt": "10:20",
         "topic": "Get Back in Control of Your SQL"
     },
     {
-        "inRoom": "10",
+        "inRoom": "7",
         "onDay": "5.15.2014",
-        "roomName": "10",
         "speaker": "Steve Freeman",
         "startsAt": "10:20",
         "topic": "Building on SOLID Foundations"
     },
     {
-        "inRoom": "12",
+        "inRoom": "11",
         "onDay": "5.15.2014",
-        "roomName": "12",
         "speaker": "Adam Bien",
         "startsAt": "10:20",
         "topic": "Java EE 7 + Java 8 = Highway To Anemic Applications"
     },
     {
-        "inRoom": "1",
+        "inRoom": "12",
         "onDay": "5.15.2014",
-        "roomName": "1",
         "speaker": "Sam Newman",
         "startsAt": "10:20",
         "topic": "Deploying And Testing Microservices"
@@ -298,39 +261,34 @@
     {
         "inRoom": "1",
         "onDay": "5.15.2014",
-        "roomName": "1",
         "speaker": "Oleg \u0160elajev",
         "startsAt": "11:40",
         "topic": "Java: Anticipating the unexpected"
     },
     {
-        "inRoom": "6",
+        "inRoom": "5",
         "onDay": "5.15.2014",
-        "roomName": "6",
         "speaker": "Eugene Ciurana",
         "startsAt": "11:40",
         "topic": "Mobile + HA + Cloud = Successful Mobile App HOWTO"
     },
     {
-        "inRoom": "10",
+        "inRoom": "7",
         "onDay": "5.15.2014",
-        "roomName": "10",
         "speaker": "Ken Sipe",
         "startsAt": "11:40",
         "topic": "Advanced Spock"
     },
     {
-        "inRoom": "12",
+        "inRoom": "11",
         "onDay": "5.15.2014",
-        "roomName": "12",
         "speaker": "Arun Gupta",
         "startsAt": "11:40",
         "topic": "50 new features of Java EE 7 in 50 mins"
     },
     {
-        "inRoom": "1",
+        "inRoom": "12",
         "onDay": "5.15.2014",
-        "roomName": "1",
         "speaker": "Micha\u0142 Ostruszka",
         "startsAt": "11:40",
         "topic": "SRP applied - building modern web applications"
@@ -338,39 +296,34 @@
     {
         "inRoom": "1",
         "onDay": "5.15.2014",
-        "roomName": "1",
         "speaker": "Richard Warburton",
         "startsAt": "13:30",
         "topic": "Predictable Equals Fast"
     },
     {
-        "inRoom": "6",
+        "inRoom": "5",
         "onDay": "5.15.2014",
-        "roomName": "6",
         "speaker": "Marek Goldmann",
         "startsAt": "13:30",
         "topic": "Docker - intro to revolution"
     },
     {
-        "inRoom": "10",
+        "inRoom": "7",
         "onDay": "5.15.2014",
-        "roomName": "10",
         "speaker": "Steve Freeman",
         "startsAt": "13:30",
         "topic": "Test-Driven Development: That's not what we meant"
     },
     {
-        "inRoom": "12",
+        "inRoom": "11",
         "onDay": "5.15.2014",
-        "roomName": "12",
         "speaker": "Josh Long",
         "startsAt": "13:30",
         "topic": "Microservices and REST with Spring Boot"
     },
     {
-        "inRoom": "1",
+        "inRoom": "12",
         "onDay": "5.15.2014",
-        "roomName": "1",
         "speaker": "Mina Bostr\u00f6m Nakicenovic",
         "startsAt": "13:30",
         "topic": "Agile Architecture \u2013 how worse can be better"
@@ -378,39 +331,34 @@
     {
         "inRoom": "1",
         "onDay": "5.15.2014",
-        "roomName": "1",
         "speaker": "Tomasz Nurkiewicz",
         "startsAt": "14:40",
         "topic": "CompletableFuture in Java 8 - asynchronous processing done right"
     },
     {
-        "inRoom": "6",
+        "inRoom": "5",
         "onDay": "5.15.2014",
-        "roomName": "6",
         "speaker": "Darach Ennis",
         "startsAt": "14:40",
         "topic": "Deconstructing the Lambda Architecture"
     },
     {
-        "inRoom": "10",
+        "inRoom": "7",
         "onDay": "5.15.2014",
-        "roomName": "10",
         "speaker": "Thomas Riha",
         "startsAt": "14:40",
         "topic": "Scaling Continuous Delivery"
     },
     {
-        "inRoom": "12",
+        "inRoom": "11",
         "onDay": "5.15.2014",
-        "roomName": "12",
         "speaker": "Tim Fox",
         "startsAt": "14:40",
         "topic": "High Performance Reactive Applications with Vert.x"
     },
     {
-        "inRoom": "1",
+        "inRoom": "12",
         "onDay": "5.15.2014",
-        "roomName": "1",
         "speaker": "Kevlin Henney",
         "startsAt": "14:40",
         "topic": "Seven Ineffective Coding Habits of Many Java Programmers"
@@ -418,23 +366,20 @@
     {
         "inRoom": "1",
         "onDay": "5.15.2014",
-        "roomName": "1",
         "speaker": "Roberto Cortez",
         "startsAt": "16:00",
         "topic": "Five Ways to Not Suck at Being a Java Freelancer"
     },
     {
-        "inRoom": "6",
+        "inRoom": "5",
         "onDay": "5.15.2014",
-        "roomName": "6",
         "speaker": "Bartosz Majsak",
         "startsAt": "16:00",
         "topic": "Life is too short to write CRUD"
     },
     {
-        "inRoom": "10",
+        "inRoom": "12",
         "onDay": "5.15.2014",
-        "roomName": "10",
         "speaker": "Tomek Kaczanowski",
         "startsAt": "16:00",
         "topic": "Custom Assertions In Tests"
@@ -442,23 +387,20 @@
     {
         "inRoom": "1",
         "onDay": "5.15.2014",
-        "roomName": "1",
         "speaker": "Wojciech Erbetowski",
         "startsAt": "16:20",
         "topic": "Be the perfect attendee"
     },
     {
-        "inRoom": "6",
+        "inRoom": "5",
         "onDay": "5.15.2014",
-        "roomName": "6",
         "speaker": "Jakub Marchwicki",
         "startsAt": "16:20",
         "topic": "Reverse engineering the clean code"
     },
     {
-        "inRoom": "10",
+        "inRoom": "12",
         "onDay": "5.15.2014",
-        "roomName": "10",
         "speaker": "Wiktor \u017bo\u0142nowski",
         "startsAt": "16:20",
         "topic": "Page Object Pattern - it's change my life!"
@@ -466,23 +408,20 @@
     {
         "inRoom": "1",
         "onDay": "5.15.2014",
-        "roomName": "1",
         "speaker": "S\u00e9ven Le Mesle",
         "startsAt": "16:40",
         "topic": "10 secrets to succeed when deploying in the cloud"
     },
     {
-        "inRoom": "6",
+        "inRoom": "5",
         "onDay": "5.15.2014",
-        "roomName": "6",
         "speaker": "Thomas Sundberg, Peter Kofler",
         "startsAt": "16:40",
         "topic": "(remote) Pair programming"
     },
     {
-        "inRoom": "10",
+        "inRoom": "12",
         "onDay": "5.15.2014",
-        "roomName": "10",
         "speaker": "Paul Szulc",
         "startsAt": "16:40",
         "topic": "Extending Chrome - writing your own extensions"
@@ -490,7 +429,6 @@
     {
         "inRoom": "1",
         "onDay": "5.15.2014",
-        "roomName": "1",
         "speaker": "Kevlin Henney",
         "startsAt": "17:10",
         "topic": "Worse Is Better, for Better or for Worse"
@@ -498,23 +436,20 @@
     {
         "inRoom": "1",
         "onDay": "5.16.2014",
-        "roomName": "1",
         "speaker": "Tomasz Kowalczewski",
         "startsAt": "09:00",
         "topic": "Reactive Java"
     },
     {
-        "inRoom": "6",
+        "inRoom": "5",
         "onDay": "5.16.2014",
-        "roomName": "6",
         "speaker": "Johan Haleby, Mattias Severson",
         "startsAt": "09:00",
         "topic": "Functional Programming without Lambdas"
     },
     {
-        "inRoom": "10",
+        "inRoom": "11",
         "onDay": "5.16.2014",
-        "roomName": "10",
         "speaker": "Andrea Provaglio",
         "startsAt": "09:00",
         "topic": "Dreaming - how business Intent drives your Agile initiatives"
@@ -522,7 +457,6 @@
     {
         "inRoom": "12",
         "onDay": "5.16.2014",
-        "roomName": "12",
         "speaker": "Jakub Kubry\u0144ski",
         "startsAt": "09:00",
         "topic": "Spring Boot - and it is lightly again"
@@ -530,23 +464,20 @@
     {
         "inRoom": "1",
         "onDay": "5.16.2014",
-        "roomName": "1",
         "speaker": "Stephen Chin",
         "startsAt": "10:20",
         "topic": "Java 8 for Tablets, Pis, and Legos"
     },
     {
-        "inRoom": "6",
+        "inRoom": "5",
         "onDay": "5.16.2014",
-        "roomName": "6",
         "speaker": "Sander Mak, Paul Bakker",
         "startsAt": "10:20",
         "topic": "Modular JavaScript"
     },
     {
-        "inRoom": "10",
+        "inRoom": "11",
         "onDay": "5.16.2014",
-        "roomName": "10",
         "speaker": "Tom Bujok",
         "startsAt": "10:20",
         "topic": "33 things you want to do better"
@@ -554,7 +485,6 @@
     {
         "inRoom": "12",
         "onDay": "5.16.2014",
-        "roomName": "12",
         "speaker": "Alex Soto, Bartosz Majsak",
         "startsAt": "10:20",
         "topic": "Testing Polyglot Persistence Done Right"
@@ -562,23 +492,20 @@
     {
         "inRoom": "1",
         "onDay": "5.16.2014",
-        "roomName": "1",
         "speaker": "Gerrit Grunwald",
         "startsAt": "11:40",
         "topic": "JavaFX everywhere"
     },
     {
-        "inRoom": "6",
+        "inRoom": "5",
         "onDay": "5.16.2014",
-        "roomName": "6",
         "speaker": "Tom Enebo",
         "startsAt": "11:40",
         "topic": "Modding Minecraft with a dash of Ruby"
     },
     {
-        "inRoom": "10",
+        "inRoom": "11",
         "onDay": "5.16.2014",
-        "roomName": "10",
         "speaker": "Andres Almiray",
         "startsAt": "11:40",
         "topic": "Asciidoctor: because writing docs does not have to"
@@ -586,7 +513,6 @@
     {
         "inRoom": "12",
         "onDay": "5.16.2014",
-        "roomName": "12",
         "speaker": "Mathias Severson",
         "startsAt": "11:40",
         "topic": "Spring testing"
@@ -594,23 +520,20 @@
     {
         "inRoom": "1",
         "onDay": "5.16.2014",
-        "roomName": "1",
         "speaker": "Erwan Pinault, Nicolas Rigaud",
         "startsAt": "13:30",
         "topic": "Who could resist controlling NAO robot with Java?"
     },
     {
-        "inRoom": "6",
+        "inRoom": "5",
         "onDay": "5.16.2014",
-        "roomName": "6",
         "speaker": "Vaclav Pech",
         "startsAt": "13:30",
         "topic": "JetBrains MPS - Speaking your language"
     },
     {
-        "inRoom": "10",
+        "inRoom": "11",
         "onDay": "5.16.2014",
-        "roomName": "10",
         "speaker": "Nikita Salnikov-Tarnovski",
         "startsAt": "13:30",
         "topic": "I bet you have a memory leak"
@@ -618,7 +541,6 @@
     {
         "inRoom": "12",
         "onDay": "5.16.2014",
-        "roomName": "12",
         "speaker": "Sandro Mancuso",
         "startsAt": "13:30",
         "topic": "Crafted Design"
@@ -626,23 +548,20 @@
     {
         "inRoom": "1",
         "onDay": "5.16.2014",
-        "roomName": "1",
         "speaker": "Maciek Opa\u0142a, Wojtek Erbetowski",
         "startsAt": "14:40",
         "topic": "Designing API for mobile app"
     },
     {
-        "inRoom": "6",
+        "inRoom": "5",
         "onDay": "5.16.2014",
-        "roomName": "6",
         "speaker": "Konrad Malawski",
         "startsAt": "14:40",
         "topic": "DDDing with Akka Persistence"
     },
     {
-        "inRoom": "10",
+        "inRoom": "11",
         "onDay": "5.16.2014",
-        "roomName": "10",
         "speaker": "Sam Newman",
         "startsAt": "14:40",
         "topic": "The Practical Implications Of Microservices"
@@ -650,7 +569,6 @@
     {
         "inRoom": "12",
         "onDay": "5.16.2014",
-        "roomName": "12",
         "speaker": "Jaros\u0142aw Pa\u0142ka",
         "startsAt": "14:40",
         "topic": "So you want to write another JVM language?"
@@ -658,7 +576,6 @@
     {
         "inRoom": "1",
         "onDay": "5.16.2014",
-        "roomName": "1",
         "speaker": "Michael Feathers",
         "startsAt": "16:00",
         "topic": "Beyond Error Handling"
